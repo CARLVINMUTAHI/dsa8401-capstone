@@ -1,5 +1,5 @@
 """
-tests/test_api.py  (updated — matches nested /predict response schema)
+tests/test_api.py
 =================
 Unit and integration tests for the FastAPI prediction service (app/main.py).
 Uses httpx TestClient — no live models required; models are monkey-patched
@@ -16,10 +16,6 @@ from fastapi.testclient import TestClient
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-
-# ── Monkey-patch models BEFORE importing app ──────────────────────────────────
-# app/main.py tries to load .pkl files at import time; we patch `pipelines`
-# immediately after import with tiny in-memory sklearn pipelines.
 
 import app.main as api_module
 
@@ -65,19 +61,19 @@ def client():
 def valid_child():
     return {
         "child_age_months":    24,
-        "child_sex":           0,
+        "child_sex":           1,       # 1=male, 2=female
         "birth_order":         2,
         "prev_birth_interval": 30.0,
         "size_at_birth":       3,
         "birth_weight_kg":     3.1,
         "diarrhea_2wk":        0,
         "fever_2wk":           1,
-        "breastfeeding":       1,
+        "breastfeeding":       1,       # 1=currently, 2=previously, 3=never
         "maternal_edu":        1,
         "maternal_bmi":        22.5,
         "wealth_index":        2,
         "under5_in_hh":        3,
-        "hh_head_sex":         0,
+        "hh_head_sex":         1,       # 1=male, 2=female
         "hh_head_age":         35.0,
         "electricity":         0,
         "residence_urban":     0,
@@ -127,27 +123,33 @@ class TestPredictValid:
         resp = client.post("/predict", json=valid_child)
         assert resp.status_code == 200
 
-    def test_response_has_risk_scores(self, client, valid_child):
+    def test_response_has_predictions(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
-        assert "stunting_risk"    in data
-        assert "wasting_risk"     in data
-        assert "underweight_risk" in data
+        assert "predictions" in data
 
-    def test_risk_scores_between_0_and_1(self, client, valid_child):
+    def test_predictions_has_all_outcomes(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
-        for key in ["stunting_risk", "wasting_risk", "underweight_risk"]:
-            assert 0.0 <= data[key] <= 1.0, f"{key} = {data[key]} out of range"
+        preds = data["predictions"]
+        assert "stunted"     in preds
+        assert "wasted"      in preds
+        assert "underweight" in preds
 
-    def test_response_has_flags(self, client, valid_child):
+    def test_each_outcome_has_probability_and_flag(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
-        assert "stunted_flag"     in data
-        assert "wasted_flag"      in data
-        assert "underweight_flag" in data
+        for outcome in ["stunted", "wasted", "underweight"]:
+            assert "probability" in data["predictions"][outcome]
+            assert "flag"        in data["predictions"][outcome]
+
+    def test_probabilities_between_0_and_1(self, client, valid_child):
+        data = client.post("/predict", json=valid_child).json()
+        for outcome in ["stunted", "wasted", "underweight"]:
+            p = data["predictions"][outcome]["probability"]
+            assert 0.0 <= p <= 1.0, f"{outcome} probability {p} out of range"
 
     def test_flags_are_bool(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
-        for key in ["stunted_flag", "wasted_flag", "underweight_flag"]:
-            assert isinstance(data[key], bool), f"{key} is not bool"
+        for outcome in ["stunted", "wasted", "underweight"]:
+            assert isinstance(data["predictions"][outcome]["flag"], bool)
 
     def test_county_echoed(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
@@ -161,20 +163,18 @@ class TestPredictValid:
         """Same input produces same output."""
         r1 = client.post("/predict", json=valid_child).json()
         r2 = client.post("/predict", json=valid_child).json()
-        assert r1["stunting_risk"]    == r2["stunting_risk"]
-        assert r1["wasting_risk"]     == r2["wasting_risk"]
-        assert r1["underweight_risk"] == r2["underweight_risk"]
+        for outcome in ["stunted", "wasted", "underweight"]:
+            assert r1["predictions"][outcome]["probability"] == \
+                   r2["predictions"][outcome]["probability"]
 
-    def test_different_county_different_result(self, client, valid_child):
-        """County code is a feature; changing it may change predictions."""
+    def test_different_county(self, client, valid_child):
+        """Changing county produces a valid response."""
         child2 = dict(valid_child)
-        child2["county"] = 1  # different county
-        r1 = client.post("/predict", json=valid_child).json()
+        child2["county"] = 1
         r2 = client.post("/predict", json=child2).json()
-        # Either scores differ, or they just happen to be equal (acceptable)
-        # We only assert both are valid
-        for k in ["stunting_risk", "wasting_risk", "underweight_risk"]:
-            assert 0.0 <= r2[k] <= 1.0
+        for outcome in ["stunted", "wasted", "underweight"]:
+            p = r2["predictions"][outcome]["probability"]
+            assert 0.0 <= p <= 1.0
 
 
 # ── TESTS: POST /predict — invalid input ─────────────────────────────────────
@@ -183,36 +183,40 @@ class TestPredictInvalid:
     def test_missing_field_422(self, client, valid_child):
         payload = dict(valid_child)
         del payload["child_age_months"]
-        resp = client.post("/predict", json=payload)
-        assert resp.status_code == 422
+        assert client.post("/predict", json=payload).status_code == 422
 
     def test_age_above_max_422(self, client, valid_child):
         payload = dict(valid_child)
         payload["child_age_months"] = 60   # max is 59
-        resp = client.post("/predict", json=payload)
-        assert resp.status_code == 422
+        assert client.post("/predict", json=payload).status_code == 422
 
     def test_county_out_of_range_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["county"] = 48   # max is 47
-        resp = client.post("/predict", json=payload)
-        assert resp.status_code == 422
+        payload["county"] = 48             # max is 47
+        assert client.post("/predict", json=payload).status_code == 422
 
     def test_negative_age_422(self, client, valid_child):
         payload = dict(valid_child)
         payload["child_age_months"] = -1
-        resp = client.post("/predict", json=payload)
-        assert resp.status_code == 422
+        assert client.post("/predict", json=payload).status_code == 422
 
     def test_wealth_index_zero_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["wealth_index"] = 0   # min is 1
-        resp = client.post("/predict", json=payload)
-        assert resp.status_code == 422
+        payload["wealth_index"] = 0        # min is 1
+        assert client.post("/predict", json=payload).status_code == 422
 
     def test_empty_body_422(self, client):
-        resp = client.post("/predict", json={})
-        assert resp.status_code == 422
+        assert client.post("/predict", json={}).status_code == 422
+
+    def test_child_sex_zero_422(self, client, valid_child):
+        payload = dict(valid_child)
+        payload["child_sex"] = 0           # min is 1
+        assert client.post("/predict", json=payload).status_code == 422
+
+    def test_breastfeeding_zero_422(self, client, valid_child):
+        payload = dict(valid_child)
+        payload["breastfeeding"] = 0       # min is 1
+        assert client.post("/predict", json=payload).status_code == 422
 
 
 # ── TESTS: POST /predict/batch ────────────────────────────────────────────────
@@ -233,13 +237,12 @@ class TestPredictBatch:
         payload = [dict(valid_child | {"county": i + 1}) for i in range(5)]
         results = client.post("/predict/batch", json=payload).json()
         for r in results:
-            assert "stunting_risk" in r
-            assert 0.0 <= r["stunting_risk"] <= 1.0
+            assert "predictions" in r
+            assert 0.0 <= r["predictions"]["stunted"]["probability"] <= 1.0
 
     def test_batch_over_limit_400(self, client, valid_child):
         payload = [valid_child] * 1001
-        resp = client.post("/predict/batch", json=payload)
-        assert resp.status_code == 400
+        assert client.post("/predict/batch", json=payload).status_code == 400
 
     def test_batch_empty_list_200(self, client):
         resp = client.post("/predict/batch", json=[])
@@ -248,6 +251,6 @@ class TestPredictBatch:
 
     def test_batch_one_invalid_422(self, client, valid_child):
         bad_child = dict(valid_child)
-        bad_child["county"] = 99   # invalid
+        bad_child["county"] = 99           # invalid
         resp = client.post("/predict/batch", json=[valid_child, bad_child])
         assert resp.status_code == 422
