@@ -1,0 +1,21 @@
+{
+  "child_age_months": 24,
+  "child_sex": 0,
+  "birth_order": 2,
+  "prev_birth_interval": 30,
+  "size_at_birth": 3,
+  "birth_weight_kg": 3.1,
+  "diarrhea_2wk": 0,
+  "fever_2wk": 1,
+  "breastfeeding": 1,
+  "maternal_edu": 1,
+  "maternal_bmi": 22.5,
+  "wealth_index": 2,
+  "under5_in_hh": 3,
+  "hh_head_sex": 0,
+  "hh_head_age": 35,
+  "electricity": 0,
+  "residence_urban": 0,
+  "wash_score": 1,
+  "county": 23
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Child Malnutrition Risk Screener</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600&display=swap">
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #ffffff; --border: #dde1e8;
+    --fg: #1a1d23; --fg-muted: #5a6072;
+    --accent: #0f6e3d; --accent-light: #e6f4ee;
+    --warn: #c0392b; --warn-light: #fdf0ee;
+    --ok: #0f6e3d; --ok-light: #e6f4ee;
+    --caution: #b35c00; --caution-light: #fef3e6;
+    --shadow: 0 2px 10px rgba(0,0,0,0.07); --radius: 10px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6;
+    padding: 0 16px 40px;
+  }
+  .header {
+    background: var(--accent); color: #fff;
+    padding: 20px 24px; margin: 0 -16px 28px;
+  }
+  .header-inner { max-width: 680px; margin: 0 auto; }
+  .header h1 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 600; }
+  .header p  { opacity: 0.88; font-size: 0.9rem; margin-top: 4px; }
+  .badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    border-radius: 100px; font-size: 0.75rem; padding: 2px 10px;
+    margin-bottom: 8px; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); box-shadow: var(--shadow);
+    max-width: 680px; margin: 0 auto 20px; padding: 24px;
+  }
+  .section-title {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-light);
+  }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+  @media (max-width: 520px) { .fields { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field.full { grid-column: 1 / -1; }
+  label { font-size: 0.82rem; font-weight: 600; color: var(--fg-muted); }
+  label .req { color: var(--warn); margin-left: 2px; }
+  input, select {
+    background: var(--bg); border: 1.5px solid var(--border);
+    border-radius: 7px; color: var(--fg); font-family: inherit;
+    font-size: 0.95rem; padding: 9px 12px; width: 100%;
+    transition: border-color 0.15s;
+  }
+  input:focus, select:focus {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+  }
+  .hint { font-size: 0.78rem; color: var(--fg-muted); }
+  .btn-row { max-width: 680px; margin: 0 auto; }
+  button[type="submit"] {
+    background: var(--accent); border: none; border-radius: 8px;
+    color: #fff; cursor: pointer; font-family: inherit; font-size: 1rem;
+    font-weight: 600; padding: 13px 28px; width: 100%;
+    transition: opacity 0.15s;
+  }
+  button[type="submit"]:hover { opacity: 0.9; }
+  button[type="submit"]:disabled { opacity: 0.55; cursor: not-allowed; }
+  #results { max-width: 680px; margin: 20px auto 0; }
+  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 520px) { .results-grid { grid-template-columns: 1fr; } }
+  .risk-tile { border-radius: var(--radius); padding: 16px; text-align: center; }
+  .risk-tile .lbl { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.75; margin-bottom: 6px; }
+  .risk-tile .val { font-size: 1.9rem; font-weight: 700; line-height: 1; }
+  .risk-tile .lvl { font-size: 0.82rem; font-weight: 600; margin-top: 6px; }
+  .risk-low    { background: var(--ok-light);      color: var(--ok); }
+  .risk-medium { background: var(--caution-light); color: var(--caution); }
+  .risk-high   { background: var(--warn-light);    color: var(--warn); }
+  .recommendation {
+    margin-top: 16px; border-left: 4px solid var(--accent);
+    padding: 12px 16px; background: var(--accent-light);
+    border-radius: 0 8px 8px 0; font-size: 0.9rem;
+  }
+  .recommendation strong { color: var(--accent); }
+  .error-box {
+    background: var(--warn-light); border: 1px solid var(--warn);
+    border-radius: 8px; color: var(--warn); padding: 12px 16px; font-size: 0.9rem;
+  }
+  .spinner {
+    display: none; width: 22px; height: 22px;
+    border: 3px solid rgba(255,255,255,0.4); border-top-color: #fff;
+    border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .wash-pill {
+    background: var(--accent-light); border-radius: 20px; color: var(--accent);
+    font-size: 0.82rem; font-weight: 700; padding: 4px 14px;
+  }
+  .api-row { display: flex; gap: 10px; align-items: flex-end; }
+  .api-row input { flex: 1; }
+  #api-status { font-size: 0.78rem; margin-top: 6px; }
+  .ok  { color: var(--ok); }
+  .err { color: var(--warn); }
+  .try { color: var(--fg-muted); }
+  .test-btn {
+    background: var(--accent); color: #fff; border: none; border-radius: 7px;
+    padding: 9px 16px; font-family: inherit; font-size: 0.85rem;
+    font-weight: 600; cursor: pointer; white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<!-- API connection -->
+<div class="card" style="margin-top:20px">
+  <div class="section-title">API Connection</div>
+  <div class="field">
+    <label for="api-url">Backend URL <span class="req">*</span></label>
+    <div class="api-row">
+      <input type="url" id="api-url" value="http://127.0.0.1:8000" placeholder="http://127.0.0.1:8000">
+      <button type="button" class="test-btn" id="test-btn">Test</button>
+    </div>
+    <div id="api-status" class="try">Enter the API address and click Test.</div>
+  </div>
+</div>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="badge">Kenya KDHS 2022 · ML Model</div>
+    <h1>Child Malnutrition Risk Screener</h1>
+    <p>For use by health workers at facility or community level. Enter the child's details to receive a risk score for stunting, wasting, and underweight.</p>
+  </div>
+</div>
+
+<form id="screen-form" novalidate>
+
+  <div class="card">
+    <div class="section-title">Child Information</div>
+    <div class="fields">
+      <div class="field">
+        <label for="age">Age <span class="req">*</span></label>
+        <input type="number" id="age" min="0" max="59" placeholder="e.g. 24">
+        <span class="hint">Months (0–59)</span>
+      </div>
+      <div class="field">
+        <label for="sex">Sex <span class="req">*</span></label>
+        <select id="sex">
+          <option value="">Select…</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="birth-order">Birth order <span class="req">*</span></label>
+        <input type="number" id="birth-order" min="1" max="20" placeholder="e.g. 2">
+        <span class="hint">1 = first born</span>
+      </div>
+      <div class="field">
+        <label for="prev-interval">Preceding birth interval</label>
+        <input type="number" id="prev-interval" min="0" max="300" placeholder="e.g. 24">
+        <span class="hint">Months since previous birth (0 if first born)</span>
+      </div>
+      <div class="field">
+        <label for="size-birth">Size at birth <span class="req">*</span></label>
+        <select id="size-birth">
+          <option value="">Select…</option>
+          <option value="1">Very small</option>
+          <option value="2">Smaller than average</option>
+          <option value="3">Average</option>
+          <option value="4">Larger than average</option>
+          <option value="5">Very large</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="birth-weight">Birth weight (kg)</label>
+        <input type="number" id="birth-weight" min="0.5" max="6" step="0.1" placeholder="e.g. 3.2">
+        <span class="hint">Leave blank if unknown</span>
+      </div>
+      <div class="field">
+        <label for="diarrhea">Diarrhea in last 2 weeks? <span class="req">*</span></label>
+        <select id="diarrhea">
+          <option value="">Select…</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fever">Fever in last 2 weeks? <span class="req">*</span></label>
+        <select id="fever">
+          <option value="">Select…</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="breastfeeding">Breastfeeding status <span class="req">*</span></label>
+        <select id="breastfeeding">
+          <option value="">Select…</option>
+          <option value="1">Currently breastfeeding</option>
+          <option value="2">Previously breastfed</option>
+          <option value="3">Never breastfed</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Mother / Caregiver</div>
+    <div class="fields">
+      <div class="field">
+        <label for="mat-edu">Maternal education <span class="req">*</span></label>
+        <select id="mat-edu">
+          <option value="">Select…</option>
+          <option value="0">No education</option>
+          <option value="1">Primary</option>
+          <option value="2">Secondary</option>
+          <option value="3">Higher</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mat-bmi">Maternal BMI</label>
+        <input type="number" id="mat-bmi" min="10" max="60" step="0.1" placeholder="e.g. 22.5">
+        <span class="hint">Weight(kg) ÷ Height(m)²</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Household</div>
+    <div class="fields">
+      <div class="field">
+        <label for="wealth">Wealth index <span class="req">*</span></label>
+        <select id="wealth">
+          <option value="">Select…</option>
+          <option value="1">Poorest</option>
+          <option value="2">Poorer</option>
+          <option value="3">Middle</option>
+          <option value="4">Richer</option>
+          <option value="5">Richest</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="under5">Children under 5 in household <span class="req">*</span></label>
+        <input type="number" id="under5" min="1" max="10" placeholder="e.g. 2">
+      </div>
+      <div class="field">
+        <label for="hh-head-sex">Household head sex <span class="req">*</span></label>
+        <select id="hh-head-sex">
+          <option value="">Select…</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="hh-head-age">Household head age</label>
+        <input type="number" id="hh-head-age" min="15" max="99" placeholder="e.g. 35">
+        <span class="hint">Years</span>
+      </div>
+      <div class="field">
+        <label for="electricity">Electricity access <span class="req">*</span></label>
+        <select id="electricity">
+          <option value="">Select…</option>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="residence">Residence <span class="req">*</span></label>
+        <select id="residence">
+          <option value="">Select…</option>
+          <option value="1">Urban</option>
+          <option value="0">Rural</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="county">County <span class="req">*</span></label>
+        <select id="county"><option value="">Select…</option></select>
+      </div>
+      <div class="field full">
+        <label>WASH indicators <span class="req">*</span></label>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:400;color:var(--fg);cursor:pointer;">
+            <input type="checkbox" id="wash-water" style="width:18px;height:18px;accent-color:var(--accent);">
+            Improved water source (piped, protected well, borehole)
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:400;color:var(--fg);cursor:pointer;">
+            <input type="checkbox" id="wash-toilet" style="width:18px;height:18px;accent-color:var(--accent);">
+            Improved sanitation / toilet facility
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:400;color:var(--fg);cursor:pointer;">
+            <input type="checkbox" id="wash-handwash" style="width:18px;height:18px;accent-color:var(--accent);">
+            Handwashing facility with soap observed
+          </label>
+        </div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:10px;">
+          <span class="hint">WASH score (0–3):</span>
+          <span class="wash-pill" id="wash-display">0 / 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button type="submit" id="submit-btn">
+      <span id="btn-text">Screen Child</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+  </div>
+</form>
+
+<div id="results"></div>
+
+<script>
+  const COUNTIES = [
+    [1,"Mombasa"],[2,"Kwale"],[3,"Kilifi"],[4,"Tana River"],[5,"Lamu"],
+    [6,"Taita Taveta"],[7,"Garissa"],[8,"Wajir"],[9,"Mandera"],[10,"Marsabit"],
+    [11,"Isiolo"],[12,"Meru"],[13,"Tharaka Nithi"],[14,"Embu"],[15,"Kitui"],
+    [16,"Machakos"],[17,"Makueni"],[18,"Nyandarua"],[19,"Nyeri"],[20,"Kirinyaga"],
+    [21,"Murang'a"],[22,"Kiambu"],[23,"Turkana"],[24,"West Pokot"],[25,"Samburu"],
+    [26,"Trans Nzoia"],[27,"Uasin Gishu"],[28,"Elgeyo Marakwet"],[29,"Nandi"],
+    [30,"Baringo"],[31,"Laikipia"],[32,"Nakuru"],[33,"Narok"],[34,"Kajiado"],
+    [35,"Kericho"],[36,"Bomet"],[37,"Kakamega"],[38,"Vihiga"],[39,"Bungoma"],
+    [40,"Busia"],[41,"Siaya"],[42,"Kisumu"],[43,"Homa Bay"],[44,"Migori"],
+    [45,"Kisii"],[46,"Nyamira"],[47,"Nairobi"]
+  ];
+  const sel = document.getElementById('county');
+  COUNTIES.forEach(([v,n]) => { const o = document.createElement('option'); o.value=v; o.textContent=n; sel.appendChild(o); });
+
+  const washBoxes = ['wash-water','wash-toilet','wash-handwash'];
+  function updateWash() {
+    const s = washBoxes.filter(id => document.getElementById(id).checked).length;
+    document.getElementById('wash-display').textContent = `${s} / 3`;
+  }
+  washBoxes.forEach(id => document.getElementById(id).addEventListener('change', updateWash));
+
+  document.getElementById('test-btn').addEventListener('click', async () => {
+    const base = document.getElementById('api-url').value.replace(/\/$/, '');
+    const st = document.getElementById('api-status');
+    st.className = 'try'; st.textContent = 'Connecting…';
+    try {
+      const r = await fetch(`${base}/health`);
+      const j = await r.json();
+      if (j.all_models_ready) {
+        st.className = 'ok';
+        st.textContent = `Connected — models loaded: ${j.models_loaded.join(', ')}`;
+      } else {
+        st.className = 'err';
+        st.textContent = `Reachable but models not ready: ${JSON.stringify(j)}`;
+      }
+    } catch(e) {
+      st.className = 'err';
+      st.textContent = `Cannot reach API: ${e.message}`;
+    }
+  });
+
+  document.getElementById('screen-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const spinner = document.getElementById('spinner');
+    const btnText = document.getElementById('btn-text');
+    const resultsEl = document.getElementById('results');
+
+    const g = id => document.getElementById(id).value;
+    const age        = parseFloat(g('age'));
+    const sex        = parseInt(g('sex'));
+    const bo         = parseInt(g('birth-order'));
+    const pi         = parseFloat(g('prev-interval')) || 0;
+    const sb         = parseInt(g('size-birth')) || 3;
+    const bw         = parseFloat(g('birth-weight')) || 3.0;
+    const dia        = parseInt(g('diarrhea'));
+    const fev        = parseInt(g('fever'));
+    const bf         = parseInt(g('breastfeeding'));
+    const edu        = parseInt(g('mat-edu'));
+    const bmi        = parseFloat(g('mat-bmi')) || 22.0;
+    const wealth     = parseInt(g('wealth'));
+    const u5         = parseInt(g('under5'));
+    const hhs        = parseInt(g('hh-head-sex'));
+    const hha        = parseInt(g('hh-head-age')) || 35;
+    const elec       = parseInt(g('electricity'));
+    const urban      = parseInt(g('residence'));
+    const county     = parseInt(g('county'));
+    const wash       = washBoxes.filter(id => document.getElementById(id).checked).length;
+
+    const miss = [];
+    if (isNaN(age))    miss.push('Child age');
+    if (isNaN(sex))    miss.push('Sex');
+    if (isNaN(bo))     miss.push('Birth order');
+    if (isNaN(dia))    miss.push('Diarrhea');
+    if (isNaN(fev))    miss.push('Fever');
+    if (isNaN(bf))     miss.push('Breastfeeding');
+    if (isNaN(edu))    miss.push('Maternal education');
+    if (isNaN(wealth)) miss.push('Wealth index');
+    if (isNaN(u5))     miss.push('Children under 5');
+    if (isNaN(hhs))    miss.push('Household head sex');
+    if (isNaN(elec))   miss.push('Electricity');
+    if (isNaN(urban))  miss.push('Residence');
+    if (isNaN(county)) miss.push('County');
+    if (miss.length) {
+      resultsEl.innerHTML = `<div class="error-box" style="max-width:680px;margin:20px auto 0">Please complete: ${miss.join(', ')}.</div>`;
+      return;
+    }
+
+    const payload = {
+      child_age_months: age, child_sex: sex, birth_order: bo,
+      prev_birth_interval: pi, size_at_birth: sb, birth_weight_kg: bw,
+      diarrhea_2wk: dia, fever_2wk: fev, breastfeeding: bf,
+      maternal_edu: edu, maternal_bmi: bmi, wealth_index: wealth,
+      under5_in_hh: u5, hh_head_sex: hhs, hh_head_age: hha,
+      electricity: elec, residence_urban: urban, wash_score: wash, county,
+    };
+
+    btn.disabled = true; btnText.style.display = 'none'; spinner.style.display = 'block';
+    resultsEl.innerHTML = '';
+
+    const base = document.getElementById('api-url').value.replace(/\/$/, '');
+    try {
+      const resp = await fetch(`${base}/predict`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        throw new Error(err.detail || `HTTP ${resp.status}`);
+      }
+      const data = await resp.json();
+      const preds = data.predictions || {};
+      const st = preds.stunted?.probability ?? 0;
+      const wa = preds.wasted?.probability ?? 0;
+      const uw = preds.underweight?.probability ?? 0;
+
+      const rc = p => p >= 0.6 ? 'risk-high' : p >= 0.35 ? 'risk-medium' : 'risk-low';
+      const rl = p => p >= 0.6 ? 'High risk' : p >= 0.35 ? 'Moderate risk' : 'Low risk';
+      const pc = p => (p*100).toFixed(1)+'%';
+
+      const max = Math.max(st, wa, uw);
+      const rec = max >= 0.6
+        ? '<strong>Immediate referral recommended.</strong> High risk detected. Refer to nutrition unit for anthropometric assessment (MUAC, weight-for-height Z-score) and therapeutic feeding support.'
+        : max >= 0.35
+        ? '<strong>Monitor closely.</strong> Moderate risk. Schedule follow-up within 4 weeks. Counsel caregiver on dietary diversity, breastfeeding, and hygiene.'
+        : '<strong>Continue routine care.</strong> Low risk at this time. Reinforce preventive messages on feeding, immunization, and WASH at the next visit.';
+
+      resultsEl.innerHTML = `
+        <div class="card" style="margin-top:20px">
+          <div class="section-title">Screening Result</div>
+          <div class="results-grid">
+            <div class="risk-tile ${rc(st)}"><div class="lbl">Stunting</div><div class="val">${pc(st)}</div><div class="lvl">${rl(st)}</div></div>
+            <div class="risk-tile ${rc(wa)}"><div class="lbl">Wasting</div><div class="val">${pc(wa)}</div><div class="lvl">${rl(wa)}</div></div>
+            <div class="risk-tile ${rc(uw)}"><div class="lbl">Underweight</div><div class="val">${pc(uw)}</div><div class="lvl">${rl(uw)}</div></div>
+          </div>
+          <div class="recommendation">${rec}</div>
+        </div>`;
+    } catch(err) {
+      resultsEl.innerHTML = `<div class="error-box" style="max-width:680px;margin:20px auto 0">Error: ${err.message}. Is uvicorn running?</div>`;
+    } finally {
+      btn.disabled = false; btnText.style.display = ''; spinner.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

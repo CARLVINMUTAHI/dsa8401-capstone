@@ -1,0 +1,61 @@
+name: Capstone CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    name: Lint, Unit Tests & Docker Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov flake8 httpx
+
+      - name: Lint with flake8
+        run: |
+          flake8 . \
+            --max-line-length=100 \
+            --exclude=.git,__pycache__,models,data,reports \
+            --per-file-ignores="*.py:E501"
+
+      - name: Run unit tests
+        run: |
+          pytest tests/ -v --tb=short --cov=. --cov-report=term-missing
+
+      - name: Build Docker image
+        run: |
+          docker build -t kenya-malnutrition-api:ci .
+
+      - name: Verify Docker container starts
+        run: |
+          docker run -d --name test-api \
+            -v $(pwd)/models:/app/models:ro \
+            -p 8000:8000 \
+            kenya-malnutrition-api:ci
+          sleep 5
+          curl --retry 5 --retry-delay 2 --fail http://localhost:8000/health || \
+            (docker logs test-api && exit 1)
+          docker stop test-api
+          docker rm test-api

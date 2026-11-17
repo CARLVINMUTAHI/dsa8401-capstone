@@ -1,0 +1,24 @@
+============================================================
+EDA SUMMARY — 2022 KDHS Child Malnutrition
+============================================================
+Total children: 17,283
+Counties covered: 47
+
+NATIONAL PREVALENCE
+  Stunting    : 17.9%  (n=3,099)
+  Wasting     : 7.2%   (n=1,238)
+  Underweight : 12.5%  (n=2,158)
+
+CLASS IMBALANCE RATIOS
+  stunted        : 4.58:1 → SMOTE justified
+  wasted         : 12.96:1 → SMOTE justified
+  underweight    : 7.01:1 → SMOTE justified
+
+TOP 5 COUNTIES — STUNTING
+  Kilifi              : 34.7%
+  West Pokot          : 33.1%
+  Samburu             : 30.3%
+  Meru                : 24.6%
+  Kitui               : 24.1%
+
+============================================================

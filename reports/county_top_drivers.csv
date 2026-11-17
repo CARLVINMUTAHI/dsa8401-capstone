@@ -1,0 +1,142 @@
+county,county_name,outcome,top_1_driver,top_2_driver,top_3_driver,top_4_driver,top_5_driver
+1,Mombasa,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+2,Kwale,stunted,wealth_index,child_age_months,wash_score,prev_birth_interval,child_sex
+3,Kilifi,stunted,child_age_months,wealth_index,wash_score,prev_birth_interval,maternal_bmi
+4,Tana River,stunted,child_age_months,wealth_index,wash_score,maternal_edu,prev_birth_interval
+5,Lamu,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,prev_birth_interval
+6,Taita/Taveta,stunted,wealth_index,child_age_months,wash_score,prev_birth_interval,birth_weight_kg
+7,Garissa,stunted,child_age_months,wealth_index,wash_score,maternal_edu,birth_weight_kg
+8,Wajir,stunted,child_age_months,maternal_edu,wealth_index,wash_score,birth_weight_kg
+9,Mandera,stunted,child_age_months,wash_score,maternal_edu,wealth_index,birth_weight_kg
+10,Marsabit,stunted,child_age_months,wash_score,wealth_index,maternal_edu,prev_birth_interval
+11,Isiolo,stunted,child_age_months,wealth_index,wash_score,maternal_edu,prev_birth_interval
+12,Meru,stunted,wealth_index,child_age_months,wash_score,prev_birth_interval,birth_weight_kg
+13,Tharaka-Nithi,stunted,wealth_index,child_age_months,maternal_edu,prev_birth_interval,wash_score
+14,Embu,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+15,Kitui,stunted,wealth_index,child_age_months,maternal_edu,prev_birth_interval,birth_weight_kg
+16,Machakos,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+17,Makueni,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+18,Nyandarua,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,maternal_edu
+19,Nyeri,stunted,wealth_index,maternal_edu,child_age_months,wash_score,birth_weight_kg
+20,Kirinyaga,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+21,Murang'a,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+22,Kiambu,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,maternal_edu
+23,Turkana,stunted,child_age_months,wealth_index,prev_birth_interval,wash_score,maternal_edu
+24,West Pokot,stunted,child_age_months,wealth_index,prev_birth_interval,maternal_edu,birth_weight_kg
+25,Samburu,stunted,wealth_index,child_age_months,prev_birth_interval,wash_score,maternal_edu
+26,Trans Nzoia,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,maternal_edu
+27,Uasin Gishu,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+28,Elgeyo/Marakwet,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+29,Nandi,stunted,wealth_index,child_age_months,wash_score,prev_birth_interval,birth_weight_kg
+30,Baringo,stunted,child_age_months,wealth_index,wash_score,maternal_edu,birth_weight_kg
+31,Laikipia,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+32,Nakuru,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,maternal_edu
+33,Narok,stunted,child_age_months,wealth_index,maternal_edu,wash_score,birth_weight_kg
+34,Kajiado,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+35,Kericho,stunted,child_age_months,wealth_index,maternal_edu,wash_score,birth_weight_kg
+36,Bomet,stunted,child_age_months,wash_score,wealth_index,birth_weight_kg,maternal_edu
+37,Kakamega,stunted,wealth_index,child_age_months,maternal_edu,wash_score,birth_weight_kg
+38,Vihiga,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+39,Bungoma,stunted,child_age_months,wealth_index,wash_score,maternal_edu,prev_birth_interval
+40,Busia,stunted,child_age_months,wealth_index,wash_score,birth_weight_kg,prev_birth_interval
+41,Siaya,stunted,child_age_months,wealth_index,wash_score,birth_weight_kg,maternal_edu
+42,Kisumu,stunted,wealth_index,child_age_months,wash_score,birth_weight_kg,prev_birth_interval
+43,Homa Bay,stunted,child_age_months,wealth_index,wash_score,birth_weight_kg,prev_birth_interval
+44,Migori,stunted,child_age_months,wealth_index,prev_birth_interval,birth_weight_kg,wash_score
+45,Kisii,stunted,child_age_months,wealth_index,maternal_edu,wash_score,birth_weight_kg
+46,Nyamira,stunted,wealth_index,child_age_months,maternal_edu,prev_birth_interval,wash_score
+47,Nairobi,stunted,wealth_index,child_age_months,wash_score,maternal_edu,birth_weight_kg
+1,Mombasa,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+2,Kwale,wasted,maternal_edu,wash_score,under5_in_hh,birth_order,maternal_bmi
+3,Kilifi,wasted,maternal_edu,wash_score,wealth_index,under5_in_hh,birth_order
+4,Tana River,wasted,maternal_edu,wash_score,birth_order,maternal_bmi,under5_in_hh
+5,Lamu,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+6,Taita/Taveta,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+7,Garissa,wasted,maternal_edu,wash_score,wealth_index,birth_order,maternal_bmi
+8,Wajir,wasted,maternal_edu,wash_score,wealth_index,maternal_bmi,birth_order
+9,Mandera,wasted,maternal_edu,wash_score,birth_order,wealth_index,under5_in_hh
+10,Marsabit,wasted,maternal_edu,wash_score,wealth_index,under5_in_hh,birth_order
+11,Isiolo,wasted,maternal_edu,wash_score,wealth_index,under5_in_hh,birth_order
+12,Meru,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+13,Tharaka-Nithi,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+14,Embu,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+15,Kitui,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+16,Machakos,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+17,Makueni,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+18,Nyandarua,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+19,Nyeri,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+20,Kirinyaga,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+21,Murang'a,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+22,Kiambu,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+23,Turkana,wasted,maternal_edu,wash_score,birth_order,wealth_index,under5_in_hh
+24,West Pokot,wasted,maternal_edu,wash_score,wealth_index,birth_order,maternal_bmi
+25,Samburu,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,maternal_bmi
+26,Trans Nzoia,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+27,Uasin Gishu,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+28,Elgeyo/Marakwet,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+29,Nandi,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+30,Baringo,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+31,Laikipia,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+32,Nakuru,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+33,Narok,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+34,Kajiado,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+35,Kericho,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+36,Bomet,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+37,Kakamega,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+38,Vihiga,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+39,Bungoma,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+40,Busia,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+41,Siaya,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+42,Kisumu,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+43,Homa Bay,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+44,Migori,wasted,maternal_edu,wealth_index,wash_score,under5_in_hh,birth_order
+45,Kisii,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,maternal_bmi
+46,Nyamira,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,birth_order
+47,Nairobi,wasted,maternal_edu,wealth_index,under5_in_hh,wash_score,maternal_bmi
+1,Mombasa,underweight,wealth_index,maternal_edu,birth_order,wash_score,under5_in_hh
+2,Kwale,underweight,birth_order,wash_score,wealth_index,maternal_edu,prev_birth_interval
+3,Kilifi,underweight,birth_order,wealth_index,maternal_edu,wash_score,maternal_bmi
+4,Tana River,underweight,birth_order,wash_score,child_age_months,wealth_index,maternal_edu
+5,Lamu,underweight,wealth_index,birth_order,maternal_edu,wash_score,maternal_bmi
+6,Taita/Taveta,underweight,wealth_index,birth_order,maternal_edu,wash_score,prev_birth_interval
+7,Garissa,underweight,wealth_index,birth_order,wash_score,child_age_months,maternal_bmi
+8,Wajir,underweight,wealth_index,birth_order,wash_score,child_age_months,maternal_bmi
+9,Mandera,underweight,wealth_index,birth_order,wash_score,child_age_months,maternal_bmi
+10,Marsabit,underweight,wealth_index,birth_order,wash_score,child_age_months,maternal_edu
+11,Isiolo,underweight,wealth_index,birth_order,wash_score,maternal_edu,prev_birth_interval
+12,Meru,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+13,Tharaka-Nithi,underweight,wealth_index,maternal_edu,birth_order,wash_score,prev_birth_interval
+14,Embu,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+15,Kitui,underweight,maternal_edu,wealth_index,birth_order,child_age_months,under5_in_hh
+16,Machakos,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+17,Makueni,underweight,wealth_index,maternal_edu,birth_order,wash_score,prev_birth_interval
+18,Nyandarua,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+19,Nyeri,underweight,wealth_index,maternal_edu,wash_score,birth_order,child_age_months
+20,Kirinyaga,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+21,Murang'a,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+22,Kiambu,underweight,wealth_index,maternal_edu,birth_order,wash_score,under5_in_hh
+23,Turkana,underweight,birth_order,wealth_index,child_age_months,maternal_edu,under5_in_hh
+24,West Pokot,underweight,wealth_index,birth_order,maternal_edu,child_age_months,prev_birth_interval
+25,Samburu,underweight,wealth_index,birth_order,maternal_edu,child_age_months,wash_score
+26,Trans Nzoia,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+27,Uasin Gishu,underweight,wealth_index,maternal_edu,birth_order,wash_score,under5_in_hh
+28,Elgeyo/Marakwet,underweight,maternal_edu,wealth_index,birth_order,wash_score,child_age_months
+29,Nandi,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+30,Baringo,underweight,wealth_index,maternal_edu,birth_order,wash_score,child_age_months
+31,Laikipia,underweight,wealth_index,maternal_edu,birth_order,wash_score,under5_in_hh
+32,Nakuru,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+33,Narok,underweight,wealth_index,maternal_edu,birth_order,child_age_months,wash_score
+34,Kajiado,underweight,wealth_index,birth_order,maternal_edu,wash_score,prev_birth_interval
+35,Kericho,underweight,maternal_edu,wealth_index,birth_order,wash_score,child_age_months
+36,Bomet,underweight,maternal_edu,birth_order,wealth_index,wash_score,maternal_bmi
+37,Kakamega,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+38,Vihiga,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+39,Bungoma,underweight,wealth_index,maternal_edu,birth_order,wash_score,maternal_bmi
+40,Busia,underweight,wealth_index,maternal_edu,birth_order,maternal_bmi,wash_score
+41,Siaya,underweight,maternal_edu,wealth_index,birth_order,maternal_bmi,wash_score
+42,Kisumu,underweight,maternal_edu,wealth_index,birth_order,wash_score,maternal_bmi
+43,Homa Bay,underweight,maternal_edu,wealth_index,birth_order,wash_score,maternal_bmi
+44,Migori,underweight,maternal_edu,wealth_index,birth_order,wash_score,maternal_bmi
+45,Kisii,underweight,maternal_edu,wealth_index,birth_order,maternal_bmi,wash_score
+46,Nyamira,underweight,maternal_edu,wealth_index,birth_order,maternal_bmi,wash_score
+47,Nairobi,underweight,wealth_index,maternal_edu,birth_order,maternal_bmi,wash_score

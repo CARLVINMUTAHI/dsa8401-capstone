@@ -1,0 +1,2539 @@
+feature,mean_abs_shap,rank,county,county_name,outcome
+wealth_index,0.0993126767877392,1,1,Mombasa,stunted
+child_age_months,0.04666203503338953,2,1,Mombasa,stunted
+wash_score,0.04596385299612169,3,1,Mombasa,stunted
+maternal_edu,0.026413245150944006,4,1,Mombasa,stunted
+birth_weight_kg,0.025901044475325062,5,1,Mombasa,stunted
+maternal_bmi,0.019651112548984436,6,1,Mombasa,stunted
+under5_in_hh,0.018807132740771202,7,1,Mombasa,stunted
+prev_birth_interval,0.018742469417279008,8,1,Mombasa,stunted
+birth_order,0.018609400612593193,9,1,Mombasa,stunted
+child_sex,0.018296249109242903,10,1,Mombasa,stunted
+hh_head_age,0.0102944780012974,11,1,Mombasa,stunted
+electricity,0.009748189612229449,12,1,Mombasa,stunted
+residence_urban,0.007518091113436052,13,1,Mombasa,stunted
+size_at_birth,0.003783825250462724,14,1,Mombasa,stunted
+fever_2wk,0.003502238625347772,15,1,Mombasa,stunted
+hh_head_sex,0.002805096320125813,16,1,Mombasa,stunted
+breastfeeding,0.002659765993709595,17,1,Mombasa,stunted
+diarrhea_2wk,0.0,18,1,Mombasa,stunted
+wealth_index,0.04795068117546483,1,2,Kwale,stunted
+child_age_months,0.0451604648036741,2,2,Kwale,stunted
+wash_score,0.03634406744111753,3,2,Kwale,stunted
+prev_birth_interval,0.026292568072961067,4,2,Kwale,stunted
+child_sex,0.022996133845542523,5,2,Kwale,stunted
+birth_weight_kg,0.02260780055517541,6,2,Kwale,stunted
+maternal_bmi,0.022323796365117884,7,2,Kwale,stunted
+maternal_edu,0.022235240716830917,8,2,Kwale,stunted
+birth_order,0.021383535976460255,9,2,Kwale,stunted
+under5_in_hh,0.015826886942250255,10,2,Kwale,stunted
+hh_head_age,0.00974591191303598,11,2,Kwale,stunted
+electricity,0.008160769491949247,12,2,Kwale,stunted
+size_at_birth,0.006178414079687,13,2,Kwale,stunted
+residence_urban,0.00335290151183924,14,2,Kwale,stunted
+hh_head_sex,0.0031086938580495186,15,2,Kwale,stunted
+breastfeeding,0.002388349528420731,16,2,Kwale,stunted
+fever_2wk,0.0021024487555006176,17,2,Kwale,stunted
+diarrhea_2wk,0.0,18,2,Kwale,stunted
+child_age_months,0.05376604300992131,1,3,Kilifi,stunted
+wealth_index,0.046436026257183634,2,3,Kilifi,stunted
+wash_score,0.03476888567994644,3,3,Kilifi,stunted
+prev_birth_interval,0.028185619981889704,4,3,Kilifi,stunted
+maternal_bmi,0.024079942136626436,5,3,Kilifi,stunted
+under5_in_hh,0.022652211518873498,6,3,Kilifi,stunted
+maternal_edu,0.022155905198978493,7,3,Kilifi,stunted
+child_sex,0.021774343346865198,8,3,Kilifi,stunted
+birth_order,0.021297892832156884,9,3,Kilifi,stunted
+birth_weight_kg,0.020364893815832643,10,3,Kilifi,stunted
+electricity,0.008551388475265832,11,3,Kilifi,stunted
+hh_head_age,0.0072226964293257406,12,3,Kilifi,stunted
+hh_head_sex,0.003677150126459141,13,3,Kilifi,stunted
+residence_urban,0.0036354818358256885,14,3,Kilifi,stunted
+breastfeeding,0.0034983643238339197,15,3,Kilifi,stunted
+size_at_birth,0.0029736111185664554,16,3,Kilifi,stunted
+fever_2wk,0.002306010582523148,17,3,Kilifi,stunted
+diarrhea_2wk,0.0,18,3,Kilifi,stunted
+child_age_months,0.06072696216986161,1,4,Tana River,stunted
+wealth_index,0.03422666939565772,2,4,Tana River,stunted
+wash_score,0.028314684571225362,3,4,Tana River,stunted
+maternal_edu,0.026553186235490998,4,4,Tana River,stunted
+prev_birth_interval,0.024672900728807824,5,4,Tana River,stunted
+child_sex,0.02212401849989407,6,4,Tana River,stunted
+birth_weight_kg,0.020886371705830204,7,4,Tana River,stunted
+birth_order,0.01941828991437194,8,4,Tana River,stunted
+maternal_bmi,0.019325974518218776,9,4,Tana River,stunted
+under5_in_hh,0.014304282615149861,10,4,Tana River,stunted
+hh_head_age,0.008710386586575308,11,4,Tana River,stunted
+electricity,0.007911024108734496,12,4,Tana River,stunted
+residence_urban,0.006610336382801023,13,4,Tana River,stunted
+breastfeeding,0.0032614192974539944,14,4,Tana River,stunted
+fever_2wk,0.0027259772933838403,15,4,Tana River,stunted
+hh_head_sex,0.00240907325657468,16,4,Tana River,stunted
+size_at_birth,0.0014367869709861804,17,4,Tana River,stunted
+diarrhea_2wk,0.0,18,4,Tana River,stunted
+wealth_index,0.05767632135534073,1,5,Lamu,stunted
+child_age_months,0.051007784931127474,2,5,Lamu,stunted
+wash_score,0.03757039137537449,3,5,Lamu,stunted
+birth_weight_kg,0.02967536132054294,4,5,Lamu,stunted
+prev_birth_interval,0.023237591144308192,5,5,Lamu,stunted
+maternal_edu,0.022292830543179907,6,5,Lamu,stunted
+maternal_bmi,0.021524425197384376,7,5,Lamu,stunted
+child_sex,0.01930126348599361,8,5,Lamu,stunted
+birth_order,0.01884153573263181,9,5,Lamu,stunted
+under5_in_hh,0.0178308968371858,10,5,Lamu,stunted
+electricity,0.01023371244675439,11,5,Lamu,stunted
+hh_head_age,0.008234940793037202,12,5,Lamu,stunted
+residence_urban,0.00609943091648721,13,5,Lamu,stunted
+size_at_birth,0.005662954043569751,14,5,Lamu,stunted
+breastfeeding,0.003502755701657217,15,5,Lamu,stunted
+fever_2wk,0.0028820790236101478,16,5,Lamu,stunted
+hh_head_sex,0.0025228097342213304,17,5,Lamu,stunted
+diarrhea_2wk,0.0,18,5,Lamu,stunted
+wealth_index,0.0634117652371918,1,6,Taita/Taveta,stunted
+child_age_months,0.04671138072453558,2,6,Taita/Taveta,stunted
+wash_score,0.04433266487342515,3,6,Taita/Taveta,stunted
+prev_birth_interval,0.030859789081751812,4,6,Taita/Taveta,stunted
+birth_weight_kg,0.026060511100878096,5,6,Taita/Taveta,stunted
+birth_order,0.023729936729062852,6,6,Taita/Taveta,stunted
+under5_in_hh,0.022369730675265587,7,6,Taita/Taveta,stunted
+maternal_bmi,0.021332783565773738,8,6,Taita/Taveta,stunted
+maternal_edu,0.021220097813278053,9,6,Taita/Taveta,stunted
+child_sex,0.02075130284235809,10,6,Taita/Taveta,stunted
+hh_head_age,0.01049161810663946,11,6,Taita/Taveta,stunted
+electricity,0.008069276607094208,12,6,Taita/Taveta,stunted
+hh_head_sex,0.004984636148678593,13,6,Taita/Taveta,stunted
+residence_urban,0.0046890589487526965,14,6,Taita/Taveta,stunted
+breastfeeding,0.002986035148643606,15,6,Taita/Taveta,stunted
+fever_2wk,0.002787662663852906,16,6,Taita/Taveta,stunted
+size_at_birth,0.0023281392327160443,17,6,Taita/Taveta,stunted
+diarrhea_2wk,0.0,18,6,Taita/Taveta,stunted
+child_age_months,0.05212760945880061,1,7,Garissa,stunted
+wealth_index,0.04789437507999519,2,7,Garissa,stunted
+wash_score,0.04649785840610566,3,7,Garissa,stunted
+maternal_edu,0.04239992353777197,4,7,Garissa,stunted
+birth_weight_kg,0.02581584836092595,5,7,Garissa,stunted
+maternal_bmi,0.021574763296203763,6,7,Garissa,stunted
+child_sex,0.018705752547883914,7,7,Garissa,stunted
+birth_order,0.014384831881727875,8,7,Garissa,stunted
+prev_birth_interval,0.012545115304125838,9,7,Garissa,stunted
+hh_head_age,0.010594249639589328,10,7,Garissa,stunted
+electricity,0.010432195787749163,11,7,Garissa,stunted
+under5_in_hh,0.010077546674278383,12,7,Garissa,stunted
+residence_urban,0.005425441732327898,13,7,Garissa,stunted
+breastfeeding,0.0035110343094809596,14,7,Garissa,stunted
+hh_head_sex,0.0024839274973410532,15,7,Garissa,stunted
+fever_2wk,0.002331292802664539,16,7,Garissa,stunted
+size_at_birth,0.0016068519035960902,17,7,Garissa,stunted
+diarrhea_2wk,0.0,18,7,Garissa,stunted
+child_age_months,0.048244399944491236,1,8,Wajir,stunted
+maternal_edu,0.04164984930716332,2,8,Wajir,stunted
+wealth_index,0.03875527185035762,3,8,Wajir,stunted
+wash_score,0.033307864436573485,4,8,Wajir,stunted
+birth_weight_kg,0.022581244489786562,5,8,Wajir,stunted
+maternal_bmi,0.021578815577817528,6,8,Wajir,stunted
+child_sex,0.02110834373200529,7,8,Wajir,stunted
+prev_birth_interval,0.019143120625389053,8,8,Wajir,stunted
+birth_order,0.016640515950172314,9,8,Wajir,stunted
+electricity,0.011573496587776982,10,8,Wajir,stunted
+under5_in_hh,0.011555656933777548,11,8,Wajir,stunted
+hh_head_age,0.011216690107262534,12,8,Wajir,stunted
+residence_urban,0.006355712057941808,13,8,Wajir,stunted
+breastfeeding,0.003507958610443368,14,8,Wajir,stunted
+fever_2wk,0.003293954094074365,15,8,Wajir,stunted
+hh_head_sex,0.003141742557271649,16,8,Wajir,stunted
+size_at_birth,0.0021345785053997484,17,8,Wajir,stunted
+diarrhea_2wk,0.0,18,8,Wajir,stunted
+child_age_months,0.05124427753897716,1,9,Mandera,stunted
+wash_score,0.04444550300421146,2,9,Mandera,stunted
+maternal_edu,0.037457043500107326,3,9,Mandera,stunted
+wealth_index,0.03421101617463796,4,9,Mandera,stunted
+birth_weight_kg,0.022911084297763153,5,9,Mandera,stunted
+maternal_bmi,0.02227454950660328,6,9,Mandera,stunted
+child_sex,0.018989516466415893,7,9,Mandera,stunted
+prev_birth_interval,0.01853856592808963,8,9,Mandera,stunted
+birth_order,0.017135262250289534,9,9,Mandera,stunted
+under5_in_hh,0.014180342804773201,10,9,Mandera,stunted
+hh_head_age,0.01059642297868872,11,9,Mandera,stunted
+electricity,0.010281580761323511,12,9,Mandera,stunted
+residence_urban,0.006415257336297591,13,9,Mandera,stunted
+breastfeeding,0.0032957356449791683,14,9,Mandera,stunted
+hh_head_sex,0.0031488595155832358,15,9,Mandera,stunted
+fever_2wk,0.002749051690510078,16,9,Mandera,stunted
+size_at_birth,0.001803534853884797,17,9,Mandera,stunted
+diarrhea_2wk,0.0,18,9,Mandera,stunted
+child_age_months,0.06014478911711337,1,10,Marsabit,stunted
+wash_score,0.04638589944054537,2,10,Marsabit,stunted
+wealth_index,0.043209451063498015,3,10,Marsabit,stunted
+maternal_edu,0.03142238422189355,4,10,Marsabit,stunted
+prev_birth_interval,0.023905864485586976,5,10,Marsabit,stunted
+birth_weight_kg,0.0231355633777339,6,10,Marsabit,stunted
+birth_order,0.02085528077330545,7,10,Marsabit,stunted
+maternal_bmi,0.02060752694887657,8,10,Marsabit,stunted
+child_sex,0.018576847347106372,9,10,Marsabit,stunted
+under5_in_hh,0.016028549256498808,10,10,Marsabit,stunted
+electricity,0.009289482618376699,11,10,Marsabit,stunted
+hh_head_age,0.00859110799675961,12,10,Marsabit,stunted
+residence_urban,0.004769316359208208,13,10,Marsabit,stunted
+breastfeeding,0.0034242569475063027,14,10,Marsabit,stunted
+size_at_birth,0.0027811737847994963,15,10,Marsabit,stunted
+fever_2wk,0.0025559137407369717,16,10,Marsabit,stunted
+hh_head_sex,0.002337626466657839,17,10,Marsabit,stunted
+diarrhea_2wk,0.0,18,10,Marsabit,stunted
+child_age_months,0.05319115760380466,1,11,Isiolo,stunted
+wealth_index,0.05156232757364431,2,11,Isiolo,stunted
+wash_score,0.04784153359106116,3,11,Isiolo,stunted
+maternal_edu,0.028839271624795295,4,11,Isiolo,stunted
+prev_birth_interval,0.023661147572767893,5,11,Isiolo,stunted
+birth_weight_kg,0.02332328892667519,6,11,Isiolo,stunted
+birth_order,0.02236887006114076,7,11,Isiolo,stunted
+child_sex,0.02026497089838698,8,11,Isiolo,stunted
+under5_in_hh,0.019435535174495623,9,11,Isiolo,stunted
+maternal_bmi,0.01747403227030816,10,11,Isiolo,stunted
+hh_head_age,0.010859447013036405,11,11,Isiolo,stunted
+electricity,0.00854943551063959,12,11,Isiolo,stunted
+residence_urban,0.004418826159610469,13,11,Isiolo,stunted
+hh_head_sex,0.003096241452406576,14,11,Isiolo,stunted
+breastfeeding,0.0030234621901141273,15,11,Isiolo,stunted
+fever_2wk,0.0026383012419395617,16,11,Isiolo,stunted
+size_at_birth,0.0021226414383015966,17,11,Isiolo,stunted
+diarrhea_2wk,0.0,18,11,Isiolo,stunted
+wealth_index,0.059102421241664135,1,12,Meru,stunted
+child_age_months,0.05658774165312008,2,12,Meru,stunted
+wash_score,0.04362054462038521,3,12,Meru,stunted
+prev_birth_interval,0.03132589490886926,4,12,Meru,stunted
+birth_weight_kg,0.027513294162757003,5,12,Meru,stunted
+under5_in_hh,0.022888536527061548,6,12,Meru,stunted
+maternal_edu,0.022171585412076766,7,12,Meru,stunted
+maternal_bmi,0.021829143731716526,8,12,Meru,stunted
+child_sex,0.020882871449941803,9,12,Meru,stunted
+birth_order,0.020200799646060977,10,12,Meru,stunted
+hh_head_age,0.009445411670128486,11,12,Meru,stunted
+electricity,0.007493505406949579,12,12,Meru,stunted
+residence_urban,0.0056170587517970876,13,12,Meru,stunted
+size_at_birth,0.004571122064723466,14,12,Meru,stunted
+hh_head_sex,0.004445872699432696,15,12,Meru,stunted
+breastfeeding,0.003027875513125907,16,12,Meru,stunted
+fever_2wk,0.001871837369903302,17,12,Meru,stunted
+diarrhea_2wk,0.0,18,12,Meru,stunted
+wealth_index,0.06587881327671179,1,13,Tharaka-Nithi,stunted
+child_age_months,0.05140714630017226,2,13,Tharaka-Nithi,stunted
+maternal_edu,0.03641689929970409,3,13,Tharaka-Nithi,stunted
+prev_birth_interval,0.031680910036326566,4,13,Tharaka-Nithi,stunted
+wash_score,0.031580526112515855,5,13,Tharaka-Nithi,stunted
+birth_weight_kg,0.027809615804007738,6,13,Tharaka-Nithi,stunted
+under5_in_hh,0.026497223358909756,7,13,Tharaka-Nithi,stunted
+birth_order,0.023943339256709918,8,13,Tharaka-Nithi,stunted
+maternal_bmi,0.021120193437321275,9,13,Tharaka-Nithi,stunted
+child_sex,0.018351193781747363,10,13,Tharaka-Nithi,stunted
+hh_head_age,0.010020779305879812,11,13,Tharaka-Nithi,stunted
+electricity,0.008274198104877126,12,13,Tharaka-Nithi,stunted
+residence_urban,0.00481664489102411,13,13,Tharaka-Nithi,stunted
+hh_head_sex,0.004811443475904527,14,13,Tharaka-Nithi,stunted
+breastfeeding,0.002632489017342652,15,13,Tharaka-Nithi,stunted
+fever_2wk,0.0024375415276940166,16,13,Tharaka-Nithi,stunted
+size_at_birth,0.002395182892570956,17,13,Tharaka-Nithi,stunted
+diarrhea_2wk,0.0,18,13,Tharaka-Nithi,stunted
+wealth_index,0.08463625304150527,1,14,Embu,stunted
+child_age_months,0.06104354201102936,2,14,Embu,stunted
+wash_score,0.0429539609260148,3,14,Embu,stunted
+maternal_edu,0.042397669350377025,4,14,Embu,stunted
+birth_weight_kg,0.030418951072490027,5,14,Embu,stunted
+prev_birth_interval,0.026241732961868092,6,14,Embu,stunted
+under5_in_hh,0.024105911190684066,7,14,Embu,stunted
+maternal_bmi,0.023211936215233674,8,14,Embu,stunted
+birth_order,0.022395003251911436,9,14,Embu,stunted
+child_sex,0.022087801404830135,10,14,Embu,stunted
+hh_head_age,0.012009918024334406,11,14,Embu,stunted
+electricity,0.010312261277039048,12,14,Embu,stunted
+residence_urban,0.007487005380932752,13,14,Embu,stunted
+breastfeeding,0.003793106047093258,14,14,Embu,stunted
+hh_head_sex,0.0034120832975641697,15,14,Embu,stunted
+size_at_birth,0.002439914001856426,16,14,Embu,stunted
+fever_2wk,0.0017145820603187123,17,14,Embu,stunted
+diarrhea_2wk,0.0,18,14,Embu,stunted
+wealth_index,0.06094878830274923,1,15,Kitui,stunted
+child_age_months,0.05703120191345125,2,15,Kitui,stunted
+maternal_edu,0.03596561220240111,3,15,Kitui,stunted
+prev_birth_interval,0.035199788441467775,4,15,Kitui,stunted
+birth_weight_kg,0.026762063245068204,5,15,Kitui,stunted
+under5_in_hh,0.024400857222415036,6,15,Kitui,stunted
+birth_order,0.023900891201221193,7,15,Kitui,stunted
+wash_score,0.02335308661596127,8,15,Kitui,stunted
+maternal_bmi,0.021563139634983908,9,15,Kitui,stunted
+child_sex,0.02024760043784026,10,15,Kitui,stunted
+hh_head_age,0.009010818173101925,11,15,Kitui,stunted
+electricity,0.00710149519271463,12,15,Kitui,stunted
+hh_head_sex,0.0064171426924043515,13,15,Kitui,stunted
+size_at_birth,0.002804133565371867,14,15,Kitui,stunted
+residence_urban,0.0027081949374431645,15,15,Kitui,stunted
+breastfeeding,0.0022343670276786434,16,15,Kitui,stunted
+fever_2wk,0.0016948329676451659,17,15,Kitui,stunted
+diarrhea_2wk,0.0,18,15,Kitui,stunted
+wealth_index,0.08691795818868486,1,16,Machakos,stunted
+child_age_months,0.05894601573089185,2,16,Machakos,stunted
+maternal_edu,0.04676165451492163,3,16,Machakos,stunted
+wash_score,0.0419772864764291,4,16,Machakos,stunted
+birth_weight_kg,0.030532401564684074,5,16,Machakos,stunted
+prev_birth_interval,0.025612669342523636,6,16,Machakos,stunted
+maternal_bmi,0.024368396580303077,7,16,Machakos,stunted
+under5_in_hh,0.020943301070525642,8,16,Machakos,stunted
+birth_order,0.020151219883332596,9,16,Machakos,stunted
+child_sex,0.01972204187552971,10,16,Machakos,stunted
+hh_head_age,0.011668235362919208,11,16,Machakos,stunted
+electricity,0.008409279236800234,12,16,Machakos,stunted
+residence_urban,0.007209433980035878,13,16,Machakos,stunted
+hh_head_sex,0.004252209422485431,14,16,Machakos,stunted
+breastfeeding,0.0030796734153316053,15,16,Machakos,stunted
+size_at_birth,0.0027890492005533288,16,16,Machakos,stunted
+fever_2wk,0.0018436038843409647,17,16,Machakos,stunted
+diarrhea_2wk,0.0,18,16,Machakos,stunted
+wealth_index,0.07492810974304039,1,17,Makueni,stunted
+child_age_months,0.0560175448239043,2,17,Makueni,stunted
+maternal_edu,0.03590749488649667,3,17,Makueni,stunted
+wash_score,0.03421533668714251,4,17,Makueni,stunted
+birth_weight_kg,0.03351216601051977,5,17,Makueni,stunted
+prev_birth_interval,0.03225303986069102,6,17,Makueni,stunted
+maternal_bmi,0.025524771918044375,7,17,Makueni,stunted
+birth_order,0.023897606732150654,8,17,Makueni,stunted
+under5_in_hh,0.022701284175829384,9,17,Makueni,stunted
+child_sex,0.022030996413316708,10,17,Makueni,stunted
+hh_head_age,0.009252413970605786,11,17,Makueni,stunted
+electricity,0.0063079695565093526,12,17,Makueni,stunted
+hh_head_sex,0.004996778379005633,13,17,Makueni,stunted
+residence_urban,0.0035031676269310723,14,17,Makueni,stunted
+size_at_birth,0.003428266737888049,15,17,Makueni,stunted
+breastfeeding,0.003214796515543141,16,17,Makueni,stunted
+fever_2wk,0.002084443156893205,17,17,Makueni,stunted
+diarrhea_2wk,0.0,18,17,Makueni,stunted
+wealth_index,0.08760651188389867,1,18,Nyandarua,stunted
+child_age_months,0.053404165503352266,2,18,Nyandarua,stunted
+wash_score,0.04223633062262668,3,18,Nyandarua,stunted
+birth_weight_kg,0.035931445478822044,4,18,Nyandarua,stunted
+maternal_edu,0.028649769495645443,5,18,Nyandarua,stunted
+prev_birth_interval,0.025564455544089867,6,18,Nyandarua,stunted
+maternal_bmi,0.024369108971073312,7,18,Nyandarua,stunted
+under5_in_hh,0.02218088466456347,8,18,Nyandarua,stunted
+child_sex,0.021459650713871504,9,18,Nyandarua,stunted
+birth_order,0.018898512125589916,10,18,Nyandarua,stunted
+electricity,0.009200982940812022,11,18,Nyandarua,stunted
+hh_head_age,0.00915158506161877,12,18,Nyandarua,stunted
+size_at_birth,0.008240341437931405,13,18,Nyandarua,stunted
+residence_urban,0.006459965324077664,14,18,Nyandarua,stunted
+hh_head_sex,0.004379143026771933,15,18,Nyandarua,stunted
+breastfeeding,0.003774197937128215,16,18,Nyandarua,stunted
+fever_2wk,0.0016390574542544008,17,18,Nyandarua,stunted
+diarrhea_2wk,0.0,18,18,Nyandarua,stunted
+wealth_index,0.08804421049501444,1,19,Nyeri,stunted
+maternal_edu,0.05399810763422176,2,19,Nyeri,stunted
+child_age_months,0.0505841582072966,3,19,Nyeri,stunted
+wash_score,0.045136454885513363,4,19,Nyeri,stunted
+birth_weight_kg,0.03467086995498621,5,19,Nyeri,stunted
+under5_in_hh,0.025233355572390037,6,19,Nyeri,stunted
+birth_order,0.023452926692881536,7,19,Nyeri,stunted
+child_sex,0.022438924433153883,8,19,Nyeri,stunted
+maternal_bmi,0.021920156366370513,9,19,Nyeri,stunted
+prev_birth_interval,0.020655662415778507,10,19,Nyeri,stunted
+hh_head_age,0.011393561158157806,11,19,Nyeri,stunted
+electricity,0.00966206650724682,12,19,Nyeri,stunted
+residence_urban,0.008912156052573504,13,19,Nyeri,stunted
+size_at_birth,0.00401323590680058,14,19,Nyeri,stunted
+hh_head_sex,0.003739739518134806,15,19,Nyeri,stunted
+breastfeeding,0.00333833850826678,16,19,Nyeri,stunted
+fever_2wk,0.001341427640830316,17,19,Nyeri,stunted
+diarrhea_2wk,0.0,18,19,Nyeri,stunted
+wealth_index,0.0962401398881907,1,20,Kirinyaga,stunted
+child_age_months,0.05054901987036966,2,20,Kirinyaga,stunted
+wash_score,0.049345423940008,3,20,Kirinyaga,stunted
+maternal_edu,0.03395681573096674,4,20,Kirinyaga,stunted
+birth_weight_kg,0.031305588083536555,5,20,Kirinyaga,stunted
+prev_birth_interval,0.02723082066784268,6,20,Kirinyaga,stunted
+under5_in_hh,0.026733385539379997,7,20,Kirinyaga,stunted
+birth_order,0.023296019827167853,8,20,Kirinyaga,stunted
+child_sex,0.02203525498129174,9,20,Kirinyaga,stunted
+maternal_bmi,0.020687028190785793,10,20,Kirinyaga,stunted
+electricity,0.010969198188862203,11,20,Kirinyaga,stunted
+hh_head_age,0.010825093756894211,12,20,Kirinyaga,stunted
+residence_urban,0.006437963354934808,13,20,Kirinyaga,stunted
+hh_head_sex,0.004582504758220738,14,20,Kirinyaga,stunted
+breastfeeding,0.0031988941983266193,15,20,Kirinyaga,stunted
+size_at_birth,0.0027975013536626443,16,20,Kirinyaga,stunted
+fever_2wk,0.0022678545440210063,17,20,Kirinyaga,stunted
+diarrhea_2wk,0.0,18,20,Kirinyaga,stunted
+wealth_index,0.0697056590080465,1,21,Murang'a,stunted
+child_age_months,0.06153109347260751,2,21,Murang'a,stunted
+wash_score,0.042159833290684484,3,21,Murang'a,stunted
+maternal_edu,0.03467116535869706,4,21,Murang'a,stunted
+birth_weight_kg,0.030020079036426003,5,21,Murang'a,stunted
+maternal_bmi,0.02595684970989695,6,21,Murang'a,stunted
+prev_birth_interval,0.02579078967529691,7,21,Murang'a,stunted
+under5_in_hh,0.02162593260295322,8,21,Murang'a,stunted
+birth_order,0.020688419444182357,9,21,Murang'a,stunted
+child_sex,0.0200405085490345,10,21,Murang'a,stunted
+electricity,0.009436008859905825,11,21,Murang'a,stunted
+hh_head_age,0.009332229117436728,12,21,Murang'a,stunted
+residence_urban,0.006584964001623286,13,21,Murang'a,stunted
+size_at_birth,0.005935404052595399,14,21,Murang'a,stunted
+hh_head_sex,0.005226278203169513,15,21,Murang'a,stunted
+breastfeeding,0.0037206248256790443,16,21,Murang'a,stunted
+fever_2wk,0.00217553956813963,17,21,Murang'a,stunted
+diarrhea_2wk,0.0,18,21,Murang'a,stunted
+wealth_index,0.10934967943244533,1,22,Kiambu,stunted
+child_age_months,0.05490067782419997,2,22,Kiambu,stunted
+wash_score,0.04638891457527709,3,22,Kiambu,stunted
+birth_weight_kg,0.03192015585495692,4,22,Kiambu,stunted
+maternal_edu,0.03189160870396114,5,22,Kiambu,stunted
+prev_birth_interval,0.024950325784786953,6,22,Kiambu,stunted
+under5_in_hh,0.02254110534273836,7,22,Kiambu,stunted
+child_sex,0.021147954027990773,8,22,Kiambu,stunted
+maternal_bmi,0.02086705387008035,9,22,Kiambu,stunted
+birth_order,0.019251556852210677,10,22,Kiambu,stunted
+electricity,0.010646499280175834,11,22,Kiambu,stunted
+hh_head_age,0.00932832812805819,12,22,Kiambu,stunted
+residence_urban,0.007912798052974769,13,22,Kiambu,stunted
+breastfeeding,0.004279758459474592,14,22,Kiambu,stunted
+hh_head_sex,0.0037961713871095307,15,22,Kiambu,stunted
+size_at_birth,0.0024767704810072936,16,22,Kiambu,stunted
+fever_2wk,0.0023934716185511126,17,22,Kiambu,stunted
+diarrhea_2wk,0.0,18,22,Kiambu,stunted
+child_age_months,0.06642664119554662,1,23,Turkana,stunted
+wealth_index,0.03939101587581104,2,23,Turkana,stunted
+prev_birth_interval,0.02611616246666932,3,23,Turkana,stunted
+wash_score,0.023545539435049407,4,23,Turkana,stunted
+maternal_edu,0.02189062655866743,5,23,Turkana,stunted
+birth_weight_kg,0.021489325914405853,6,23,Turkana,stunted
+child_sex,0.020479362699580166,7,23,Turkana,stunted
+maternal_bmi,0.018952119773501683,8,23,Turkana,stunted
+under5_in_hh,0.016832407729697563,9,23,Turkana,stunted
+birth_order,0.016592035318909685,10,23,Turkana,stunted
+electricity,0.009563908291645518,11,23,Turkana,stunted
+hh_head_age,0.009400307538168421,12,23,Turkana,stunted
+hh_head_sex,0.004419486239043908,13,23,Turkana,stunted
+residence_urban,0.004186365514422321,14,23,Turkana,stunted
+size_at_birth,0.0030944592350742556,15,23,Turkana,stunted
+breastfeeding,0.0029114827132330494,16,23,Turkana,stunted
+fever_2wk,0.002442892497128425,17,23,Turkana,stunted
+diarrhea_2wk,0.0,18,23,Turkana,stunted
+child_age_months,0.06624030827710801,1,24,West Pokot,stunted
+wealth_index,0.043654314185665725,2,24,West Pokot,stunted
+prev_birth_interval,0.02832333331329847,3,24,West Pokot,stunted
+maternal_edu,0.026984774424266788,4,24,West Pokot,stunted
+birth_weight_kg,0.022318397347710312,5,24,West Pokot,stunted
+maternal_bmi,0.02060010574537605,6,24,West Pokot,stunted
+child_sex,0.020509492554716152,7,24,West Pokot,stunted
+birth_order,0.020499862840675835,8,24,West Pokot,stunted
+wash_score,0.02018493517291496,9,24,West Pokot,stunted
+under5_in_hh,0.016247688699468032,10,24,West Pokot,stunted
+hh_head_age,0.010572026876100284,11,24,West Pokot,stunted
+electricity,0.009735490001871067,12,24,West Pokot,stunted
+hh_head_sex,0.0037032604063121344,13,24,West Pokot,stunted
+size_at_birth,0.0030657128332020646,14,24,West Pokot,stunted
+breastfeeding,0.0029747038992171512,15,24,West Pokot,stunted
+residence_urban,0.002520883470339401,16,24,West Pokot,stunted
+fever_2wk,0.00159856714268328,17,24,West Pokot,stunted
+diarrhea_2wk,0.0,18,24,West Pokot,stunted
+wealth_index,0.056120231730139025,1,25,Samburu,stunted
+child_age_months,0.05523722660876047,2,25,Samburu,stunted
+prev_birth_interval,0.029992635091439603,3,25,Samburu,stunted
+wash_score,0.026189008090594247,4,25,Samburu,stunted
+maternal_edu,0.025882656729319588,5,25,Samburu,stunted
+birth_order,0.022850583976169375,6,25,Samburu,stunted
+birth_weight_kg,0.022674729410391118,7,25,Samburu,stunted
+child_sex,0.01982203462362761,8,25,Samburu,stunted
+under5_in_hh,0.01934336570264474,9,25,Samburu,stunted
+maternal_bmi,0.015004758230169004,10,25,Samburu,stunted
+hh_head_age,0.010582575495706913,11,25,Samburu,stunted
+electricity,0.00835769639563184,12,25,Samburu,stunted
+hh_head_sex,0.0030756880831684405,13,25,Samburu,stunted
+residence_urban,0.002883258757603712,14,25,Samburu,stunted
+size_at_birth,0.0027829720490610598,15,25,Samburu,stunted
+breastfeeding,0.0027158275421663718,16,25,Samburu,stunted
+fever_2wk,0.0020089901033481547,17,25,Samburu,stunted
+diarrhea_2wk,0.0,18,25,Samburu,stunted
+wealth_index,0.06441636500440288,1,26,Trans Nzoia,stunted
+child_age_months,0.06363122216364436,2,26,Trans Nzoia,stunted
+wash_score,0.05179285369715157,3,26,Trans Nzoia,stunted
+birth_weight_kg,0.03019763889416115,4,26,Trans Nzoia,stunted
+maternal_edu,0.025295283245556775,5,26,Trans Nzoia,stunted
+prev_birth_interval,0.025082970944793836,6,26,Trans Nzoia,stunted
+birth_order,0.024622055538462872,7,26,Trans Nzoia,stunted
+maternal_bmi,0.023887358972841305,8,26,Trans Nzoia,stunted
+child_sex,0.020475312864557817,9,26,Trans Nzoia,stunted
+under5_in_hh,0.02000492249106295,10,26,Trans Nzoia,stunted
+hh_head_age,0.008805530447315075,11,26,Trans Nzoia,stunted
+electricity,0.007387111770519429,12,26,Trans Nzoia,stunted
+size_at_birth,0.006358393469685512,13,26,Trans Nzoia,stunted
+residence_urban,0.006023360405597245,14,26,Trans Nzoia,stunted
+hh_head_sex,0.004198420399732053,15,26,Trans Nzoia,stunted
+breastfeeding,0.0033376147954382396,16,26,Trans Nzoia,stunted
+fever_2wk,0.0026394824183970027,17,26,Trans Nzoia,stunted
+diarrhea_2wk,0.0,18,26,Trans Nzoia,stunted
+wealth_index,0.09343504492665655,1,27,Uasin Gishu,stunted
+child_age_months,0.05392099959680495,2,27,Uasin Gishu,stunted
+maternal_edu,0.03924965621056209,3,27,Uasin Gishu,stunted
+wash_score,0.03849142614467923,4,27,Uasin Gishu,stunted
+birth_weight_kg,0.03143069260681676,5,27,Uasin Gishu,stunted
+under5_in_hh,0.024504740088344284,6,27,Uasin Gishu,stunted
+child_sex,0.023904645433213828,7,27,Uasin Gishu,stunted
+birth_order,0.02211894906905641,8,27,Uasin Gishu,stunted
+prev_birth_interval,0.021207494351263435,9,27,Uasin Gishu,stunted
+maternal_bmi,0.019724775312154663,10,27,Uasin Gishu,stunted
+electricity,0.008818826744295257,11,27,Uasin Gishu,stunted
+hh_head_age,0.008689147430259806,12,27,Uasin Gishu,stunted
+residence_urban,0.005882971385967494,13,27,Uasin Gishu,stunted
+size_at_birth,0.0046074563561910534,14,27,Uasin Gishu,stunted
+hh_head_sex,0.003618217501865453,15,27,Uasin Gishu,stunted
+breastfeeding,0.0034780990001312692,16,27,Uasin Gishu,stunted
+fever_2wk,0.0032503051009654914,17,27,Uasin Gishu,stunted
+diarrhea_2wk,0.0,18,27,Uasin Gishu,stunted
+wealth_index,0.05731047003568009,1,28,Elgeyo/Marakwet,stunted
+child_age_months,0.0559120874806674,2,28,Elgeyo/Marakwet,stunted
+maternal_edu,0.041699684156852025,3,28,Elgeyo/Marakwet,stunted
+wash_score,0.03344124018460792,4,28,Elgeyo/Marakwet,stunted
+birth_weight_kg,0.029234585970329772,5,28,Elgeyo/Marakwet,stunted
+prev_birth_interval,0.024210445774789466,6,28,Elgeyo/Marakwet,stunted
+birth_order,0.022475230642135843,7,28,Elgeyo/Marakwet,stunted
+under5_in_hh,0.02203874544218647,8,28,Elgeyo/Marakwet,stunted
+child_sex,0.021908187952894034,9,28,Elgeyo/Marakwet,stunted
+maternal_bmi,0.02062049191977649,10,28,Elgeyo/Marakwet,stunted
+hh_head_age,0.010219102900616226,11,28,Elgeyo/Marakwet,stunted
+electricity,0.008760136620521441,12,28,Elgeyo/Marakwet,stunted
+residence_urban,0.005082007327705373,13,28,Elgeyo/Marakwet,stunted
+size_at_birth,0.003491698498145476,14,28,Elgeyo/Marakwet,stunted
+breastfeeding,0.003265294186075468,15,28,Elgeyo/Marakwet,stunted
+hh_head_sex,0.0030231360574898354,16,28,Elgeyo/Marakwet,stunted
+fever_2wk,0.0022790656067243034,17,28,Elgeyo/Marakwet,stunted
+diarrhea_2wk,0.0,18,28,Elgeyo/Marakwet,stunted
+wealth_index,0.06822969314581467,1,29,Nandi,stunted
+child_age_months,0.057518886256416116,2,29,Nandi,stunted
+wash_score,0.036719027348257494,3,29,Nandi,stunted
+prev_birth_interval,0.031307556629706294,4,29,Nandi,stunted
+birth_weight_kg,0.02847653727962358,5,29,Nandi,stunted
+maternal_edu,0.02744738652004805,6,29,Nandi,stunted
+under5_in_hh,0.023273123224158934,7,29,Nandi,stunted
+child_sex,0.022037368318256347,8,29,Nandi,stunted
+birth_order,0.02115482192951536,9,29,Nandi,stunted
+maternal_bmi,0.01747938688473886,10,29,Nandi,stunted
+electricity,0.008522290241357748,11,29,Nandi,stunted
+hh_head_age,0.0076054953913644524,12,29,Nandi,stunted
+residence_urban,0.004782787477695116,13,29,Nandi,stunted
+breastfeeding,0.0037935976657823673,14,29,Nandi,stunted
+hh_head_sex,0.0036893393582278743,15,29,Nandi,stunted
+size_at_birth,0.003017673521221409,16,29,Nandi,stunted
+fever_2wk,0.001736221034197353,17,29,Nandi,stunted
+diarrhea_2wk,0.0,18,29,Nandi,stunted
+child_age_months,0.06045147381296309,1,30,Baringo,stunted
+wealth_index,0.057561215263555544,2,30,Baringo,stunted
+wash_score,0.03380125889203819,3,30,Baringo,stunted
+maternal_edu,0.029677457935540507,4,30,Baringo,stunted
+birth_weight_kg,0.02637833142663123,5,30,Baringo,stunted
+prev_birth_interval,0.025910846344523657,6,30,Baringo,stunted
+child_sex,0.022390474126605348,7,30,Baringo,stunted
+birth_order,0.019701424739706336,8,30,Baringo,stunted
+under5_in_hh,0.018414538851111138,9,30,Baringo,stunted
+maternal_bmi,0.018008381121689693,10,30,Baringo,stunted
+electricity,0.009313998704086618,11,30,Baringo,stunted
+hh_head_age,0.00888079207711698,12,30,Baringo,stunted
+size_at_birth,0.007026066594077958,13,30,Baringo,stunted
+residence_urban,0.00474004617004514,14,30,Baringo,stunted
+breastfeeding,0.0035567262453275817,15,30,Baringo,stunted
+hh_head_sex,0.0030759041364699707,16,30,Baringo,stunted
+fever_2wk,0.0025322363933805675,17,30,Baringo,stunted
+diarrhea_2wk,0.0,18,30,Baringo,stunted
+wealth_index,0.09466156907470541,1,31,Laikipia,stunted
+child_age_months,0.04905833517171013,2,31,Laikipia,stunted
+maternal_edu,0.04258535638834663,3,31,Laikipia,stunted
+wash_score,0.033829604454889646,4,31,Laikipia,stunted
+birth_weight_kg,0.031470555543559986,5,31,Laikipia,stunted
+prev_birth_interval,0.025128711310861574,6,31,Laikipia,stunted
+under5_in_hh,0.024662196521324477,7,31,Laikipia,stunted
+child_sex,0.02210808364052494,8,31,Laikipia,stunted
+maternal_bmi,0.02192991559518666,9,31,Laikipia,stunted
+birth_order,0.018634194354884972,10,31,Laikipia,stunted
+hh_head_age,0.010867459730431952,11,31,Laikipia,stunted
+electricity,0.01023134497827908,12,31,Laikipia,stunted
+residence_urban,0.005710647913553138,13,31,Laikipia,stunted
+hh_head_sex,0.004484490387126079,14,31,Laikipia,stunted
+size_at_birth,0.0036760459775493385,15,31,Laikipia,stunted
+breastfeeding,0.00265747702167778,16,31,Laikipia,stunted
+fever_2wk,0.0022483424065319873,17,31,Laikipia,stunted
+diarrhea_2wk,0.0,18,31,Laikipia,stunted
+wealth_index,0.07997549090577977,1,32,Nakuru,stunted
+child_age_months,0.05272886329838482,2,32,Nakuru,stunted
+wash_score,0.0382940592441223,3,32,Nakuru,stunted
+birth_weight_kg,0.031272988691255055,4,32,Nakuru,stunted
+maternal_edu,0.030205626639745735,5,32,Nakuru,stunted
+prev_birth_interval,0.026038138863075117,6,32,Nakuru,stunted
+under5_in_hh,0.024786651635418988,7,32,Nakuru,stunted
+maternal_bmi,0.024679699080219965,8,32,Nakuru,stunted
+child_sex,0.023104688040495855,9,32,Nakuru,stunted
+birth_order,0.019242504603082314,10,32,Nakuru,stunted
+electricity,0.010477312814894,11,32,Nakuru,stunted
+hh_head_age,0.009394912057129145,12,32,Nakuru,stunted
+residence_urban,0.005913591681089334,13,32,Nakuru,stunted
+hh_head_sex,0.00455176167007046,14,32,Nakuru,stunted
+breastfeeding,0.0033446690704071035,15,32,Nakuru,stunted
+size_at_birth,0.002920169661805202,16,32,Nakuru,stunted
+fever_2wk,0.002458907313396049,17,32,Nakuru,stunted
+diarrhea_2wk,0.0,18,32,Nakuru,stunted
+child_age_months,0.06590439583730702,1,33,Narok,stunted
+wealth_index,0.05474517295918401,2,33,Narok,stunted
+maternal_edu,0.029892253180592084,3,33,Narok,stunted
+wash_score,0.028623269956377626,4,33,Narok,stunted
+birth_weight_kg,0.028590674833202025,5,33,Narok,stunted
+prev_birth_interval,0.023664083312550484,6,33,Narok,stunted
+maternal_bmi,0.022987705643983093,7,33,Narok,stunted
+child_sex,0.021086762703349624,8,33,Narok,stunted
+under5_in_hh,0.02016069837393738,9,33,Narok,stunted
+birth_order,0.01844536942777568,10,33,Narok,stunted
+hh_head_age,0.00807046156235985,11,33,Narok,stunted
+electricity,0.0075674664612392535,12,33,Narok,stunted
+size_at_birth,0.005362034959486944,13,33,Narok,stunted
+residence_urban,0.004008391764256448,14,33,Narok,stunted
+hh_head_sex,0.003117586140191906,15,33,Narok,stunted
+breastfeeding,0.003110819817047897,16,33,Narok,stunted
+fever_2wk,0.002271838097765615,17,33,Narok,stunted
+diarrhea_2wk,0.0,18,33,Narok,stunted
+wealth_index,0.06766791967019069,1,34,Kajiado,stunted
+child_age_months,0.0585116325658051,2,34,Kajiado,stunted
+maternal_edu,0.03242747158292379,3,34,Kajiado,stunted
+wash_score,0.030280437503956134,4,34,Kajiado,stunted
+birth_weight_kg,0.025490290516471618,5,34,Kajiado,stunted
+prev_birth_interval,0.022690085858589094,6,34,Kajiado,stunted
+child_sex,0.022264520126155856,7,34,Kajiado,stunted
+birth_order,0.021942149598279254,8,34,Kajiado,stunted
+under5_in_hh,0.021219059119858073,9,34,Kajiado,stunted
+maternal_bmi,0.017452673758070147,10,34,Kajiado,stunted
+hh_head_age,0.011156958205336593,11,34,Kajiado,stunted
+electricity,0.008845989899241421,12,34,Kajiado,stunted
+residence_urban,0.004312165110133802,13,34,Kajiado,stunted
+size_at_birth,0.0041178925950973696,14,34,Kajiado,stunted
+hh_head_sex,0.003917582407608211,15,34,Kajiado,stunted
+breastfeeding,0.003088932064846087,16,34,Kajiado,stunted
+fever_2wk,0.002354439931730278,17,34,Kajiado,stunted
+diarrhea_2wk,0.0,18,34,Kajiado,stunted
+child_age_months,0.06453499393416487,1,35,Kericho,stunted
+wealth_index,0.05545557291247157,2,35,Kericho,stunted
+maternal_edu,0.0372740869739255,3,35,Kericho,stunted
+wash_score,0.032811324902330935,4,35,Kericho,stunted
+birth_weight_kg,0.02879773500572305,5,35,Kericho,stunted
+prev_birth_interval,0.026319274531140024,6,35,Kericho,stunted
+maternal_bmi,0.023380864693757355,7,35,Kericho,stunted
+under5_in_hh,0.02200623569699637,8,35,Kericho,stunted
+child_sex,0.021851878667315413,9,35,Kericho,stunted
+birth_order,0.020524992286797335,10,35,Kericho,stunted
+hh_head_age,0.009034217165932987,11,35,Kericho,stunted
+electricity,0.008712710366237593,12,35,Kericho,stunted
+residence_urban,0.0046011107356279555,13,35,Kericho,stunted
+breastfeeding,0.003606273125862959,14,35,Kericho,stunted
+hh_head_sex,0.003082388198350669,15,35,Kericho,stunted
+size_at_birth,0.0029980343430246513,16,35,Kericho,stunted
+fever_2wk,0.00156767884014968,17,35,Kericho,stunted
+diarrhea_2wk,0.0,18,35,Kericho,stunted
+child_age_months,0.056051418290578,1,36,Bomet,stunted
+wash_score,0.05253037460703657,2,36,Bomet,stunted
+wealth_index,0.0389303450322287,3,36,Bomet,stunted
+birth_weight_kg,0.028720191585190086,4,36,Bomet,stunted
+maternal_edu,0.026547243038996436,5,36,Bomet,stunted
+prev_birth_interval,0.025839589260860798,6,36,Bomet,stunted
+maternal_bmi,0.025830639823111092,7,36,Bomet,stunted
+under5_in_hh,0.02126994271843932,8,36,Bomet,stunted
+child_sex,0.01962209029661064,9,36,Bomet,stunted
+birth_order,0.019009525942153938,10,36,Bomet,stunted
+hh_head_age,0.008239903332011984,11,36,Bomet,stunted
+electricity,0.00799617297294694,12,36,Bomet,stunted
+residence_urban,0.004562403474301002,13,36,Bomet,stunted
+breastfeeding,0.003568804947517064,14,36,Bomet,stunted
+hh_head_sex,0.0035625214908592343,15,36,Bomet,stunted
+fever_2wk,0.0026999492689320985,16,36,Bomet,stunted
+size_at_birth,0.002431764173852259,17,36,Bomet,stunted
+diarrhea_2wk,0.0,18,36,Bomet,stunted
+wealth_index,0.06298727500214678,1,37,Kakamega,stunted
+child_age_months,0.053377839704185984,2,37,Kakamega,stunted
+maternal_edu,0.04152660404507266,3,37,Kakamega,stunted
+wash_score,0.03497209872265713,4,37,Kakamega,stunted
+birth_weight_kg,0.02723588885780822,5,37,Kakamega,stunted
+prev_birth_interval,0.02536373889381716,6,37,Kakamega,stunted
+maternal_bmi,0.024170320762337976,7,37,Kakamega,stunted
+under5_in_hh,0.02348617625189933,8,37,Kakamega,stunted
+child_sex,0.021321094749208885,9,37,Kakamega,stunted
+birth_order,0.019545563711877295,10,37,Kakamega,stunted
+hh_head_age,0.008388277758235927,11,37,Kakamega,stunted
+electricity,0.00796495586243363,12,37,Kakamega,stunted
+size_at_birth,0.006824082128853123,13,37,Kakamega,stunted
+residence_urban,0.005532531286470869,14,37,Kakamega,stunted
+hh_head_sex,0.0048576429359430805,15,37,Kakamega,stunted
+breastfeeding,0.003382098836708429,16,37,Kakamega,stunted
+fever_2wk,0.0019104754571278373,17,37,Kakamega,stunted
+diarrhea_2wk,0.0,18,37,Kakamega,stunted
+wealth_index,0.06028346679150811,1,38,Vihiga,stunted
+child_age_months,0.05688314430734403,2,38,Vihiga,stunted
+wash_score,0.05192156587175178,3,38,Vihiga,stunted
+maternal_edu,0.02820710065100215,4,38,Vihiga,stunted
+birth_weight_kg,0.027182716619106085,5,38,Vihiga,stunted
+under5_in_hh,0.025364744705181155,6,38,Vihiga,stunted
+prev_birth_interval,0.022324422506646395,7,38,Vihiga,stunted
+maternal_bmi,0.02181745002670987,8,38,Vihiga,stunted
+child_sex,0.021594983219556947,9,38,Vihiga,stunted
+birth_order,0.01905435880735306,10,38,Vihiga,stunted
+electricity,0.009922630144998697,11,38,Vihiga,stunted
+hh_head_age,0.007770514152874634,12,38,Vihiga,stunted
+residence_urban,0.005344676265038265,13,38,Vihiga,stunted
+hh_head_sex,0.00391588779783898,14,38,Vihiga,stunted
+breastfeeding,0.003764035753389495,15,38,Vihiga,stunted
+fever_2wk,0.0025454114061983744,16,38,Vihiga,stunted
+size_at_birth,0.0025241574946515905,17,38,Vihiga,stunted
+diarrhea_2wk,0.0,18,38,Vihiga,stunted
+child_age_months,0.057532001312458586,1,39,Bungoma,stunted
+wealth_index,0.052192973391712104,2,39,Bungoma,stunted
+wash_score,0.033364411753672156,3,39,Bungoma,stunted
+maternal_edu,0.032221165428955346,4,39,Bungoma,stunted
+prev_birth_interval,0.03187396479652593,5,39,Bungoma,stunted
+under5_in_hh,0.0242305638131026,6,39,Bungoma,stunted
+birth_weight_kg,0.023207806004705202,7,39,Bungoma,stunted
+child_sex,0.0217015841208701,8,39,Bungoma,stunted
+maternal_bmi,0.020821095927045532,9,39,Bungoma,stunted
+birth_order,0.017717174911015335,10,39,Bungoma,stunted
+electricity,0.0077717786327360676,11,39,Bungoma,stunted
+hh_head_age,0.006984094722087951,12,39,Bungoma,stunted
+residence_urban,0.005011756883467575,13,39,Bungoma,stunted
+size_at_birth,0.00436492816752856,14,39,Bungoma,stunted
+hh_head_sex,0.0032414345123865265,15,39,Bungoma,stunted
+breastfeeding,0.0029610030779856408,16,39,Bungoma,stunted
+fever_2wk,0.002191144755742105,17,39,Bungoma,stunted
+diarrhea_2wk,0.0,18,39,Bungoma,stunted
+child_age_months,0.06303233962200758,1,40,Busia,stunted
+wealth_index,0.05712886322075915,2,40,Busia,stunted
+wash_score,0.03436571910057793,3,40,Busia,stunted
+birth_weight_kg,0.026720012467339505,4,40,Busia,stunted
+prev_birth_interval,0.025448220987330895,5,40,Busia,stunted
+birth_order,0.022883265837833004,6,40,Busia,stunted
+child_sex,0.022305290067514482,7,40,Busia,stunted
+maternal_edu,0.022053836764313956,8,40,Busia,stunted
+under5_in_hh,0.02195942243528671,9,40,Busia,stunted
+maternal_bmi,0.020303217853692476,10,40,Busia,stunted
+hh_head_age,0.007766159308595733,11,40,Busia,stunted
+electricity,0.007306050121194363,12,40,Busia,stunted
+residence_urban,0.004102357685786716,13,40,Busia,stunted
+breastfeeding,0.0034199964522160257,14,40,Busia,stunted
+size_at_birth,0.003103480649108835,15,40,Busia,stunted
+hh_head_sex,0.00285253237954035,16,40,Busia,stunted
+fever_2wk,0.002321790779789939,17,40,Busia,stunted
+diarrhea_2wk,0.0,18,40,Busia,stunted
+child_age_months,0.05591282177789834,1,41,Siaya,stunted
+wealth_index,0.05572142329534952,2,41,Siaya,stunted
+wash_score,0.030730204098960764,3,41,Siaya,stunted
+birth_weight_kg,0.027328071564309622,4,41,Siaya,stunted
+maternal_edu,0.026515779745878685,5,41,Siaya,stunted
+prev_birth_interval,0.025439294733972117,6,41,Siaya,stunted
+under5_in_hh,0.02300481004255437,7,41,Siaya,stunted
+maternal_bmi,0.02248096527920269,8,41,Siaya,stunted
+child_sex,0.021441449030558824,9,41,Siaya,stunted
+birth_order,0.0183199542409829,10,41,Siaya,stunted
+hh_head_age,0.007851042315714726,11,41,Siaya,stunted
+electricity,0.007144727432777361,12,41,Siaya,stunted
+size_at_birth,0.00501503948880406,13,41,Siaya,stunted
+residence_urban,0.003921817178083791,14,41,Siaya,stunted
+hh_head_sex,0.003375009797324748,15,41,Siaya,stunted
+breastfeeding,0.0031321264244319378,16,41,Siaya,stunted
+fever_2wk,0.001424007655615083,17,41,Siaya,stunted
+diarrhea_2wk,0.0,18,41,Siaya,stunted
+wealth_index,0.05552785868733634,1,42,Kisumu,stunted
+child_age_months,0.055163575812181,2,42,Kisumu,stunted
+wash_score,0.04086240554585024,3,42,Kisumu,stunted
+birth_weight_kg,0.027399301800644444,4,42,Kisumu,stunted
+prev_birth_interval,0.025575195992672984,5,42,Kisumu,stunted
+maternal_bmi,0.020945694469995443,6,42,Kisumu,stunted
+under5_in_hh,0.020879669455502174,7,42,Kisumu,stunted
+maternal_edu,0.020546752369058164,8,42,Kisumu,stunted
+birth_order,0.020415718694371063,9,42,Kisumu,stunted
+child_sex,0.019789059769285966,10,42,Kisumu,stunted
+electricity,0.008866322281461635,11,42,Kisumu,stunted
+hh_head_age,0.007656610013488405,12,42,Kisumu,stunted
+residence_urban,0.005042441008149734,13,42,Kisumu,stunted
+breastfeeding,0.003098883681951563,14,42,Kisumu,stunted
+size_at_birth,0.0027114228778725336,15,42,Kisumu,stunted
+fever_2wk,0.0026734516059011416,16,42,Kisumu,stunted
+hh_head_sex,0.002442857830800653,17,42,Kisumu,stunted
+diarrhea_2wk,0.0,18,42,Kisumu,stunted
+child_age_months,0.05118339377838007,1,43,Homa Bay,stunted
+wealth_index,0.051077143266407415,2,43,Homa Bay,stunted
+wash_score,0.0358287171194868,3,43,Homa Bay,stunted
+birth_weight_kg,0.02855604537601908,4,43,Homa Bay,stunted
+prev_birth_interval,0.02657682610861846,5,43,Homa Bay,stunted
+maternal_edu,0.023579718667322686,6,43,Homa Bay,stunted
+under5_in_hh,0.022549847767817252,7,43,Homa Bay,stunted
+maternal_bmi,0.02121871351223874,8,43,Homa Bay,stunted
+child_sex,0.019509989790826313,9,43,Homa Bay,stunted
+birth_order,0.01617013107613787,10,43,Homa Bay,stunted
+electricity,0.007184296285908572,11,43,Homa Bay,stunted
+hh_head_age,0.005422550628519207,12,43,Homa Bay,stunted
+size_at_birth,0.005205320427956064,13,43,Homa Bay,stunted
+residence_urban,0.004873813849514238,14,43,Homa Bay,stunted
+fever_2wk,0.004346705529071935,15,43,Homa Bay,stunted
+breastfeeding,0.0026769106724804886,16,43,Homa Bay,stunted
+hh_head_sex,0.0025959012563885734,17,43,Homa Bay,stunted
+diarrhea_2wk,0.0,18,43,Homa Bay,stunted
+child_age_months,0.05908048183731616,1,44,Migori,stunted
+wealth_index,0.05176559393031496,2,44,Migori,stunted
+prev_birth_interval,0.029947969835940547,3,44,Migori,stunted
+birth_weight_kg,0.028616193390847724,4,44,Migori,stunted
+wash_score,0.028022133218553718,5,44,Migori,stunted
+maternal_edu,0.02298365400375046,6,44,Migori,stunted
+maternal_bmi,0.02194411143612105,7,44,Migori,stunted
+under5_in_hh,0.019439511349014952,8,44,Migori,stunted
+child_sex,0.01829808031446934,9,44,Migori,stunted
+birth_order,0.01829333269920801,10,44,Migori,stunted
+hh_head_age,0.007202348513787125,11,44,Migori,stunted
+electricity,0.007026468763251249,12,44,Migori,stunted
+size_at_birth,0.003947893101120312,13,44,Migori,stunted
+residence_urban,0.0037897474298911205,14,44,Migori,stunted
+breastfeeding,0.0036350363177710416,15,44,Migori,stunted
+hh_head_sex,0.0028826231116384575,16,44,Migori,stunted
+fever_2wk,0.00240905181247343,17,44,Migori,stunted
+diarrhea_2wk,0.0,18,44,Migori,stunted
+child_age_months,0.0566683901953725,1,45,Kisii,stunted
+wealth_index,0.05639732090414272,2,45,Kisii,stunted
+maternal_edu,0.03777947328460995,3,45,Kisii,stunted
+wash_score,0.03333435680698409,4,45,Kisii,stunted
+birth_weight_kg,0.02966042971209212,5,45,Kisii,stunted
+prev_birth_interval,0.029532730785962403,6,45,Kisii,stunted
+under5_in_hh,0.02453047495857511,7,45,Kisii,stunted
+maternal_bmi,0.022796720340111248,8,45,Kisii,stunted
+child_sex,0.021637805863627853,9,45,Kisii,stunted
+birth_order,0.017379658873955723,10,45,Kisii,stunted
+hh_head_age,0.00756384671514081,11,45,Kisii,stunted
+electricity,0.00704265408089012,12,45,Kisii,stunted
+residence_urban,0.004292622397223977,13,45,Kisii,stunted
+size_at_birth,0.0030457796740413125,14,45,Kisii,stunted
+breastfeeding,0.0029173231746847787,15,45,Kisii,stunted
+hh_head_sex,0.0025902006269760782,16,45,Kisii,stunted
+fever_2wk,0.0014908158905960675,17,45,Kisii,stunted
+diarrhea_2wk,0.0,18,45,Kisii,stunted
+wealth_index,0.05475014743935722,1,46,Nyamira,stunted
+child_age_months,0.04291604395464771,2,46,Nyamira,stunted
+maternal_edu,0.04229880284655826,3,46,Nyamira,stunted
+prev_birth_interval,0.029557075448787346,4,46,Nyamira,stunted
+wash_score,0.02800527893855636,5,46,Nyamira,stunted
+birth_weight_kg,0.026538834792499917,6,46,Nyamira,stunted
+under5_in_hh,0.024710251740023382,7,46,Nyamira,stunted
+maternal_bmi,0.023266935492402725,8,46,Nyamira,stunted
+child_sex,0.021473351922893576,9,46,Nyamira,stunted
+birth_order,0.017555512093088442,10,46,Nyamira,stunted
+hh_head_age,0.0076611331845620485,11,46,Nyamira,stunted
+electricity,0.006079861976257315,12,46,Nyamira,stunted
+residence_urban,0.004701120203193705,13,46,Nyamira,stunted
+size_at_birth,0.004643451701895335,14,46,Nyamira,stunted
+hh_head_sex,0.0034817094957124077,15,46,Nyamira,stunted
+breastfeeding,0.0029018632437594885,16,46,Nyamira,stunted
+fever_2wk,0.0014147561082863314,17,46,Nyamira,stunted
+diarrhea_2wk,0.0,18,46,Nyamira,stunted
+wealth_index,0.10440103792428715,1,47,Nairobi,stunted
+child_age_months,0.054295864060229425,2,47,Nairobi,stunted
+wash_score,0.04369348013216062,3,47,Nairobi,stunted
+maternal_edu,0.03665174900936249,4,47,Nairobi,stunted
+birth_weight_kg,0.028629700191878407,5,47,Nairobi,stunted
+maternal_bmi,0.021744502066830908,6,47,Nairobi,stunted
+under5_in_hh,0.021607194203358757,7,47,Nairobi,stunted
+child_sex,0.021395483061622065,8,47,Nairobi,stunted
+prev_birth_interval,0.021205105266772054,9,47,Nairobi,stunted
+birth_order,0.020019481429767158,10,47,Nairobi,stunted
+electricity,0.012468517978321325,11,47,Nairobi,stunted
+hh_head_age,0.010890519594909198,12,47,Nairobi,stunted
+residence_urban,0.003798484979607381,13,47,Nairobi,stunted
+fever_2wk,0.0032128443416766955,14,47,Nairobi,stunted
+breastfeeding,0.0027438882133053286,15,47,Nairobi,stunted
+size_at_birth,0.0026498142967751382,16,47,Nairobi,stunted
+hh_head_sex,0.0026077429105897994,17,47,Nairobi,stunted
+diarrhea_2wk,0.0,18,47,Nairobi,stunted
+maternal_edu,0.101038827654571,1,1,Mombasa,wasted
+wealth_index,0.06655847307834942,2,1,Mombasa,wasted
+wash_score,0.04035730207736942,3,1,Mombasa,wasted
+under5_in_hh,0.039629913132532134,4,1,Mombasa,wasted
+birth_order,0.02872043858044129,5,1,Mombasa,wasted
+maternal_bmi,0.022230261143364325,6,1,Mombasa,wasted
+prev_birth_interval,0.019415810620145257,7,1,Mombasa,wasted
+child_age_months,0.01650867652235443,8,1,Mombasa,wasted
+electricity,0.011363566507235271,9,1,Mombasa,wasted
+child_sex,0.011057214611852818,10,1,Mombasa,wasted
+hh_head_age,0.008645199500967128,11,1,Mombasa,wasted
+residence_urban,0.008508459478571487,12,1,Mombasa,wasted
+breastfeeding,0.006695891639836307,13,1,Mombasa,wasted
+birth_weight_kg,0.0062171487690313625,14,1,Mombasa,wasted
+fever_2wk,0.005569251598332514,15,1,Mombasa,wasted
+hh_head_sex,0.005392340485310992,16,1,Mombasa,wasted
+size_at_birth,0.0045481998929871046,17,1,Mombasa,wasted
+diarrhea_2wk,0.0,18,1,Mombasa,wasted
+maternal_edu,0.09812441038078208,1,2,Kwale,wasted
+wash_score,0.052838152636251676,2,2,Kwale,wasted
+under5_in_hh,0.0322184147959734,3,2,Kwale,wasted
+birth_order,0.031208813469025834,4,2,Kwale,wasted
+maternal_bmi,0.028226043421637568,5,2,Kwale,wasted
+wealth_index,0.024135250665481126,6,2,Kwale,wasted
+prev_birth_interval,0.016533743398462232,7,2,Kwale,wasted
+child_age_months,0.016015258784353337,8,2,Kwale,wasted
+hh_head_age,0.014197236502511923,9,2,Kwale,wasted
+residence_urban,0.011525895938235518,10,2,Kwale,wasted
+child_sex,0.010254941819903442,11,2,Kwale,wasted
+size_at_birth,0.007799141575263039,12,2,Kwale,wasted
+birth_weight_kg,0.007137313481174652,13,2,Kwale,wasted
+electricity,0.0064034128093771086,14,2,Kwale,wasted
+breastfeeding,0.004675146147129114,15,2,Kwale,wasted
+hh_head_sex,0.003924234429278243,16,2,Kwale,wasted
+fever_2wk,0.003604493273410916,17,2,Kwale,wasted
+diarrhea_2wk,0.0,18,2,Kwale,wasted
+maternal_edu,0.10805477499837612,1,3,Kilifi,wasted
+wash_score,0.04268894220665803,2,3,Kilifi,wasted
+wealth_index,0.03516365643809142,3,3,Kilifi,wasted
+under5_in_hh,0.03286386914028687,4,3,Kilifi,wasted
+birth_order,0.03078546643548578,5,3,Kilifi,wasted
+maternal_bmi,0.02795588176205304,6,3,Kilifi,wasted
+prev_birth_interval,0.017540276181995253,7,3,Kilifi,wasted
+child_age_months,0.017419501981313756,8,3,Kilifi,wasted
+residence_urban,0.01362422801739624,9,3,Kilifi,wasted
+hh_head_age,0.0112761995129617,10,3,Kilifi,wasted
+child_sex,0.010694101196045306,11,3,Kilifi,wasted
+breastfeeding,0.006929234987653487,12,3,Kilifi,wasted
+electricity,0.006657849874827231,13,3,Kilifi,wasted
+hh_head_sex,0.005148948728744397,14,3,Kilifi,wasted
+birth_weight_kg,0.0046623323289021424,15,3,Kilifi,wasted
+fever_2wk,0.0038599250799307232,16,3,Kilifi,wasted
+size_at_birth,0.003311735338776826,17,3,Kilifi,wasted
+diarrhea_2wk,0.0,18,3,Kilifi,wasted
+maternal_edu,0.09599091401280625,1,4,Tana River,wasted
+wash_score,0.042657572092913806,2,4,Tana River,wasted
+birth_order,0.03328262095111257,3,4,Tana River,wasted
+maternal_bmi,0.029242656466073682,4,4,Tana River,wasted
+under5_in_hh,0.026735318774456143,5,4,Tana River,wasted
+child_age_months,0.02341222357278353,6,4,Tana River,wasted
+wealth_index,0.02081070237665669,7,4,Tana River,wasted
+prev_birth_interval,0.016060300192011337,8,4,Tana River,wasted
+child_sex,0.01170077408433343,9,4,Tana River,wasted
+residence_urban,0.011370971499582555,10,4,Tana River,wasted
+hh_head_age,0.010299562320263177,11,4,Tana River,wasted
+birth_weight_kg,0.008980970211003905,12,4,Tana River,wasted
+breastfeeding,0.006835540226094203,13,4,Tana River,wasted
+electricity,0.0064198598007191065,14,4,Tana River,wasted
+hh_head_sex,0.004065747359983228,15,4,Tana River,wasted
+fever_2wk,0.0038558049264520835,16,4,Tana River,wasted
+size_at_birth,0.002990598974966456,17,4,Tana River,wasted
+diarrhea_2wk,0.0,18,4,Tana River,wasted
+maternal_edu,0.12131161046707688,1,5,Lamu,wasted
+wealth_index,0.0446969566390285,2,5,Lamu,wasted
+wash_score,0.04348013487994024,3,5,Lamu,wasted
+under5_in_hh,0.03807378949404737,4,5,Lamu,wasted
+birth_order,0.033598723180157025,5,5,Lamu,wasted
+maternal_bmi,0.024096416160939577,6,5,Lamu,wasted
+prev_birth_interval,0.01816645654724397,7,5,Lamu,wasted
+child_age_months,0.01794806081925031,8,5,Lamu,wasted
+residence_urban,0.014763036208470663,9,5,Lamu,wasted
+child_sex,0.01094135126645982,10,5,Lamu,wasted
+electricity,0.01074363094662711,11,5,Lamu,wasted
+hh_head_age,0.01015671651140326,12,5,Lamu,wasted
+size_at_birth,0.009275994613271311,13,5,Lamu,wasted
+breastfeeding,0.008977251044542521,14,5,Lamu,wasted
+fever_2wk,0.006141518266012052,15,5,Lamu,wasted
+birth_weight_kg,0.005505640494553555,16,5,Lamu,wasted
+hh_head_sex,0.0050949917541289885,17,5,Lamu,wasted
+diarrhea_2wk,0.0,18,5,Lamu,wasted
+maternal_edu,0.12309873958710763,1,6,Taita/Taveta,wasted
+wealth_index,0.0579650147931566,2,6,Taita/Taveta,wasted
+wash_score,0.04713573829047064,3,6,Taita/Taveta,wasted
+under5_in_hh,0.04473270240784578,4,6,Taita/Taveta,wasted
+birth_order,0.032400676989765495,5,6,Taita/Taveta,wasted
+maternal_bmi,0.025501248028966732,6,6,Taita/Taveta,wasted
+prev_birth_interval,0.024820625523175856,7,6,Taita/Taveta,wasted
+residence_urban,0.016708335744766333,8,6,Taita/Taveta,wasted
+child_sex,0.012820328184721947,9,6,Taita/Taveta,wasted
+child_age_months,0.012693523877020519,10,6,Taita/Taveta,wasted
+hh_head_age,0.01184485278828457,11,6,Taita/Taveta,wasted
+electricity,0.009109165110387448,12,6,Taita/Taveta,wasted
+breastfeeding,0.0072814894661387955,13,6,Taita/Taveta,wasted
+birth_weight_kg,0.006252925758409136,14,6,Taita/Taveta,wasted
+fever_2wk,0.005434504569588751,15,6,Taita/Taveta,wasted
+hh_head_sex,0.004537693487588986,16,6,Taita/Taveta,wasted
+size_at_birth,0.002986932292998046,17,6,Taita/Taveta,wasted
+diarrhea_2wk,0.0,18,6,Taita/Taveta,wasted
+maternal_edu,0.07839701382790028,1,7,Garissa,wasted
+wash_score,0.061544482642378634,2,7,Garissa,wasted
+wealth_index,0.045474186074373035,3,7,Garissa,wasted
+birth_order,0.035423408371259256,4,7,Garissa,wasted
+maternal_bmi,0.034036657114024045,5,7,Garissa,wasted
+under5_in_hh,0.03149496291299518,6,7,Garissa,wasted
+child_age_months,0.024266475914276067,7,7,Garissa,wasted
+prev_birth_interval,0.016442508937141193,8,7,Garissa,wasted
+hh_head_age,0.01248593170157848,9,7,Garissa,wasted
+child_sex,0.01225509591803455,10,7,Garissa,wasted
+breastfeeding,0.010574270981167809,11,7,Garissa,wasted
+residence_urban,0.009599042967974659,12,7,Garissa,wasted
+electricity,0.008333189328601888,13,7,Garissa,wasted
+birth_weight_kg,0.006720611163237908,14,7,Garissa,wasted
+hh_head_sex,0.005504014304884954,15,7,Garissa,wasted
+size_at_birth,0.004598902005626312,16,7,Garissa,wasted
+fever_2wk,0.003463868073753718,17,7,Garissa,wasted
+diarrhea_2wk,0.0,18,7,Garissa,wasted
+maternal_edu,0.08916131478142363,1,8,Wajir,wasted
+wash_score,0.04780271468506755,2,8,Wajir,wasted
+wealth_index,0.03972484424058226,3,8,Wajir,wasted
+maternal_bmi,0.03189510649603768,4,8,Wajir,wasted
+birth_order,0.03166121557187362,5,8,Wajir,wasted
+under5_in_hh,0.025001689225966118,6,8,Wajir,wasted
+child_age_months,0.023589670213250435,7,8,Wajir,wasted
+prev_birth_interval,0.017117469743646932,8,8,Wajir,wasted
+breastfeeding,0.017029293569283274,9,8,Wajir,wasted
+hh_head_age,0.01563546459280525,10,8,Wajir,wasted
+child_sex,0.011716491527295064,11,8,Wajir,wasted
+residence_urban,0.007420764343813381,12,8,Wajir,wasted
+electricity,0.007006900707804004,13,8,Wajir,wasted
+birth_weight_kg,0.006960558649548326,14,8,Wajir,wasted
+hh_head_sex,0.005334498176473139,15,8,Wajir,wasted
+size_at_birth,0.005163896414830634,16,8,Wajir,wasted
+fever_2wk,0.0044400923594072085,17,8,Wajir,wasted
+diarrhea_2wk,0.0,18,8,Wajir,wasted
+maternal_edu,0.07735182415454257,1,9,Mandera,wasted
+wash_score,0.058511607273828876,2,9,Mandera,wasted
+birth_order,0.03594910273053859,3,9,Mandera,wasted
+wealth_index,0.03578615109870748,4,9,Mandera,wasted
+under5_in_hh,0.02943787419463429,5,9,Mandera,wasted
+maternal_bmi,0.02892590680601705,6,9,Mandera,wasted
+child_age_months,0.02750863630432776,7,9,Mandera,wasted
+hh_head_age,0.01922997316998818,8,9,Mandera,wasted
+prev_birth_interval,0.018003782874422156,9,9,Mandera,wasted
+breastfeeding,0.013688693430171187,10,9,Mandera,wasted
+child_sex,0.011119679943375465,11,9,Mandera,wasted
+birth_weight_kg,0.008722713686909805,12,9,Mandera,wasted
+residence_urban,0.00807517767407166,13,9,Mandera,wasted
+electricity,0.006305454417008371,14,9,Mandera,wasted
+hh_head_sex,0.004878085596717129,15,9,Mandera,wasted
+fever_2wk,0.003554506540635953,16,9,Mandera,wasted
+size_at_birth,0.00346523129253016,17,9,Mandera,wasted
+diarrhea_2wk,0.0,18,9,Mandera,wasted
+maternal_edu,0.08623154636410825,1,10,Marsabit,wasted
+wash_score,0.054909874572671026,2,10,Marsabit,wasted
+wealth_index,0.04582601977754749,3,10,Marsabit,wasted
+under5_in_hh,0.041571516807355643,4,10,Marsabit,wasted
+birth_order,0.03649374500165111,5,10,Marsabit,wasted
+maternal_bmi,0.02800119360015408,6,10,Marsabit,wasted
+child_age_months,0.021681385663775882,7,10,Marsabit,wasted
+prev_birth_interval,0.02162645449218497,8,10,Marsabit,wasted
+hh_head_age,0.012984086121571186,9,10,Marsabit,wasted
+child_sex,0.01076102228736659,10,10,Marsabit,wasted
+breastfeeding,0.00858432241893973,11,10,Marsabit,wasted
+birth_weight_kg,0.00837218547368321,12,10,Marsabit,wasted
+residence_urban,0.008162365273624576,13,10,Marsabit,wasted
+electricity,0.007621596559711565,14,10,Marsabit,wasted
+size_at_birth,0.0054142165099957335,15,10,Marsabit,wasted
+hh_head_sex,0.004915667017425274,16,10,Marsabit,wasted
+fever_2wk,0.004464180391208437,17,10,Marsabit,wasted
+diarrhea_2wk,0.0,18,10,Marsabit,wasted
+maternal_edu,0.10317737332675515,1,11,Isiolo,wasted
+wash_score,0.05409222793364209,2,11,Isiolo,wasted
+wealth_index,0.04804859879754296,3,11,Isiolo,wasted
+under5_in_hh,0.03616580398051596,4,11,Isiolo,wasted
+birth_order,0.034205544474081744,5,11,Isiolo,wasted
+maternal_bmi,0.02704159870882827,6,11,Isiolo,wasted
+prev_birth_interval,0.02539357953202635,7,11,Isiolo,wasted
+child_age_months,0.020046961375664977,8,11,Isiolo,wasted
+child_sex,0.012393396555527255,9,11,Isiolo,wasted
+hh_head_age,0.010222638289878438,10,11,Isiolo,wasted
+breastfeeding,0.009868257479922307,11,11,Isiolo,wasted
+residence_urban,0.009694692779689566,12,11,Isiolo,wasted
+electricity,0.0085455631089761,13,11,Isiolo,wasted
+birth_weight_kg,0.0076762059856473564,14,11,Isiolo,wasted
+hh_head_sex,0.005424069515513008,15,11,Isiolo,wasted
+fever_2wk,0.004492706941287113,16,11,Isiolo,wasted
+size_at_birth,0.003666788845861188,17,11,Isiolo,wasted
+diarrhea_2wk,0.0,18,11,Isiolo,wasted
+maternal_edu,0.12567380943609732,1,12,Meru,wasted
+wealth_index,0.056207004382610344,2,12,Meru,wasted
+under5_in_hh,0.04538457445898902,3,12,Meru,wasted
+wash_score,0.04247038230565023,4,12,Meru,wasted
+birth_order,0.035299065334844316,5,12,Meru,wasted
+maternal_bmi,0.026657623569232278,6,12,Meru,wasted
+prev_birth_interval,0.024313917554976316,7,12,Meru,wasted
+child_age_months,0.018581164442972267,8,12,Meru,wasted
+child_sex,0.014734673752359971,9,12,Meru,wasted
+residence_urban,0.014079494325733447,10,12,Meru,wasted
+hh_head_age,0.009168952493236458,11,12,Meru,wasted
+electricity,0.008826501350225108,12,12,Meru,wasted
+birth_weight_kg,0.0072335144226664625,13,12,Meru,wasted
+fever_2wk,0.005797079302182029,14,12,Meru,wasted
+size_at_birth,0.005255090435835411,15,12,Meru,wasted
+breastfeeding,0.004904288502449063,16,12,Meru,wasted
+hh_head_sex,0.004553646800771456,17,12,Meru,wasted
+diarrhea_2wk,0.0,18,12,Meru,wasted
+maternal_edu,0.1319668395043025,1,13,Tharaka-Nithi,wasted
+wealth_index,0.06488139495300851,2,13,Tharaka-Nithi,wasted
+under5_in_hh,0.048443306291349866,3,13,Tharaka-Nithi,wasted
+wash_score,0.03728965562545329,4,13,Tharaka-Nithi,wasted
+birth_order,0.03408642074332952,5,13,Tharaka-Nithi,wasted
+prev_birth_interval,0.02541597740249167,6,13,Tharaka-Nithi,wasted
+maternal_bmi,0.02534205462765546,7,13,Tharaka-Nithi,wasted
+child_age_months,0.018253076056743103,8,13,Tharaka-Nithi,wasted
+residence_urban,0.014005547715565789,9,13,Tharaka-Nithi,wasted
+child_sex,0.012003830357330712,10,13,Tharaka-Nithi,wasted
+hh_head_age,0.008885358057022664,11,13,Tharaka-Nithi,wasted
+electricity,0.008823752954772097,12,13,Tharaka-Nithi,wasted
+fever_2wk,0.00692709957182398,13,13,Tharaka-Nithi,wasted
+breastfeeding,0.00563418448678021,14,13,Tharaka-Nithi,wasted
+hh_head_sex,0.005186290741420589,15,13,Tharaka-Nithi,wasted
+birth_weight_kg,0.0047896158109359465,16,13,Tharaka-Nithi,wasted
+size_at_birth,0.002040033573833989,17,13,Tharaka-Nithi,wasted
+diarrhea_2wk,0.0,18,13,Tharaka-Nithi,wasted
+maternal_edu,0.12904046343794812,1,14,Embu,wasted
+wealth_index,0.07674425916097166,2,14,Embu,wasted
+under5_in_hh,0.04499524824717454,3,14,Embu,wasted
+wash_score,0.04125397370940341,4,14,Embu,wasted
+birth_order,0.028526429894822975,5,14,Embu,wasted
+maternal_bmi,0.026425731725299748,6,14,Embu,wasted
+prev_birth_interval,0.024416922603774677,7,14,Embu,wasted
+child_age_months,0.017970232598651135,8,14,Embu,wasted
+child_sex,0.016157941978534925,9,14,Embu,wasted
+residence_urban,0.014184023029746874,10,14,Embu,wasted
+hh_head_age,0.011593744996775424,11,14,Embu,wasted
+electricity,0.010218741048770519,12,14,Embu,wasted
+birth_weight_kg,0.005439665276608629,13,14,Embu,wasted
+breastfeeding,0.0052596174604043954,14,14,Embu,wasted
+fever_2wk,0.005207769715254215,15,14,Embu,wasted
+hh_head_sex,0.0041396998089290125,16,14,Embu,wasted
+size_at_birth,0.003265226414859562,17,14,Embu,wasted
+diarrhea_2wk,0.0,18,14,Embu,wasted
+maternal_edu,0.14716349699461767,1,15,Kitui,wasted
+wealth_index,0.05992552009090506,2,15,Kitui,wasted
+under5_in_hh,0.04416516104334681,3,15,Kitui,wasted
+wash_score,0.03191277500582153,4,15,Kitui,wasted
+birth_order,0.031615006979702716,5,15,Kitui,wasted
+maternal_bmi,0.024817229873844424,6,15,Kitui,wasted
+prev_birth_interval,0.02287128032307753,7,15,Kitui,wasted
+child_age_months,0.017948818725849067,8,15,Kitui,wasted
+hh_head_age,0.014059004597406428,9,15,Kitui,wasted
+child_sex,0.013499979958597225,10,15,Kitui,wasted
+residence_urban,0.010764746368238116,11,15,Kitui,wasted
+birth_weight_kg,0.006617551288799241,12,15,Kitui,wasted
+electricity,0.00580594237997584,13,15,Kitui,wasted
+fever_2wk,0.005223028500541255,14,15,Kitui,wasted
+breastfeeding,0.004958029541226587,15,15,Kitui,wasted
+hh_head_sex,0.004205298062231235,16,15,Kitui,wasted
+size_at_birth,0.0040455582540788165,17,15,Kitui,wasted
+diarrhea_2wk,0.0,18,15,Kitui,wasted
+maternal_edu,0.12221355389097421,1,16,Machakos,wasted
+wealth_index,0.08686922355818957,2,16,Machakos,wasted
+wash_score,0.04663578485392142,3,16,Machakos,wasted
+under5_in_hh,0.04173929902934935,4,16,Machakos,wasted
+birth_order,0.03208183671616094,5,16,Machakos,wasted
+maternal_bmi,0.02772852723016262,6,16,Machakos,wasted
+prev_birth_interval,0.021014422989349323,7,16,Machakos,wasted
+child_age_months,0.017649589160175578,8,16,Machakos,wasted
+child_sex,0.012894279928371968,9,16,Machakos,wasted
+residence_urban,0.012264061693177222,10,16,Machakos,wasted
+hh_head_age,0.009503147590050724,11,16,Machakos,wasted
+electricity,0.009274722121494253,12,16,Machakos,wasted
+birth_weight_kg,0.007752605573308523,13,16,Machakos,wasted
+breastfeeding,0.005802649672408944,14,16,Machakos,wasted
+fever_2wk,0.005212098454932528,15,16,Machakos,wasted
+hh_head_sex,0.00472834151174031,16,16,Machakos,wasted
+size_at_birth,0.0037445857350606408,17,16,Machakos,wasted
+diarrhea_2wk,0.0,18,16,Machakos,wasted
+maternal_edu,0.12922327770485326,1,17,Makueni,wasted
+wealth_index,0.07381092422304998,2,17,Makueni,wasted
+under5_in_hh,0.04495911343958697,3,17,Makueni,wasted
+wash_score,0.04253521542084065,4,17,Makueni,wasted
+birth_order,0.03106503409228894,5,17,Makueni,wasted
+maternal_bmi,0.02804350291591984,6,17,Makueni,wasted
+prev_birth_interval,0.026669298061109476,7,17,Makueni,wasted
+child_age_months,0.01603774921604185,8,17,Makueni,wasted
+hh_head_age,0.014968421058971226,9,17,Makueni,wasted
+child_sex,0.013819828968498886,10,17,Makueni,wasted
+residence_urban,0.012142342377835758,11,17,Makueni,wasted
+birth_weight_kg,0.007529276968831049,12,17,Makueni,wasted
+electricity,0.007214615271319491,13,17,Makueni,wasted
+breastfeeding,0.0054298416155418,14,17,Makueni,wasted
+fever_2wk,0.0048088563359840976,15,17,Makueni,wasted
+size_at_birth,0.004274897738966011,16,17,Makueni,wasted
+hh_head_sex,0.003972803274655545,17,17,Makueni,wasted
+diarrhea_2wk,0.0,18,17,Makueni,wasted
+maternal_edu,0.12468256158591319,1,18,Nyandarua,wasted
+wealth_index,0.07303126316659066,2,18,Nyandarua,wasted
+wash_score,0.04359981136468725,3,18,Nyandarua,wasted
+under5_in_hh,0.040565220818446955,4,18,Nyandarua,wasted
+birth_order,0.0328791748924942,5,18,Nyandarua,wasted
+maternal_bmi,0.02717604042747917,6,18,Nyandarua,wasted
+prev_birth_interval,0.019917448416241993,7,18,Nyandarua,wasted
+residence_urban,0.015899048634051487,8,18,Nyandarua,wasted
+child_age_months,0.015110856068215259,9,18,Nyandarua,wasted
+child_sex,0.012544908892371325,10,18,Nyandarua,wasted
+electricity,0.010032036044119364,11,18,Nyandarua,wasted
+hh_head_age,0.009344099282664,12,18,Nyandarua,wasted
+size_at_birth,0.007807777028351966,13,18,Nyandarua,wasted
+fever_2wk,0.006384699586492345,14,18,Nyandarua,wasted
+hh_head_sex,0.005180258827063689,15,18,Nyandarua,wasted
+breastfeeding,0.0051385121701564875,16,18,Nyandarua,wasted
+birth_weight_kg,0.004440905800831841,17,18,Nyandarua,wasted
+diarrhea_2wk,0.0,18,18,Nyandarua,wasted
+maternal_edu,0.11842871218071038,1,19,Nyeri,wasted
+wealth_index,0.0738701068775403,2,19,Nyeri,wasted
+wash_score,0.049649494051210094,3,19,Nyeri,wasted
+under5_in_hh,0.04732014901000922,4,19,Nyeri,wasted
+birth_order,0.028815125215611616,5,19,Nyeri,wasted
+prev_birth_interval,0.028372272027687013,6,19,Nyeri,wasted
+maternal_bmi,0.02771356956374027,7,19,Nyeri,wasted
+child_age_months,0.018852174394999144,8,19,Nyeri,wasted
+residence_urban,0.01573786278893605,9,19,Nyeri,wasted
+child_sex,0.014195941079451874,10,19,Nyeri,wasted
+electricity,0.011739625201742071,11,19,Nyeri,wasted
+hh_head_age,0.009022349721275556,12,19,Nyeri,wasted
+breastfeeding,0.006802029562648364,13,19,Nyeri,wasted
+fever_2wk,0.005406213405042592,14,19,Nyeri,wasted
+hh_head_sex,0.0042917420323473204,15,19,Nyeri,wasted
+size_at_birth,0.004077278149016388,16,19,Nyeri,wasted
+birth_weight_kg,0.0036022790932138857,17,19,Nyeri,wasted
+diarrhea_2wk,0.0,18,19,Nyeri,wasted
+maternal_edu,0.11496949453043513,1,20,Kirinyaga,wasted
+wealth_index,0.08108154492789697,2,20,Kirinyaga,wasted
+wash_score,0.04949715998485314,3,20,Kirinyaga,wasted
+under5_in_hh,0.04523187656885602,4,20,Kirinyaga,wasted
+birth_order,0.030289124844873474,5,20,Kirinyaga,wasted
+maternal_bmi,0.02621302880205251,6,20,Kirinyaga,wasted
+prev_birth_interval,0.0254099067391644,7,20,Kirinyaga,wasted
+residence_urban,0.016311890535496483,8,20,Kirinyaga,wasted
+child_age_months,0.014868285452054708,9,20,Kirinyaga,wasted
+child_sex,0.01399337783624569,10,20,Kirinyaga,wasted
+electricity,0.013127644579858945,11,20,Kirinyaga,wasted
+hh_head_age,0.007768060181775232,12,20,Kirinyaga,wasted
+fever_2wk,0.005444171982819967,13,20,Kirinyaga,wasted
+breastfeeding,0.004914611532700593,14,20,Kirinyaga,wasted
+hh_head_sex,0.004338419206663888,15,20,Kirinyaga,wasted
+birth_weight_kg,0.0032653875771687874,16,20,Kirinyaga,wasted
+size_at_birth,0.002939254300218761,17,20,Kirinyaga,wasted
+diarrhea_2wk,0.0,18,20,Kirinyaga,wasted
+maternal_edu,0.12534465738258052,1,21,Murang'a,wasted
+wealth_index,0.06579117022155938,2,21,Murang'a,wasted
+wash_score,0.044904358629898194,3,21,Murang'a,wasted
+under5_in_hh,0.039181267157477155,4,21,Murang'a,wasted
+birth_order,0.03283385957832575,5,21,Murang'a,wasted
+maternal_bmi,0.02635410606153186,6,21,Murang'a,wasted
+prev_birth_interval,0.023074286262848933,7,21,Murang'a,wasted
+child_age_months,0.018639157091509012,8,21,Murang'a,wasted
+residence_urban,0.017273934820995956,9,21,Murang'a,wasted
+child_sex,0.014118780900879445,10,21,Murang'a,wasted
+electricity,0.01046441846791091,11,21,Murang'a,wasted
+hh_head_age,0.010393183282127296,12,21,Murang'a,wasted
+fever_2wk,0.005708799403769407,13,21,Murang'a,wasted
+size_at_birth,0.005622945996778455,14,21,Murang'a,wasted
+birth_weight_kg,0.005595023134249429,15,21,Murang'a,wasted
+breastfeeding,0.004045506713387808,16,21,Murang'a,wasted
+hh_head_sex,0.003844381144585335,17,21,Murang'a,wasted
+diarrhea_2wk,0.0,18,21,Murang'a,wasted
+maternal_edu,0.1180199757656546,1,22,Kiambu,wasted
+wealth_index,0.08741889174342529,2,22,Kiambu,wasted
+wash_score,0.05137655214969621,3,22,Kiambu,wasted
+under5_in_hh,0.04468724917931823,4,22,Kiambu,wasted
+birth_order,0.03103095783197225,5,22,Kiambu,wasted
+maternal_bmi,0.024294260701497466,6,22,Kiambu,wasted
+prev_birth_interval,0.02249296005322904,7,22,Kiambu,wasted
+child_age_months,0.015599342365603307,8,22,Kiambu,wasted
+electricity,0.01452910063175894,9,22,Kiambu,wasted
+child_sex,0.01375943548327431,10,22,Kiambu,wasted
+residence_urban,0.01308738541928748,11,22,Kiambu,wasted
+hh_head_age,0.008788073007192266,12,22,Kiambu,wasted
+breastfeeding,0.006061229949088334,13,22,Kiambu,wasted
+hh_head_sex,0.00556201206020189,14,22,Kiambu,wasted
+fever_2wk,0.005282158969103497,15,22,Kiambu,wasted
+birth_weight_kg,0.0033464650235480948,16,22,Kiambu,wasted
+size_at_birth,0.003239697940108131,17,22,Kiambu,wasted
+diarrhea_2wk,0.0,18,22,Kiambu,wasted
+maternal_edu,0.0909648121355181,1,23,Turkana,wasted
+wash_score,0.03994082025143239,2,23,Turkana,wasted
+birth_order,0.036470661520866525,3,23,Turkana,wasted
+wealth_index,0.036469938915686624,4,23,Turkana,wasted
+under5_in_hh,0.035723002532717374,5,23,Turkana,wasted
+maternal_bmi,0.03396839325280315,6,23,Turkana,wasted
+child_age_months,0.033521912572907014,7,23,Turkana,wasted
+prev_birth_interval,0.017535725695778836,8,23,Turkana,wasted
+hh_head_age,0.016548481704409947,9,23,Turkana,wasted
+child_sex,0.014196325479633986,10,23,Turkana,wasted
+birth_weight_kg,0.009103798098473804,11,23,Turkana,wasted
+residence_urban,0.007990449550429596,12,23,Turkana,wasted
+breastfeeding,0.006867746429294303,13,23,Turkana,wasted
+electricity,0.006030140058521464,14,23,Turkana,wasted
+size_at_birth,0.00557534687022995,15,23,Turkana,wasted
+hh_head_sex,0.005520122095839581,16,23,Turkana,wasted
+fever_2wk,0.004236844999308823,17,23,Turkana,wasted
+diarrhea_2wk,0.0,18,23,Turkana,wasted
+maternal_edu,0.11436162594183853,1,24,West Pokot,wasted
+wash_score,0.045123463164644606,2,24,West Pokot,wasted
+wealth_index,0.04286817759827719,3,24,West Pokot,wasted
+birth_order,0.034833707450458634,4,24,West Pokot,wasted
+maternal_bmi,0.03239473871426124,5,24,West Pokot,wasted
+under5_in_hh,0.030049996268979026,6,24,West Pokot,wasted
+child_age_months,0.027979000839022466,7,24,West Pokot,wasted
+prev_birth_interval,0.02014908080377056,8,24,West Pokot,wasted
+child_sex,0.014355089986864446,9,24,West Pokot,wasted
+hh_head_age,0.012203330488381686,10,24,West Pokot,wasted
+birth_weight_kg,0.009152843501486011,11,24,West Pokot,wasted
+residence_urban,0.008412877725804195,12,24,West Pokot,wasted
+electricity,0.006176065132407458,13,24,West Pokot,wasted
+breastfeeding,0.005243774842754949,14,24,West Pokot,wasted
+hh_head_sex,0.005140201057025524,15,24,West Pokot,wasted
+size_at_birth,0.004028818482803999,16,24,West Pokot,wasted
+fever_2wk,0.0037117489264210566,17,24,West Pokot,wasted
+diarrhea_2wk,0.0,18,24,West Pokot,wasted
+maternal_edu,0.08638005728379627,1,25,Samburu,wasted
+wealth_index,0.04781534419691615,2,25,Samburu,wasted
+wash_score,0.044658907007057096,3,25,Samburu,wasted
+under5_in_hh,0.04390624911577314,4,25,Samburu,wasted
+maternal_bmi,0.03603523640420529,5,25,Samburu,wasted
+birth_order,0.03413584451089263,6,25,Samburu,wasted
+child_age_months,0.024981200437827814,7,25,Samburu,wasted
+prev_birth_interval,0.020043246441515106,8,25,Samburu,wasted
+hh_head_age,0.015941960115796246,9,25,Samburu,wasted
+child_sex,0.012612411766181551,10,25,Samburu,wasted
+birth_weight_kg,0.008449185206408204,11,25,Samburu,wasted
+residence_urban,0.007180786549807338,12,25,Samburu,wasted
+electricity,0.006949141611425945,13,25,Samburu,wasted
+breastfeeding,0.0062944219669642506,14,25,Samburu,wasted
+hh_head_sex,0.005425170218670654,15,25,Samburu,wasted
+fever_2wk,0.004086287866383603,16,25,Samburu,wasted
+size_at_birth,0.0035268403401695235,17,25,Samburu,wasted
+diarrhea_2wk,0.0,18,25,Samburu,wasted
+maternal_edu,0.11715215995571081,1,26,Trans Nzoia,wasted
+wealth_index,0.06662572091041141,2,26,Trans Nzoia,wasted
+wash_score,0.050712350214614385,3,26,Trans Nzoia,wasted
+under5_in_hh,0.037671594265550536,4,26,Trans Nzoia,wasted
+birth_order,0.03215564421776635,5,26,Trans Nzoia,wasted
+maternal_bmi,0.026679447896482928,6,26,Trans Nzoia,wasted
+prev_birth_interval,0.0243347209676791,7,26,Trans Nzoia,wasted
+child_sex,0.017890789366890536,8,26,Trans Nzoia,wasted
+child_age_months,0.016446368389923888,9,26,Trans Nzoia,wasted
+residence_urban,0.011816355087768416,10,26,Trans Nzoia,wasted
+hh_head_age,0.008737911520582597,11,26,Trans Nzoia,wasted
+electricity,0.00841052876973017,12,26,Trans Nzoia,wasted
+size_at_birth,0.0068833595281715485,13,26,Trans Nzoia,wasted
+birth_weight_kg,0.006725948801269106,14,26,Trans Nzoia,wasted
+fever_2wk,0.006041551950761769,15,26,Trans Nzoia,wasted
+breastfeeding,0.00534935222136574,16,26,Trans Nzoia,wasted
+hh_head_sex,0.003715984190573913,17,26,Trans Nzoia,wasted
+diarrhea_2wk,0.0,18,26,Trans Nzoia,wasted
+maternal_edu,0.11420326124649145,1,27,Uasin Gishu,wasted
+wealth_index,0.07961956387223507,2,27,Uasin Gishu,wasted
+wash_score,0.04521669105235217,3,27,Uasin Gishu,wasted
+under5_in_hh,0.04237073032654564,4,27,Uasin Gishu,wasted
+birth_order,0.03143829966590177,5,27,Uasin Gishu,wasted
+prev_birth_interval,0.02606332851499859,6,27,Uasin Gishu,wasted
+maternal_bmi,0.02444403225517878,7,27,Uasin Gishu,wasted
+child_sex,0.019935949757189896,8,27,Uasin Gishu,wasted
+child_age_months,0.015173510360587424,9,27,Uasin Gishu,wasted
+electricity,0.01113769894105026,10,27,Uasin Gishu,wasted
+residence_urban,0.010984043710810085,11,27,Uasin Gishu,wasted
+hh_head_age,0.009216779223038785,12,27,Uasin Gishu,wasted
+birth_weight_kg,0.006283896529509176,13,27,Uasin Gishu,wasted
+fever_2wk,0.005109658874781057,14,27,Uasin Gishu,wasted
+breastfeeding,0.0050431891854896774,15,27,Uasin Gishu,wasted
+size_at_birth,0.004847019418441913,16,27,Uasin Gishu,wasted
+hh_head_sex,0.004611703115284903,17,27,Uasin Gishu,wasted
+diarrhea_2wk,0.0,18,27,Uasin Gishu,wasted
+maternal_edu,0.12759418658745397,1,28,Elgeyo/Marakwet,wasted
+wealth_index,0.06882058759062236,2,28,Elgeyo/Marakwet,wasted
+wash_score,0.037695971985462845,3,28,Elgeyo/Marakwet,wasted
+under5_in_hh,0.03602129445914328,4,28,Elgeyo/Marakwet,wasted
+birth_order,0.03572793385289263,5,28,Elgeyo/Marakwet,wasted
+maternal_bmi,0.026734311369952028,6,28,Elgeyo/Marakwet,wasted
+child_age_months,0.01943767411648023,7,28,Elgeyo/Marakwet,wasted
+prev_birth_interval,0.018438205854662024,8,28,Elgeyo/Marakwet,wasted
+child_sex,0.015022934005869334,9,28,Elgeyo/Marakwet,wasted
+residence_urban,0.010904387593847202,10,28,Elgeyo/Marakwet,wasted
+electricity,0.009639002573702546,11,28,Elgeyo/Marakwet,wasted
+hh_head_age,0.009189090216746144,12,28,Elgeyo/Marakwet,wasted
+birth_weight_kg,0.006265520207397267,13,28,Elgeyo/Marakwet,wasted
+breastfeeding,0.005890624951502205,14,28,Elgeyo/Marakwet,wasted
+fever_2wk,0.005081790060834886,15,28,Elgeyo/Marakwet,wasted
+size_at_birth,0.005026900107925849,16,28,Elgeyo/Marakwet,wasted
+hh_head_sex,0.0037502195099796028,17,28,Elgeyo/Marakwet,wasted
+diarrhea_2wk,0.0,18,28,Elgeyo/Marakwet,wasted
+maternal_edu,0.12452675432440377,1,29,Nandi,wasted
+wealth_index,0.066059334021187,2,29,Nandi,wasted
+wash_score,0.042814127376240546,3,29,Nandi,wasted
+under5_in_hh,0.04191438411229919,4,29,Nandi,wasted
+birth_order,0.03326778890948108,5,29,Nandi,wasted
+maternal_bmi,0.023949467344443028,6,29,Nandi,wasted
+prev_birth_interval,0.02303970662181394,7,29,Nandi,wasted
+child_age_months,0.02047162322596625,8,29,Nandi,wasted
+child_sex,0.016107247039553487,9,29,Nandi,wasted
+residence_urban,0.011681025268534097,10,29,Nandi,wasted
+hh_head_age,0.009854790783387402,11,29,Nandi,wasted
+electricity,0.009416907616390975,12,29,Nandi,wasted
+birth_weight_kg,0.006578519567102204,13,29,Nandi,wasted
+fever_2wk,0.00549375441180562,14,29,Nandi,wasted
+breastfeeding,0.004495934493055218,15,29,Nandi,wasted
+size_at_birth,0.00362408040395806,16,29,Nandi,wasted
+hh_head_sex,0.0034293543340032043,17,29,Nandi,wasted
+diarrhea_2wk,0.0,18,29,Nandi,wasted
+maternal_edu,0.12045943161174669,1,30,Baringo,wasted
+wealth_index,0.05630986863172518,2,30,Baringo,wasted
+wash_score,0.04240793053941089,3,30,Baringo,wasted
+under5_in_hh,0.03675786617904717,4,30,Baringo,wasted
+birth_order,0.033146068718415383,5,30,Baringo,wasted
+maternal_bmi,0.02827523971586787,6,30,Baringo,wasted
+child_age_months,0.01953575295402323,7,30,Baringo,wasted
+prev_birth_interval,0.0192776559949836,8,30,Baringo,wasted
+child_sex,0.013932802905866709,9,30,Baringo,wasted
+residence_urban,0.009705285077329984,10,30,Baringo,wasted
+hh_head_age,0.00912337645576973,11,30,Baringo,wasted
+electricity,0.008973569054987966,12,30,Baringo,wasted
+size_at_birth,0.008508368952792045,13,30,Baringo,wasted
+birth_weight_kg,0.007206939424180362,14,30,Baringo,wasted
+breastfeeding,0.005657071058283263,15,30,Baringo,wasted
+hh_head_sex,0.00477932360120794,16,30,Baringo,wasted
+fever_2wk,0.004386732172809541,17,30,Baringo,wasted
+diarrhea_2wk,0.0,18,30,Baringo,wasted
+maternal_edu,0.10941809797283455,1,31,Laikipia,wasted
+wealth_index,0.08086416632702473,2,31,Laikipia,wasted
+under5_in_hh,0.04299814724957518,3,31,Laikipia,wasted
+wash_score,0.038023172523422154,4,31,Laikipia,wasted
+birth_order,0.02982178270596413,5,31,Laikipia,wasted
+maternal_bmi,0.025281511747791273,6,31,Laikipia,wasted
+prev_birth_interval,0.01962880589975697,7,31,Laikipia,wasted
+child_age_months,0.0164262237343323,8,31,Laikipia,wasted
+child_sex,0.016389877571975284,9,31,Laikipia,wasted
+hh_head_age,0.01091267994570913,10,31,Laikipia,wasted
+electricity,0.010830219498834863,11,31,Laikipia,wasted
+residence_urban,0.009615750687552691,12,31,Laikipia,wasted
+birth_weight_kg,0.007026141967447991,13,31,Laikipia,wasted
+breastfeeding,0.006185246743818609,14,31,Laikipia,wasted
+size_at_birth,0.005782942540233401,15,31,Laikipia,wasted
+hh_head_sex,0.004788700997704094,16,31,Laikipia,wasted
+fever_2wk,0.004313513309808637,17,31,Laikipia,wasted
+diarrhea_2wk,0.0,18,31,Laikipia,wasted
+maternal_edu,0.10929219632007704,1,32,Nakuru,wasted
+wealth_index,0.06971998184374525,2,32,Nakuru,wasted
+under5_in_hh,0.04351426943162572,3,32,Nakuru,wasted
+wash_score,0.039811604113358295,4,32,Nakuru,wasted
+birth_order,0.027616112121824632,5,32,Nakuru,wasted
+maternal_bmi,0.025133755260719395,6,32,Nakuru,wasted
+prev_birth_interval,0.023501550044639934,7,32,Nakuru,wasted
+child_sex,0.014331966735170017,8,32,Nakuru,wasted
+child_age_months,0.01407261829273272,9,32,Nakuru,wasted
+electricity,0.010445485315007975,10,32,Nakuru,wasted
+hh_head_age,0.009703082321966141,11,32,Nakuru,wasted
+residence_urban,0.009428727206759071,12,32,Nakuru,wasted
+birth_weight_kg,0.005663491997809269,13,32,Nakuru,wasted
+breastfeeding,0.005435898837586703,14,32,Nakuru,wasted
+fever_2wk,0.004524403826090999,15,32,Nakuru,wasted
+size_at_birth,0.003704629228877216,16,32,Nakuru,wasted
+hh_head_sex,0.003692554717962232,17,32,Nakuru,wasted
+diarrhea_2wk,0.0,18,32,Nakuru,wasted
+maternal_edu,0.09611402043930475,1,33,Narok,wasted
+wealth_index,0.05680360136229302,2,33,Narok,wasted
+wash_score,0.0318311585639927,3,33,Narok,wasted
+under5_in_hh,0.030352037901839126,4,33,Narok,wasted
+birth_order,0.027924406227928935,5,33,Narok,wasted
+maternal_bmi,0.027754674100455665,6,33,Narok,wasted
+prev_birth_interval,0.021444937181223762,7,33,Narok,wasted
+child_age_months,0.018152897519323252,8,33,Narok,wasted
+child_sex,0.01638435388751971,9,33,Narok,wasted
+hh_head_age,0.008865629974247209,10,33,Narok,wasted
+residence_urban,0.008685111807417756,11,33,Narok,wasted
+birth_weight_kg,0.007499594189897406,12,33,Narok,wasted
+size_at_birth,0.007119544143844436,13,33,Narok,wasted
+electricity,0.005270101477582093,14,33,Narok,wasted
+fever_2wk,0.005092946101151309,15,33,Narok,wasted
+breastfeeding,0.004435831970123127,16,33,Narok,wasted
+hh_head_sex,0.0035342252875306926,17,33,Narok,wasted
+diarrhea_2wk,0.0,18,33,Narok,wasted
+maternal_edu,0.08955875911053078,1,34,Kajiado,wasted
+wealth_index,0.06464853753904609,2,34,Kajiado,wasted
+under5_in_hh,0.03824506786241715,3,34,Kajiado,wasted
+wash_score,0.035759935602362694,4,34,Kajiado,wasted
+birth_order,0.027688478811086728,5,34,Kajiado,wasted
+maternal_bmi,0.025883394572226846,6,34,Kajiado,wasted
+prev_birth_interval,0.023309160645059217,7,34,Kajiado,wasted
+child_age_months,0.018914990395842345,8,34,Kajiado,wasted
+child_sex,0.017627312251021005,9,34,Kajiado,wasted
+residence_urban,0.007982240213865871,10,34,Kajiado,wasted
+electricity,0.007243411345582062,11,34,Kajiado,wasted
+hh_head_age,0.006944116773816825,12,34,Kajiado,wasted
+size_at_birth,0.006509384276522387,13,34,Kajiado,wasted
+birth_weight_kg,0.0061863199488654775,14,34,Kajiado,wasted
+breastfeeding,0.004983216915994307,15,34,Kajiado,wasted
+hh_head_sex,0.0040207622549616896,16,34,Kajiado,wasted
+fever_2wk,0.0035846657951221286,17,34,Kajiado,wasted
+diarrhea_2wk,0.0,18,34,Kajiado,wasted
+maternal_edu,0.1097417149381402,1,35,Kericho,wasted
+wealth_index,0.06410529208832841,2,35,Kericho,wasted
+wash_score,0.0331916265634157,3,35,Kericho,wasted
+under5_in_hh,0.0331667045377672,4,35,Kericho,wasted
+birth_order,0.02433269736237915,5,35,Kericho,wasted
+maternal_bmi,0.02302466672636839,6,35,Kericho,wasted
+prev_birth_interval,0.021495991646595304,7,35,Kericho,wasted
+child_sex,0.014910500329098372,8,35,Kericho,wasted
+child_age_months,0.014069305526457498,9,35,Kericho,wasted
+residence_urban,0.013792508445144383,10,35,Kericho,wasted
+hh_head_age,0.008223351175856224,11,35,Kericho,wasted
+electricity,0.008148883260670847,12,35,Kericho,wasted
+birth_weight_kg,0.004536927012334179,13,35,Kericho,wasted
+hh_head_sex,0.004312200025276563,14,35,Kericho,wasted
+breastfeeding,0.0041205168793355396,15,35,Kericho,wasted
+fever_2wk,0.003962776440087365,16,35,Kericho,wasted
+size_at_birth,0.0037986679981181592,17,35,Kericho,wasted
+diarrhea_2wk,0.0,18,35,Kericho,wasted
+maternal_edu,0.10935648100503204,1,36,Bomet,wasted
+wealth_index,0.05837113071659121,2,36,Bomet,wasted
+wash_score,0.036746555354189664,3,36,Bomet,wasted
+under5_in_hh,0.03392849923427763,4,36,Bomet,wasted
+birth_order,0.0252092405787124,5,36,Bomet,wasted
+maternal_bmi,0.021688736707824466,6,36,Bomet,wasted
+child_sex,0.019027677673534,7,36,Bomet,wasted
+prev_birth_interval,0.01695056982613582,8,36,Bomet,wasted
+residence_urban,0.01357905960958324,9,36,Bomet,wasted
+child_age_months,0.01253041102733623,10,36,Bomet,wasted
+hh_head_age,0.008679588878829733,11,36,Bomet,wasted
+birth_weight_kg,0.006291482703550595,12,36,Bomet,wasted
+electricity,0.005423332969490279,13,36,Bomet,wasted
+fever_2wk,0.0049126515132925,14,36,Bomet,wasted
+size_at_birth,0.003956077260731213,15,36,Bomet,wasted
+breastfeeding,0.003810083029344223,16,36,Bomet,wasted
+hh_head_sex,0.0038020952830584835,17,36,Bomet,wasted
+diarrhea_2wk,0.0,18,36,Bomet,wasted
+maternal_edu,0.10293109125968243,1,37,Kakamega,wasted
+wealth_index,0.06532170710250368,2,37,Kakamega,wasted
+under5_in_hh,0.03614250754173647,3,37,Kakamega,wasted
+wash_score,0.03085223656154284,4,37,Kakamega,wasted
+birth_order,0.02546620358364138,5,37,Kakamega,wasted
+maternal_bmi,0.023674357544352913,6,37,Kakamega,wasted
+prev_birth_interval,0.0212104694955188,7,37,Kakamega,wasted
+child_sex,0.015368006668972378,8,37,Kakamega,wasted
+residence_urban,0.013209876616876852,9,37,Kakamega,wasted
+child_age_months,0.012574090253859822,10,37,Kakamega,wasted
+hh_head_age,0.007848944231138216,11,37,Kakamega,wasted
+size_at_birth,0.007071210783661498,12,37,Kakamega,wasted
+electricity,0.005705918568412993,13,37,Kakamega,wasted
+fever_2wk,0.005343852421506005,14,37,Kakamega,wasted
+birth_weight_kg,0.004649940248351402,15,37,Kakamega,wasted
+hh_head_sex,0.0042585685828052935,16,37,Kakamega,wasted
+breastfeeding,0.00422048624921033,17,37,Kakamega,wasted
+diarrhea_2wk,0.0,18,37,Kakamega,wasted
+maternal_edu,0.10373070119486605,1,38,Vihiga,wasted
+wealth_index,0.05720728519640796,2,38,Vihiga,wasted
+wash_score,0.03584149781267066,3,38,Vihiga,wasted
+under5_in_hh,0.032695470842673664,4,38,Vihiga,wasted
+birth_order,0.024511942464405256,5,38,Vihiga,wasted
+maternal_bmi,0.023059856347479778,6,38,Vihiga,wasted
+prev_birth_interval,0.02054388110231082,7,38,Vihiga,wasted
+residence_urban,0.016141453371934164,8,38,Vihiga,wasted
+child_sex,0.01465874422315896,9,38,Vihiga,wasted
+child_age_months,0.010617136995744137,10,38,Vihiga,wasted
+hh_head_age,0.009671480241083592,11,38,Vihiga,wasted
+electricity,0.0069360640600962375,12,38,Vihiga,wasted
+hh_head_sex,0.00532945986342606,13,38,Vihiga,wasted
+fever_2wk,0.005276634380688961,14,38,Vihiga,wasted
+breastfeeding,0.004766196105827431,15,38,Vihiga,wasted
+birth_weight_kg,0.003912870357943105,16,38,Vihiga,wasted
+size_at_birth,0.0035988839500432357,17,38,Vihiga,wasted
+diarrhea_2wk,0.0,18,38,Vihiga,wasted
+maternal_edu,0.10889155212365235,1,39,Bungoma,wasted
+wealth_index,0.06484831616345423,2,39,Bungoma,wasted
+under5_in_hh,0.034478170785720914,3,39,Bungoma,wasted
+wash_score,0.031695499918103526,4,39,Bungoma,wasted
+birth_order,0.02353137627080795,5,39,Bungoma,wasted
+maternal_bmi,0.022562799644424047,6,39,Bungoma,wasted
+prev_birth_interval,0.017954330385204872,7,39,Bungoma,wasted
+child_sex,0.014476255878511951,8,39,Bungoma,wasted
+residence_urban,0.013777650653182738,9,39,Bungoma,wasted
+child_age_months,0.009996118573019947,10,39,Bungoma,wasted
+hh_head_age,0.00816862260954838,11,39,Bungoma,wasted
+birth_weight_kg,0.005585455059402035,12,39,Bungoma,wasted
+electricity,0.004952958911482441,13,39,Bungoma,wasted
+size_at_birth,0.004712722342882193,14,39,Bungoma,wasted
+fever_2wk,0.0046200165846782505,15,39,Bungoma,wasted
+hh_head_sex,0.003906946326680388,16,39,Bungoma,wasted
+breastfeeding,0.0038818945706198317,17,39,Bungoma,wasted
+diarrhea_2wk,0.0,18,39,Bungoma,wasted
+maternal_edu,0.10607084419668979,1,40,Busia,wasted
+wealth_index,0.06108226208608503,2,40,Busia,wasted
+wash_score,0.0334206037004381,3,40,Busia,wasted
+under5_in_hh,0.028958931670526312,4,40,Busia,wasted
+birth_order,0.024567279021955876,5,40,Busia,wasted
+maternal_bmi,0.021798300665195735,6,40,Busia,wasted
+prev_birth_interval,0.01728990844100744,7,40,Busia,wasted
+child_sex,0.017082930115057935,8,40,Busia,wasted
+residence_urban,0.012670701876606983,9,40,Busia,wasted
+child_age_months,0.012195521133194746,10,40,Busia,wasted
+hh_head_age,0.00717832445784517,11,40,Busia,wasted
+birth_weight_kg,0.005602914955102638,12,40,Busia,wasted
+electricity,0.005172616419355023,13,40,Busia,wasted
+fever_2wk,0.0051708541124089015,14,40,Busia,wasted
+size_at_birth,0.004566318336094878,15,40,Busia,wasted
+hh_head_sex,0.004303331504231653,16,40,Busia,wasted
+breastfeeding,0.0038971157165641392,17,40,Busia,wasted
+diarrhea_2wk,0.0,18,40,Busia,wasted
+maternal_edu,0.11329233557784439,1,41,Siaya,wasted
+wealth_index,0.05715860850646834,2,41,Siaya,wasted
+wash_score,0.03397310642162658,3,41,Siaya,wasted
+under5_in_hh,0.029230841319166166,4,41,Siaya,wasted
+birth_order,0.02512472217914347,5,41,Siaya,wasted
+maternal_bmi,0.02385721506819507,6,41,Siaya,wasted
+prev_birth_interval,0.016548214322852587,7,41,Siaya,wasted
+child_sex,0.01585077354202227,8,41,Siaya,wasted
+residence_urban,0.012393771123818733,9,41,Siaya,wasted
+child_age_months,0.010805218338455975,10,41,Siaya,wasted
+hh_head_age,0.007816431890818494,11,41,Siaya,wasted
+size_at_birth,0.006466516744688262,12,41,Siaya,wasted
+birth_weight_kg,0.0054202853834394195,13,41,Siaya,wasted
+fever_2wk,0.004636096782348472,14,41,Siaya,wasted
+electricity,0.0038671828242793915,15,41,Siaya,wasted
+hh_head_sex,0.003781815435878738,16,41,Siaya,wasted
+breastfeeding,0.0035962314803187063,17,41,Siaya,wasted
+diarrhea_2wk,0.0,18,41,Siaya,wasted
+maternal_edu,0.10783084147654179,1,42,Kisumu,wasted
+wealth_index,0.049467806266977485,2,42,Kisumu,wasted
+under5_in_hh,0.03373228239565604,3,42,Kisumu,wasted
+wash_score,0.030968727936903293,4,42,Kisumu,wasted
+birth_order,0.026088554845245398,5,42,Kisumu,wasted
+maternal_bmi,0.02386986648200269,6,42,Kisumu,wasted
+child_sex,0.01588307508953942,7,42,Kisumu,wasted
+prev_birth_interval,0.014923748028297573,8,42,Kisumu,wasted
+residence_urban,0.012796254099645207,9,42,Kisumu,wasted
+child_age_months,0.011396024218468859,10,42,Kisumu,wasted
+hh_head_age,0.006691782641982651,11,42,Kisumu,wasted
+electricity,0.005264188899230447,12,42,Kisumu,wasted
+fever_2wk,0.004736041722509694,13,42,Kisumu,wasted
+size_at_birth,0.004105145038870308,14,42,Kisumu,wasted
+birth_weight_kg,0.0038814220163598634,15,42,Kisumu,wasted
+hh_head_sex,0.0037984586210761087,16,42,Kisumu,wasted
+breastfeeding,0.003519956704665501,17,42,Kisumu,wasted
+diarrhea_2wk,0.0,18,42,Kisumu,wasted
+maternal_edu,0.11061487132117859,1,43,Homa Bay,wasted
+wealth_index,0.049174815526298224,2,43,Homa Bay,wasted
+wash_score,0.03326528598334515,3,43,Homa Bay,wasted
+under5_in_hh,0.031644995870570035,4,43,Homa Bay,wasted
+birth_order,0.024587663585221426,5,43,Homa Bay,wasted
+maternal_bmi,0.022657348284780547,6,43,Homa Bay,wasted
+child_sex,0.01615288569541512,7,43,Homa Bay,wasted
+prev_birth_interval,0.015916275550787985,8,43,Homa Bay,wasted
+child_age_months,0.011661364707746905,9,43,Homa Bay,wasted
+residence_urban,0.011124262945921072,10,43,Homa Bay,wasted
+hh_head_age,0.009546278892599715,11,43,Homa Bay,wasted
+size_at_birth,0.0067331978837064065,12,43,Homa Bay,wasted
+fever_2wk,0.005784006243677309,13,43,Homa Bay,wasted
+electricity,0.004905428599592398,14,43,Homa Bay,wasted
+birth_weight_kg,0.004710596386242495,15,43,Homa Bay,wasted
+hh_head_sex,0.003934727693907135,16,43,Homa Bay,wasted
+breastfeeding,0.0034450775447742226,17,43,Homa Bay,wasted
+diarrhea_2wk,0.0,18,43,Homa Bay,wasted
+maternal_edu,0.11563127099222516,1,44,Migori,wasted
+wealth_index,0.051265437466548464,2,44,Migori,wasted
+wash_score,0.035237100738239095,3,44,Migori,wasted
+under5_in_hh,0.030451041493521118,4,44,Migori,wasted
+birth_order,0.025257633941893655,5,44,Migori,wasted
+maternal_bmi,0.02420266069304527,6,44,Migori,wasted
+child_sex,0.017016333729993373,7,44,Migori,wasted
+prev_birth_interval,0.013996461100648156,8,44,Migori,wasted
+child_age_months,0.013444915750864674,9,44,Migori,wasted
+residence_urban,0.010293465109841242,10,44,Migori,wasted
+hh_head_age,0.00808333949752086,11,44,Migori,wasted
+electricity,0.005528856450720863,12,44,Migori,wasted
+fever_2wk,0.005475952255196923,13,44,Migori,wasted
+birth_weight_kg,0.005115677437480714,14,44,Migori,wasted
+size_at_birth,0.0046438741223503634,15,44,Migori,wasted
+hh_head_sex,0.0037314044690177966,16,44,Migori,wasted
+breastfeeding,0.003540180191195223,17,44,Migori,wasted
+diarrhea_2wk,0.0,18,44,Migori,wasted
+maternal_edu,0.1063131603485065,1,45,Kisii,wasted
+wealth_index,0.05251542242113932,2,45,Kisii,wasted
+under5_in_hh,0.03378447936135831,3,45,Kisii,wasted
+wash_score,0.03214664929457433,4,45,Kisii,wasted
+maternal_bmi,0.02469844242427909,5,45,Kisii,wasted
+birth_order,0.02461731613336052,6,45,Kisii,wasted
+prev_birth_interval,0.018571307892089946,7,45,Kisii,wasted
+child_sex,0.01635482381418011,8,45,Kisii,wasted
+residence_urban,0.014278602876795863,9,45,Kisii,wasted
+child_age_months,0.013459807726475172,10,45,Kisii,wasted
+hh_head_age,0.007100473957908953,11,45,Kisii,wasted
+electricity,0.006692922324328289,12,45,Kisii,wasted
+fever_2wk,0.005586897785856929,13,45,Kisii,wasted
+birth_weight_kg,0.004255601693957635,14,45,Kisii,wasted
+size_at_birth,0.0041643121847535144,15,45,Kisii,wasted
+hh_head_sex,0.0032593885239970456,16,45,Kisii,wasted
+breastfeeding,0.0031413962880777364,17,45,Kisii,wasted
+diarrhea_2wk,0.0,18,45,Kisii,wasted
+maternal_edu,0.10150257697259986,1,46,Nyamira,wasted
+wealth_index,0.05679737161549366,2,46,Nyamira,wasted
+under5_in_hh,0.0381838892740111,3,46,Nyamira,wasted
+wash_score,0.03291480794265489,4,46,Nyamira,wasted
+birth_order,0.024221433598269164,5,46,Nyamira,wasted
+maternal_bmi,0.021925073336014286,6,46,Nyamira,wasted
+prev_birth_interval,0.01887867693705159,7,46,Nyamira,wasted
+residence_urban,0.01622370540206159,8,46,Nyamira,wasted
+child_sex,0.012894346102404522,9,46,Nyamira,wasted
+child_age_months,0.010161772673106535,10,46,Nyamira,wasted
+hh_head_age,0.008545466592112123,11,46,Nyamira,wasted
+electricity,0.006421552245571734,12,46,Nyamira,wasted
+size_at_birth,0.005895888618023374,13,46,Nyamira,wasted
+fever_2wk,0.005592598166269798,14,46,Nyamira,wasted
+birth_weight_kg,0.004376704483456845,15,46,Nyamira,wasted
+breastfeeding,0.004300126411121398,16,46,Nyamira,wasted
+hh_head_sex,0.0038136045458303067,17,46,Nyamira,wasted
+diarrhea_2wk,0.0,18,46,Nyamira,wasted
+maternal_edu,0.095822567158857,1,47,Nairobi,wasted
+wealth_index,0.08080135932926548,2,47,Nairobi,wasted
+under5_in_hh,0.036244663228863945,3,47,Nairobi,wasted
+wash_score,0.03341306644804493,4,47,Nairobi,wasted
+maternal_bmi,0.022713873071432345,5,47,Nairobi,wasted
+birth_order,0.020675066390622616,6,47,Nairobi,wasted
+prev_birth_interval,0.020243001129838914,7,47,Nairobi,wasted
+child_sex,0.01475507530453891,8,47,Nairobi,wasted
+child_age_months,0.014031432777147114,9,47,Nairobi,wasted
+electricity,0.010366334331409903,10,47,Nairobi,wasted
+residence_urban,0.010093596746429087,11,47,Nairobi,wasted
+hh_head_age,0.0078076727059848096,12,47,Nairobi,wasted
+breastfeeding,0.005631359498458226,13,47,Nairobi,wasted
+hh_head_sex,0.005394081803223954,14,47,Nairobi,wasted
+fever_2wk,0.0051007854610380585,15,47,Nairobi,wasted
+size_at_birth,0.00324649967144861,16,47,Nairobi,wasted
+birth_weight_kg,0.0028411345737976205,17,47,Nairobi,wasted
+diarrhea_2wk,0.0,18,47,Nairobi,wasted
+wealth_index,0.6579570274166667,1,1,Mombasa,underweight
+maternal_edu,0.33560762319666665,2,1,Mombasa,underweight
+birth_order,0.3249205143500001,3,1,Mombasa,underweight
+wash_score,0.27328507733333335,4,1,Mombasa,underweight
+under5_in_hh,0.20083675115000002,5,1,Mombasa,underweight
+prev_birth_interval,0.16916568491666664,6,1,Mombasa,underweight
+maternal_bmi,0.16083837018333336,7,1,Mombasa,underweight
+child_age_months,0.1351577245236667,8,1,Mombasa,underweight
+child_sex,0.10796382732833333,9,1,Mombasa,underweight
+hh_head_age,0.09058987494999998,10,1,Mombasa,underweight
+birth_weight_kg,0.08912004130866666,11,1,Mombasa,underweight
+fever_2wk,0.07471448951733332,12,1,Mombasa,underweight
+residence_urban,0.07394542073333335,13,1,Mombasa,underweight
+size_at_birth,0.053121528885,14,1,Mombasa,underweight
+electricity,0.04328218745066667,15,1,Mombasa,underweight
+hh_head_sex,0.03533506859733334,16,1,Mombasa,underweight
+breastfeeding,0.030571983407833337,17,1,Mombasa,underweight
+diarrhea_2wk,0.0,18,1,Mombasa,underweight
+birth_order,0.33901986220277774,1,2,Kwale,underweight
+wash_score,0.2779644164583333,2,2,Kwale,underweight
+wealth_index,0.25663136521343055,3,2,Kwale,underweight
+maternal_edu,0.2361896780138889,4,2,Kwale,underweight
+prev_birth_interval,0.15402814108055557,5,2,Kwale,underweight
+maternal_bmi,0.14943054615833332,6,2,Kwale,underweight
+under5_in_hh,0.1480616240138889,7,2,Kwale,underweight
+child_age_months,0.12600913715041667,8,2,Kwale,underweight
+child_sex,0.11402187536111111,9,2,Kwale,underweight
+size_at_birth,0.11229976953624998,10,2,Kwale,underweight
+hh_head_age,0.10918350536666667,11,2,Kwale,underweight
+birth_weight_kg,0.08441453782777777,12,2,Kwale,underweight
+residence_urban,0.06010258502777778,13,2,Kwale,underweight
+fever_2wk,0.035745892879166664,14,2,Kwale,underweight
+breastfeeding,0.03381319250833333,15,2,Kwale,underweight
+electricity,0.027194585870416666,16,2,Kwale,underweight
+hh_head_sex,0.02186011126597222,17,2,Kwale,underweight
+diarrhea_2wk,0.0,18,2,Kwale,underweight
+birth_order,0.3231532061910714,1,3,Kilifi,underweight
+wealth_index,0.2816108153035714,2,3,Kilifi,underweight
+maternal_edu,0.25125270057142857,3,3,Kilifi,underweight
+wash_score,0.24076921380357144,4,3,Kilifi,underweight
+maternal_bmi,0.19309443994642855,5,3,Kilifi,underweight
+under5_in_hh,0.17656172321428573,6,3,Kilifi,underweight
+child_age_months,0.1748764888125,7,3,Kilifi,underweight
+prev_birth_interval,0.1710274747496429,8,3,Kilifi,underweight
+child_sex,0.12415923140357144,9,3,Kilifi,underweight
+hh_head_age,0.07593687873928572,10,3,Kilifi,underweight
+breastfeeding,0.06440314336785714,11,3,Kilifi,underweight
+residence_urban,0.057718048849999995,12,3,Kilifi,underweight
+birth_weight_kg,0.05724458406053572,13,3,Kilifi,underweight
+fever_2wk,0.03903513926785714,14,3,Kilifi,underweight
+hh_head_sex,0.038807802674999996,15,3,Kilifi,underweight
+size_at_birth,0.03714802981964286,16,3,Kilifi,underweight
+electricity,0.030273687594642856,17,3,Kilifi,underweight
+diarrhea_2wk,0.0,18,3,Kilifi,underweight
+birth_order,0.32246108283928576,1,4,Tana River,underweight
+wash_score,0.22065344302053572,2,4,Tana River,underweight
+child_age_months,0.21005231800598212,3,4,Tana River,underweight
+wealth_index,0.19712884183892856,4,4,Tana River,underweight
+maternal_edu,0.1806451163464286,5,4,Tana River,underweight
+maternal_bmi,0.152275105,6,4,Tana River,underweight
+prev_birth_interval,0.1465637451942857,7,4,Tana River,underweight
+under5_in_hh,0.1371178483723214,8,4,Tana River,underweight
+child_sex,0.10859499522232142,9,4,Tana River,underweight
+hh_head_age,0.09448115991446428,10,4,Tana River,underweight
+birth_weight_kg,0.07873766129741071,11,4,Tana River,underweight
+residence_urban,0.049627855987500004,12,4,Tana River,underweight
+fever_2wk,0.03872323505892857,13,4,Tana River,underweight
+electricity,0.032661537689285716,14,4,Tana River,underweight
+breastfeeding,0.026540002362946426,15,4,Tana River,underweight
+size_at_birth,0.025064908994937497,16,4,Tana River,underweight
+hh_head_sex,0.023209450132410714,17,4,Tana River,underweight
+diarrhea_2wk,0.0,18,4,Tana River,underweight
+wealth_index,0.45929767584848485,1,5,Lamu,underweight
+birth_order,0.37577571339393945,2,5,Lamu,underweight
+maternal_edu,0.27711458575757575,3,5,Lamu,underweight
+wash_score,0.23969024418181814,4,5,Lamu,underweight
+maternal_bmi,0.19420946413333334,5,5,Lamu,underweight
+child_age_months,0.18413989204999998,6,5,Lamu,underweight
+prev_birth_interval,0.16079980347121212,7,5,Lamu,underweight
+under5_in_hh,0.15996250534242423,8,5,Lamu,underweight
+child_sex,0.09407674758333334,9,5,Lamu,underweight
+size_at_birth,0.09278668822645453,10,5,Lamu,underweight
+hh_head_age,0.09057123758333334,11,5,Lamu,underweight
+birth_weight_kg,0.08386778560272727,12,5,Lamu,underweight
+residence_urban,0.07220928346969696,13,5,Lamu,underweight
+electricity,0.05597637209984848,14,5,Lamu,underweight
+fever_2wk,0.05540061392424242,15,5,Lamu,underweight
+breastfeeding,0.026825342310606057,16,5,Lamu,underweight
+hh_head_sex,0.026465951062121212,17,5,Lamu,underweight
+diarrhea_2wk,0.0,18,5,Lamu,underweight
+wealth_index,0.4894624884782609,1,6,Taita/Taveta,underweight
+birth_order,0.3529653637391304,2,6,Taita/Taveta,underweight
+maternal_edu,0.3515418086956521,3,6,Taita/Taveta,underweight
+wash_score,0.2697360403695653,4,6,Taita/Taveta,underweight
+prev_birth_interval,0.23066488008695654,5,6,Taita/Taveta,underweight
+under5_in_hh,0.1927726335,6,6,Taita/Taveta,underweight
+maternal_bmi,0.18134718336956518,7,6,Taita/Taveta,underweight
+child_sex,0.11832438284347827,8,6,Taita/Taveta,underweight
+hh_head_age,0.11142377285869565,9,6,Taita/Taveta,underweight
+child_age_months,0.10966338249782609,10,6,Taita/Taveta,underweight
+birth_weight_kg,0.08223156689413043,11,6,Taita/Taveta,underweight
+residence_urban,0.06865164880869563,12,6,Taita/Taveta,underweight
+fever_2wk,0.03889842252173913,13,6,Taita/Taveta,underweight
+hh_head_sex,0.03463275103478261,14,6,Taita/Taveta,underweight
+electricity,0.034257625465217385,15,6,Taita/Taveta,underweight
+size_at_birth,0.029593930496521738,16,6,Taita/Taveta,underweight
+breastfeeding,0.02525289966152174,17,6,Taita/Taveta,underweight
+diarrhea_2wk,0.0,18,6,Taita/Taveta,underweight
+wealth_index,0.4665436557864078,1,7,Garissa,underweight
+birth_order,0.38059311380582533,2,7,Garissa,underweight
+wash_score,0.2743574590291261,3,7,Garissa,underweight
+child_age_months,0.2095007600207767,4,7,Garissa,underweight
+maternal_bmi,0.19089860690194174,5,7,Garissa,underweight
+under5_in_hh,0.13697363795616507,6,7,Garissa,underweight
+prev_birth_interval,0.13140140873106798,7,7,Garissa,underweight
+maternal_edu,0.10376663169449515,8,7,Garissa,underweight
+child_sex,0.09905964539902916,9,7,Garissa,underweight
+hh_head_age,0.0984415374592233,10,7,Garissa,underweight
+birth_weight_kg,0.08222954753980581,11,7,Garissa,underweight
+electricity,0.05840606372330097,12,7,Garissa,underweight
+residence_urban,0.058341272720388346,13,7,Garissa,underweight
+fever_2wk,0.03707589739805824,14,7,Garissa,underweight
+size_at_birth,0.03227637450029126,15,7,Garissa,underweight
+hh_head_sex,0.030482883253398055,16,7,Garissa,underweight
+breastfeeding,0.02638669533009708,17,7,Garissa,underweight
+diarrhea_2wk,0.0,18,7,Garissa,underweight
+wealth_index,0.38006179697916664,1,8,Wajir,underweight
+birth_order,0.325546395,2,8,Wajir,underweight
+wash_score,0.24493319996145835,3,8,Wajir,underweight
+child_age_months,0.18568623193124997,4,8,Wajir,underweight
+maternal_bmi,0.16543056185416666,5,8,Wajir,underweight
+prev_birth_interval,0.1343128546,6,8,Wajir,underweight
+under5_in_hh,0.12640427276020835,7,8,Wajir,underweight
+hh_head_age,0.11392341645208333,8,8,Wajir,underweight
+child_sex,0.105461024571875,9,8,Wajir,underweight
+maternal_edu,0.08675938734614581,10,8,Wajir,underweight
+birth_weight_kg,0.06683941951694793,11,8,Wajir,underweight
+size_at_birth,0.05773798912625,12,8,Wajir,underweight
+electricity,0.05400439337395833,13,8,Wajir,underweight
+residence_urban,0.043639203525,14,8,Wajir,underweight
+hh_head_sex,0.0335611378003125,15,8,Wajir,underweight
+fever_2wk,0.030436866284375003,16,8,Wajir,underweight
+breastfeeding,0.029763969390416662,17,8,Wajir,underweight
+diarrhea_2wk,0.0,18,8,Wajir,underweight
+wealth_index,0.3462627108819876,1,9,Mandera,underweight
+birth_order,0.3461255222670807,2,9,Mandera,underweight
+wash_score,0.27672712089689444,3,9,Mandera,underweight
+child_age_months,0.19639213402546585,4,9,Mandera,underweight
+maternal_bmi,0.1606949647111801,5,9,Mandera,underweight
+under5_in_hh,0.13395461606062112,6,9,Mandera,underweight
+prev_birth_interval,0.13278721287142858,7,9,Mandera,underweight
+child_sex,0.099399769108882,8,9,Mandera,underweight
+maternal_edu,0.09883576033614908,9,9,Mandera,underweight
+hh_head_age,0.08901945788142858,10,9,Mandera,underweight
+birth_weight_kg,0.0854407950416149,11,9,Mandera,underweight
+residence_urban,0.05297151053540372,12,9,Mandera,underweight
+electricity,0.04197735482776397,13,9,Mandera,underweight
+breastfeeding,0.03192172949434782,14,9,Mandera,underweight
+fever_2wk,0.028365803652919252,15,9,Mandera,underweight
+hh_head_sex,0.02362447641677019,16,9,Mandera,underweight
+size_at_birth,0.020641283589192545,17,9,Mandera,underweight
+diarrhea_2wk,0.0,18,9,Mandera,underweight
+wealth_index,0.4093277452321429,1,10,Marsabit,underweight
+birth_order,0.3706233876428571,2,10,Marsabit,underweight
+wash_score,0.28071850754553573,3,10,Marsabit,underweight
+child_age_months,0.2360060468955357,4,10,Marsabit,underweight
+maternal_edu,0.16870675853392858,5,10,Marsabit,underweight
+prev_birth_interval,0.15513457404910716,6,10,Marsabit,underweight
+under5_in_hh,0.15216707664464285,7,10,Marsabit,underweight
+maternal_bmi,0.14993022952946428,8,10,Marsabit,underweight
+child_sex,0.10245885832857142,9,10,Marsabit,underweight
+hh_head_age,0.08011391574910716,10,10,Marsabit,underweight
+birth_weight_kg,0.07725486364044643,11,10,Marsabit,underweight
+electricity,0.05174193166339286,12,10,Marsabit,underweight
+residence_urban,0.05168423748571428,13,10,Marsabit,underweight
+fever_2wk,0.03238417621071429,14,10,Marsabit,underweight
+size_at_birth,0.02692955981303571,15,10,Marsabit,underweight
+breastfeeding,0.02634971781625,16,10,Marsabit,underweight
+hh_head_sex,0.024229653257142856,17,10,Marsabit,underweight
+diarrhea_2wk,0.0,18,10,Marsabit,underweight
+wealth_index,0.43322913308333333,1,11,Isiolo,underweight
+birth_order,0.3256029203883334,2,11,Isiolo,underweight
+wash_score,0.29267034399999997,3,11,Isiolo,underweight
+maternal_edu,0.2491360570666667,4,11,Isiolo,underweight
+prev_birth_interval,0.17156834029999998,5,11,Isiolo,underweight
+child_age_months,0.17090422118333332,6,11,Isiolo,underweight
+under5_in_hh,0.1472355698616667,7,11,Isiolo,underweight
+maternal_bmi,0.1328857742083333,8,11,Isiolo,underweight
+child_sex,0.09714534002000001,9,11,Isiolo,underweight
+hh_head_age,0.08269913135333334,10,11,Isiolo,underweight
+birth_weight_kg,0.07468519978483333,11,11,Isiolo,underweight
+residence_urban,0.057403211276666664,12,11,Isiolo,underweight
+electricity,0.05136093657166667,13,11,Isiolo,underweight
+fever_2wk,0.03852441986666666,14,11,Isiolo,underweight
+size_at_birth,0.03155419108566667,15,11,Isiolo,underweight
+breastfeeding,0.026057954817166665,16,11,Isiolo,underweight
+hh_head_sex,0.02254030101666666,17,11,Isiolo,underweight
+diarrhea_2wk,0.0,18,11,Isiolo,underweight
+wealth_index,0.429428774,1,12,Meru,underweight
+maternal_edu,0.41603434499999997,2,12,Meru,underweight
+birth_order,0.3738301239649123,3,12,Meru,underweight
+wash_score,0.28672567636842106,4,12,Meru,underweight
+child_age_months,0.24308876041052632,5,12,Meru,underweight
+prev_birth_interval,0.1966187640877193,6,12,Meru,underweight
+under5_in_hh,0.19128771954385962,7,12,Meru,underweight
+maternal_bmi,0.17576022529824564,8,12,Meru,underweight
+child_sex,0.1314236699136842,9,12,Meru,underweight
+hh_head_age,0.08976161139122805,10,12,Meru,underweight
+birth_weight_kg,0.07850765565333333,11,12,Meru,underweight
+size_at_birth,0.06681429341754386,12,12,Meru,underweight
+residence_urban,0.06275233942105263,13,12,Meru,underweight
+fever_2wk,0.050253059519298246,14,12,Meru,underweight
+electricity,0.0334258466845614,15,12,Meru,underweight
+breastfeeding,0.030262793260701748,16,12,Meru,underweight
+hh_head_sex,0.027741795861578947,17,12,Meru,underweight
+diarrhea_2wk,0.0,18,12,Meru,underweight
+wealth_index,0.5272535560576924,1,13,Tharaka-Nithi,underweight
+maternal_edu,0.4935551405769231,2,13,Tharaka-Nithi,underweight
+birth_order,0.3531597103653846,3,13,Tharaka-Nithi,underweight
+wash_score,0.24052021521153846,4,13,Tharaka-Nithi,underweight
+prev_birth_interval,0.22027662347692306,5,13,Tharaka-Nithi,underweight
+under5_in_hh,0.20787646546153843,6,13,Tharaka-Nithi,underweight
+child_age_months,0.1870916495519231,7,13,Tharaka-Nithi,underweight
+maternal_bmi,0.18058567336538467,8,13,Tharaka-Nithi,underweight
+child_sex,0.11508660372115385,9,13,Tharaka-Nithi,underweight
+hh_head_age,0.07645067672692307,10,13,Tharaka-Nithi,underweight
+birth_weight_kg,0.06317108356807692,11,13,Tharaka-Nithi,underweight
+residence_urban,0.059768478807692316,12,13,Tharaka-Nithi,underweight
+fever_2wk,0.048084798788461544,13,13,Tharaka-Nithi,underweight
+breastfeeding,0.038438240048076916,14,13,Tharaka-Nithi,underweight
+electricity,0.03238929281230769,15,13,Tharaka-Nithi,underweight
+size_at_birth,0.02525598295961538,16,13,Tharaka-Nithi,underweight
+hh_head_sex,0.023528185724423074,17,13,Tharaka-Nithi,underweight
+diarrhea_2wk,0.0,18,13,Tharaka-Nithi,underweight
+wealth_index,0.6237585918378379,1,14,Embu,underweight
+maternal_edu,0.539568168108108,2,14,Embu,underweight
+birth_order,0.3485639328918919,3,14,Embu,underweight
+wash_score,0.2786308135135135,4,14,Embu,underweight
+child_age_months,0.27205060777297296,5,14,Embu,underweight
+under5_in_hh,0.20352739274594595,6,14,Embu,underweight
+maternal_bmi,0.19155299760810812,7,14,Embu,underweight
+prev_birth_interval,0.18387442250810812,8,14,Embu,underweight
+child_sex,0.13497648045945948,9,14,Embu,underweight
+birth_weight_kg,0.0868313793908108,10,14,Embu,underweight
+residence_urban,0.07178915456756756,11,14,Embu,underweight
+hh_head_age,0.07075967794324325,12,14,Embu,underweight
+breastfeeding,0.04594640050810811,13,14,Embu,underweight
+electricity,0.03996666250702703,14,14,Embu,underweight
+fever_2wk,0.03947984772972973,15,14,Embu,underweight
+size_at_birth,0.036370996291891895,16,14,Embu,underweight
+hh_head_sex,0.03197481585135135,17,14,Embu,underweight
+diarrhea_2wk,0.0,18,14,Embu,underweight
+maternal_edu,0.5431296609375,1,15,Kitui,underweight
+wealth_index,0.467598139690625,2,15,Kitui,underweight
+birth_order,0.36070717015625003,3,15,Kitui,underweight
+child_age_months,0.20971128831875002,4,15,Kitui,underweight
+under5_in_hh,0.20231584819218748,5,15,Kitui,underweight
+prev_birth_interval,0.19607208807734378,6,15,Kitui,underweight
+wash_score,0.193770874875,7,15,Kitui,underweight
+maternal_bmi,0.1809093690625,8,15,Kitui,underweight
+hh_head_age,0.13098662913390627,9,15,Kitui,underweight
+child_sex,0.12179775466093751,10,15,Kitui,underweight
+birth_weight_kg,0.07554222095312499,11,15,Kitui,underweight
+residence_urban,0.0489577736984375,12,15,Kitui,underweight
+hh_head_sex,0.045765542799999996,13,15,Kitui,underweight
+size_at_birth,0.040287648116875,14,15,Kitui,underweight
+fever_2wk,0.03781860259375,15,15,Kitui,underweight
+breastfeeding,0.037465633581562505,16,15,Kitui,underweight
+electricity,0.0191563591253125,17,15,Kitui,underweight
+diarrhea_2wk,0.0,18,15,Kitui,underweight
+wealth_index,0.6254810211904762,1,16,Machakos,underweight
+maternal_edu,0.5188491188095238,2,16,Machakos,underweight
+birth_order,0.38779254369047617,3,16,Machakos,underweight
+wash_score,0.29124988416666664,4,16,Machakos,underweight
+child_age_months,0.23915416902142855,5,16,Machakos,underweight
+maternal_bmi,0.2202630592857143,6,16,Machakos,underweight
+under5_in_hh,0.2006278407142857,7,16,Machakos,underweight
+prev_birth_interval,0.17977992198809525,8,16,Machakos,underweight
+child_sex,0.14973549116666665,9,16,Machakos,underweight
+birth_weight_kg,0.11613856392142859,10,16,Machakos,underweight
+hh_head_age,0.07718136070952382,11,16,Machakos,underweight
+residence_urban,0.06535866811904761,12,16,Machakos,underweight
+fever_2wk,0.04493909104761905,13,16,Machakos,underweight
+breastfeeding,0.03483663282761905,14,16,Machakos,underweight
+electricity,0.03396968853095238,15,16,Machakos,underweight
+size_at_birth,0.033399648953690485,16,16,Machakos,underweight
+hh_head_sex,0.027952828090238094,17,16,Machakos,underweight
+diarrhea_2wk,0.0,18,16,Machakos,underweight
+wealth_index,0.5522998879090909,1,17,Makueni,underweight
+maternal_edu,0.48865974981818194,2,17,Makueni,underweight
+birth_order,0.32925030229090907,3,17,Makueni,underweight
+wash_score,0.2689958435636363,4,17,Makueni,underweight
+prev_birth_interval,0.24593227846545457,5,17,Makueni,underweight
+maternal_bmi,0.20902999894545454,6,17,Makueni,underweight
+under5_in_hh,0.19460266678181817,7,17,Makueni,underweight
+child_age_months,0.1809382049727273,8,17,Makueni,underweight
+child_sex,0.15423853979818183,9,17,Makueni,underweight
+hh_head_age,0.11368541507454545,10,17,Makueni,underweight
+birth_weight_kg,0.10347871101163636,11,17,Makueni,underweight
+residence_urban,0.05841160956363638,12,17,Makueni,underweight
+size_at_birth,0.05462350449763636,13,17,Makueni,underweight
+fever_2wk,0.035465513490909095,14,17,Makueni,underweight
+breastfeeding,0.034101394651999996,15,17,Makueni,underweight
+hh_head_sex,0.032328263180181824,16,17,Makueni,underweight
+electricity,0.029145214819999994,17,17,Makueni,underweight
+diarrhea_2wk,0.0,18,17,Makueni,underweight
+wealth_index,0.6011834392452831,1,18,Nyandarua,underweight
+maternal_edu,0.45645160471698115,2,18,Nyandarua,underweight
+birth_order,0.3960785470943396,3,18,Nyandarua,underweight
+wash_score,0.29375221966037735,4,18,Nyandarua,underweight
+maternal_bmi,0.22480759844339623,5,18,Nyandarua,underweight
+under5_in_hh,0.1837887846037736,6,18,Nyandarua,underweight
+child_age_months,0.17720349243396227,7,18,Nyandarua,underweight
+prev_birth_interval,0.16844515403396226,8,18,Nyandarua,underweight
+child_sex,0.1447996580188679,9,18,Nyandarua,underweight
+size_at_birth,0.13615106526094337,10,18,Nyandarua,underweight
+birth_weight_kg,0.08446482263584904,11,18,Nyandarua,underweight
+hh_head_age,0.08147509828867923,12,18,Nyandarua,underweight
+residence_urban,0.06787207494339623,13,18,Nyandarua,underweight
+electricity,0.04092859555679246,14,18,Nyandarua,underweight
+fever_2wk,0.03713211649622642,15,18,Nyandarua,underweight
+hh_head_sex,0.02834178179245283,16,18,Nyandarua,underweight
+breastfeeding,0.02832640239245283,17,18,Nyandarua,underweight
+diarrhea_2wk,0.0,18,18,Nyandarua,underweight
+wealth_index,0.6518780715,1,19,Nyeri,underweight
+maternal_edu,0.5767783919999999,2,19,Nyeri,underweight
+wash_score,0.317327633775,3,19,Nyeri,underweight
+birth_order,0.2968424465,4,19,Nyeri,underweight
+child_age_months,0.23037532209825,5,19,Nyeri,underweight
+under5_in_hh,0.2261631993,6,19,Nyeri,underweight
+prev_birth_interval,0.21251743099999998,7,19,Nyeri,underweight
+maternal_bmi,0.19418755545000002,8,19,Nyeri,underweight
+child_sex,0.1402729067875,9,19,Nyeri,underweight
+residence_urban,0.08996657174999999,10,19,Nyeri,underweight
+hh_head_age,0.08382515334,11,19,Nyeri,underweight
+birth_weight_kg,0.0688763724725,12,19,Nyeri,underweight
+electricity,0.047462983784999996,13,19,Nyeri,underweight
+breastfeeding,0.0467719410665,14,19,Nyeri,underweight
+size_at_birth,0.0437970524885,15,19,Nyeri,underweight
+fever_2wk,0.04171479425,16,19,Nyeri,underweight
+hh_head_sex,0.025043177176,17,19,Nyeri,underweight
+diarrhea_2wk,0.0,18,19,Nyeri,underweight
+wealth_index,0.6613165841304348,1,20,Kirinyaga,underweight
+maternal_edu,0.4297567200000001,2,20,Kirinyaga,underweight
+birth_order,0.3601155094347826,3,20,Kirinyaga,underweight
+wash_score,0.31712209523913043,4,20,Kirinyaga,underweight
+maternal_bmi,0.21572447021739127,5,20,Kirinyaga,underweight
+prev_birth_interval,0.2101047760543478,6,20,Kirinyaga,underweight
+under5_in_hh,0.20594089410869565,7,20,Kirinyaga,underweight
+child_age_months,0.2039739145130435,8,20,Kirinyaga,underweight
+child_sex,0.15913383461521738,9,20,Kirinyaga,underweight
+birth_weight_kg,0.10587528333978262,10,20,Kirinyaga,underweight
+hh_head_age,0.0743886919,11,20,Kirinyaga,underweight
+residence_urban,0.0701848727671739,12,20,Kirinyaga,underweight
+electricity,0.045847669893478264,13,20,Kirinyaga,underweight
+fever_2wk,0.040319996934782616,14,20,Kirinyaga,underweight
+breastfeeding,0.031952961263913046,15,20,Kirinyaga,underweight
+size_at_birth,0.02951288038543478,16,20,Kirinyaga,underweight
+hh_head_sex,0.028988593898913038,17,20,Kirinyaga,underweight
+diarrhea_2wk,0.0,18,20,Kirinyaga,underweight
+wealth_index,0.5749244624468085,1,21,Murang'a,underweight
+maternal_edu,0.4877796602127659,2,21,Murang'a,underweight
+birth_order,0.37547273293617023,3,21,Murang'a,underweight
+wash_score,0.3044148913404256,4,21,Murang'a,underweight
+child_age_months,0.2785733141574468,5,21,Murang'a,underweight
+maternal_bmi,0.20652514725531917,6,21,Murang'a,underweight
+under5_in_hh,0.20485074858510635,7,21,Murang'a,underweight
+prev_birth_interval,0.18621986889361702,8,21,Murang'a,underweight
+child_sex,0.13159246609361702,9,21,Murang'a,underweight
+size_at_birth,0.09404262680851062,10,21,Murang'a,underweight
+hh_head_age,0.08083212584893616,11,21,Murang'a,underweight
+birth_weight_kg,0.07965808720723405,12,21,Murang'a,underweight
+residence_urban,0.07558188431914895,13,21,Murang'a,underweight
+breastfeeding,0.03800802664042554,14,21,Murang'a,underweight
+electricity,0.03640019642276596,15,21,Murang'a,underweight
+fever_2wk,0.034699317027659576,16,21,Murang'a,underweight
+hh_head_sex,0.030428290017021273,17,21,Murang'a,underweight
+diarrhea_2wk,0.0,18,21,Murang'a,underweight
+wealth_index,0.7986005855932203,1,22,Kiambu,underweight
+maternal_edu,0.43408821237288137,2,22,Kiambu,underweight
+birth_order,0.367354183559322,3,22,Kiambu,underweight
+wash_score,0.32536757559322027,4,22,Kiambu,underweight
+under5_in_hh,0.22643217701694915,5,22,Kiambu,underweight
+child_age_months,0.20232674438135595,6,22,Kiambu,underweight
+prev_birth_interval,0.17753638012372883,7,22,Kiambu,underweight
+maternal_bmi,0.17122624630508473,8,22,Kiambu,underweight
+child_sex,0.13643662901694917,9,22,Kiambu,underweight
+hh_head_age,0.08385908946949153,10,22,Kiambu,underweight
+residence_urban,0.07463486583050846,11,22,Kiambu,underweight
+birth_weight_kg,0.06404537391864407,12,22,Kiambu,underweight
+fever_2wk,0.05795050831525423,13,22,Kiambu,underweight
+electricity,0.05276814035762712,14,22,Kiambu,underweight
+breastfeeding,0.03443736094915254,15,22,Kiambu,underweight
+size_at_birth,0.03173826173559322,16,22,Kiambu,underweight
+hh_head_sex,0.024552774491525424,17,22,Kiambu,underweight
+diarrhea_2wk,0.0,18,22,Kiambu,underweight
+birth_order,0.35103621338596486,1,23,Turkana,underweight
+wealth_index,0.31666395571929834,2,23,Turkana,underweight
+child_age_months,0.28810935218859657,3,23,Turkana,underweight
+maternal_edu,0.16054461056315789,4,23,Turkana,underweight
+under5_in_hh,0.1429220342614035,5,23,Turkana,underweight
+wash_score,0.14101281545789474,6,23,Turkana,underweight
+maternal_bmi,0.13462385674561403,7,23,Turkana,underweight
+prev_birth_interval,0.13092395006070176,8,23,Turkana,underweight
+child_sex,0.11351267276763158,9,23,Turkana,underweight
+hh_head_age,0.08752122653877194,10,23,Turkana,underweight
+birth_weight_kg,0.05514225247394736,11,23,Turkana,underweight
+size_at_birth,0.04118638459096491,12,23,Turkana,underweight
+fever_2wk,0.039210182468421055,13,23,Turkana,underweight
+residence_urban,0.034742558521929826,14,23,Turkana,underweight
+hh_head_sex,0.028992673854385965,15,23,Turkana,underweight
+breastfeeding,0.02561833320929825,16,23,Turkana,underweight
+electricity,0.018437449059210523,17,23,Turkana,underweight
+diarrhea_2wk,0.0,18,23,Turkana,underweight
+wealth_index,0.35079066724117647,1,24,West Pokot,underweight
+birth_order,0.3271191924764706,2,24,West Pokot,underweight
+maternal_edu,0.2946609895170588,3,24,West Pokot,underweight
+child_age_months,0.2386221304647059,4,24,West Pokot,underweight
+prev_birth_interval,0.16187676625882352,5,24,West Pokot,underweight
+wash_score,0.15130348185294118,6,24,West Pokot,underweight
+maternal_bmi,0.14089754828058826,7,24,West Pokot,underweight
+under5_in_hh,0.13911627765,8,24,West Pokot,underweight
+child_sex,0.12242101878058823,9,24,West Pokot,underweight
+hh_head_age,0.08328636302358824,10,24,West Pokot,underweight
+birth_weight_kg,0.07194211417070588,11,24,West Pokot,underweight
+residence_urban,0.045487314964705886,12,24,West Pokot,underweight
+size_at_birth,0.038719328579411766,13,24,West Pokot,underweight
+breastfeeding,0.029842341922000002,14,24,West Pokot,underweight
+hh_head_sex,0.026576910212764707,15,24,West Pokot,underweight
+fever_2wk,0.02633119458935294,16,24,West Pokot,underweight
+electricity,0.021868825812941178,17,24,West Pokot,underweight
+diarrhea_2wk,0.0,18,24,West Pokot,underweight
+wealth_index,0.40829821752173917,1,25,Samburu,underweight
+birth_order,0.3568344812065218,2,25,Samburu,underweight
+maternal_edu,0.21008874034130434,3,25,Samburu,underweight
+child_age_months,0.18638499927826085,4,25,Samburu,underweight
+wash_score,0.18278384834782613,5,25,Samburu,underweight
+prev_birth_interval,0.1725604550652174,6,25,Samburu,underweight
+under5_in_hh,0.16709914555434782,7,25,Samburu,underweight
+maternal_bmi,0.12631298209076086,8,25,Samburu,underweight
+child_sex,0.10101780419065218,9,25,Samburu,underweight
+hh_head_age,0.09420355145938045,10,25,Samburu,underweight
+birth_weight_kg,0.06372983205347826,11,25,Samburu,underweight
+residence_urban,0.043978695108695655,12,25,Samburu,underweight
+size_at_birth,0.03830208577369565,13,25,Samburu,underweight
+breastfeeding,0.03224938046467392,14,25,Samburu,underweight
+fever_2wk,0.02625504488578261,15,25,Samburu,underweight
+hh_head_sex,0.022623825360630435,16,25,Samburu,underweight
+electricity,0.01953894017173913,17,25,Samburu,underweight
+diarrhea_2wk,0.0,18,25,Samburu,underweight
+wealth_index,0.470269060140625,1,26,Trans Nzoia,underweight
+maternal_edu,0.37483596296875,2,26,Trans Nzoia,underweight
+birth_order,0.35004220657812496,3,26,Trans Nzoia,underweight
+wash_score,0.34351079978125,4,26,Trans Nzoia,underweight
+maternal_bmi,0.20495297640625,5,26,Trans Nzoia,underweight
+child_age_months,0.19631702604687498,6,26,Trans Nzoia,underweight
+under5_in_hh,0.1813581638359375,7,26,Trans Nzoia,underweight
+prev_birth_interval,0.17171166176,8,26,Trans Nzoia,underweight
+child_sex,0.1467379240078125,9,26,Trans Nzoia,underweight
+size_at_birth,0.10136866255265625,10,26,Trans Nzoia,underweight
+birth_weight_kg,0.0923813529596875,11,26,Trans Nzoia,underweight
+hh_head_age,0.0749205680890625,12,26,Trans Nzoia,underweight
+residence_urban,0.0674355425625,13,26,Trans Nzoia,underweight
+fever_2wk,0.044058839201562505,14,26,Trans Nzoia,underweight
+breastfeeding,0.0300466116925,15,26,Trans Nzoia,underweight
+electricity,0.0281285749395625,16,26,Trans Nzoia,underweight
+hh_head_sex,0.022284518145,17,26,Trans Nzoia,underweight
+diarrhea_2wk,0.0,18,26,Trans Nzoia,underweight
+wealth_index,0.6636374808695653,1,27,Uasin Gishu,underweight
+maternal_edu,0.41578481500000003,2,27,Uasin Gishu,underweight
+birth_order,0.3525660462318841,3,27,Uasin Gishu,underweight
+wash_score,0.28249830365217393,4,27,Uasin Gishu,underweight
+under5_in_hh,0.2020487860637681,5,27,Uasin Gishu,underweight
+prev_birth_interval,0.18782206813623192,6,27,Uasin Gishu,underweight
+maternal_bmi,0.1774408227826087,7,27,Uasin Gishu,underweight
+child_sex,0.16698583718840582,8,27,Uasin Gishu,underweight
+child_age_months,0.16458382616188402,9,27,Uasin Gishu,underweight
+birth_weight_kg,0.08700472104659855,10,27,Uasin Gishu,underweight
+residence_urban,0.0691259816521739,11,27,Uasin Gishu,underweight
+hh_head_age,0.06603481291666667,12,27,Uasin Gishu,underweight
+size_at_birth,0.0564395177710145,13,27,Uasin Gishu,underweight
+fever_2wk,0.051835831893623195,14,27,Uasin Gishu,underweight
+electricity,0.03821835683884058,15,27,Uasin Gishu,underweight
+breastfeeding,0.03225181052101449,16,27,Uasin Gishu,underweight
+hh_head_sex,0.024701546404347824,17,27,Uasin Gishu,underweight
+diarrhea_2wk,0.0,18,27,Uasin Gishu,underweight
+maternal_edu,0.48051522642857136,1,28,Elgeyo/Marakwet,underweight
+wealth_index,0.4660452794285713,2,28,Elgeyo/Marakwet,underweight
+birth_order,0.38106511817142863,3,28,Elgeyo/Marakwet,underweight
+wash_score,0.23552391565714292,4,28,Elgeyo/Marakwet,underweight
+child_age_months,0.21652931475714285,5,28,Elgeyo/Marakwet,underweight
+maternal_bmi,0.1739001799714286,6,28,Elgeyo/Marakwet,underweight
+under5_in_hh,0.1725065337085714,7,28,Elgeyo/Marakwet,underweight
+child_sex,0.15551932468571428,8,28,Elgeyo/Marakwet,underweight
+prev_birth_interval,0.15206761560428567,9,28,Elgeyo/Marakwet,underweight
+hh_head_age,0.08299344707428573,10,28,Elgeyo/Marakwet,underweight
+birth_weight_kg,0.07713620628614287,11,28,Elgeyo/Marakwet,underweight
+residence_urban,0.06467244278571428,12,28,Elgeyo/Marakwet,underweight
+size_at_birth,0.05376088631772857,13,28,Elgeyo/Marakwet,underweight
+electricity,0.034851246898571435,14,28,Elgeyo/Marakwet,underweight
+fever_2wk,0.03421303204099999,15,28,Elgeyo/Marakwet,underweight
+breastfeeding,0.03340255315428572,16,28,Elgeyo/Marakwet,underweight
+hh_head_sex,0.024777519129014283,17,28,Elgeyo/Marakwet,underweight
+diarrhea_2wk,0.0,18,28,Elgeyo/Marakwet,underweight
+wealth_index,0.49201429688524584,1,29,Nandi,underweight
+maternal_edu,0.39157626557377057,2,29,Nandi,underweight
+birth_order,0.36877831511475406,3,29,Nandi,underweight
+wash_score,0.2575993744590164,4,29,Nandi,underweight
+child_age_months,0.209117657295082,5,29,Nandi,underweight
+prev_birth_interval,0.19805411292622943,6,29,Nandi,underweight
+child_sex,0.17442346021311475,7,29,Nandi,underweight
+under5_in_hh,0.1707842699386885,8,29,Nandi,underweight
+maternal_bmi,0.14601941735245905,9,29,Nandi,underweight
+hh_head_age,0.08829379425245902,10,29,Nandi,underweight
+birth_weight_kg,0.06986649218688525,11,29,Nandi,underweight
+residence_urban,0.05710589344262296,12,29,Nandi,underweight
+size_at_birth,0.047285769380983604,13,29,Nandi,underweight
+breastfeeding,0.03552851453770492,14,29,Nandi,underweight
+electricity,0.034017037409786885,15,29,Nandi,underweight
+fever_2wk,0.03310124725344262,16,29,Nandi,underweight
+hh_head_sex,0.031444153880327876,17,29,Nandi,underweight
+diarrhea_2wk,0.0,18,29,Nandi,underweight
+wealth_index,0.4671759485808989,1,30,Baringo,underweight
+maternal_edu,0.3836864408089888,2,30,Baringo,underweight
+birth_order,0.3414392014157303,3,30,Baringo,underweight
+wash_score,0.23467742965573035,4,30,Baringo,underweight
+child_age_months,0.22789225549662925,5,30,Baringo,underweight
+prev_birth_interval,0.1796306697033708,6,30,Baringo,underweight
+under5_in_hh,0.1756110629775281,7,30,Baringo,underweight
+child_sex,0.14927758256258428,8,30,Baringo,underweight
+maternal_bmi,0.13399883515730338,9,30,Baringo,underweight
+size_at_birth,0.09553513820566291,10,30,Baringo,underweight
+hh_head_age,0.08225680622022472,11,30,Baringo,underweight
+birth_weight_kg,0.06892263677224718,12,30,Baringo,underweight
+residence_urban,0.05104166561797752,13,30,Baringo,underweight
+fever_2wk,0.03396766968674157,14,30,Baringo,underweight
+breastfeeding,0.03326353405988765,15,30,Baringo,underweight
+electricity,0.03202547578932584,16,30,Baringo,underweight
+hh_head_sex,0.024335881668651683,17,30,Baringo,underweight
+diarrhea_2wk,0.0,18,30,Baringo,underweight
+wealth_index,0.7080282237777777,1,31,Laikipia,underweight
+maternal_edu,0.4411683738888889,2,31,Laikipia,underweight
+birth_order,0.38680580040000007,3,31,Laikipia,underweight
+wash_score,0.2532692924444444,4,31,Laikipia,underweight
+under5_in_hh,0.19807502104888886,5,31,Laikipia,underweight
+maternal_bmi,0.19405427935555553,6,31,Laikipia,underweight
+child_sex,0.1747420526,7,31,Laikipia,underweight
+prev_birth_interval,0.17264950681555555,8,31,Laikipia,underweight
+child_age_months,0.1540923460533333,9,31,Laikipia,underweight
+birth_weight_kg,0.09743933206133334,10,31,Laikipia,underweight
+hh_head_age,0.08121966764666666,11,31,Laikipia,underweight
+residence_urban,0.06011712682888889,12,31,Laikipia,underweight
+size_at_birth,0.04789804831833333,13,31,Laikipia,underweight
+breastfeeding,0.038602722355555556,14,31,Laikipia,underweight
+electricity,0.038420435787044446,15,31,Laikipia,underweight
+fever_2wk,0.037337395267777775,16,31,Laikipia,underweight
+hh_head_sex,0.025427090782222224,17,31,Laikipia,underweight
+diarrhea_2wk,0.0,18,31,Laikipia,underweight
+wealth_index,0.6571925315277777,1,32,Nakuru,underweight
+maternal_edu,0.38402305405555553,2,32,Nakuru,underweight
+birth_order,0.3529121393611111,3,32,Nakuru,underweight
+wash_score,0.26569052065972215,4,32,Nakuru,underweight
+maternal_bmi,0.236459388,5,32,Nakuru,underweight
+under5_in_hh,0.20630404504166666,6,32,Nakuru,underweight
+prev_birth_interval,0.19416753230319447,7,32,Nakuru,underweight
+child_sex,0.15174647000694444,8,32,Nakuru,underweight
+child_age_months,0.14171828804166664,9,32,Nakuru,underweight
+birth_weight_kg,0.10177365228672221,10,32,Nakuru,underweight
+hh_head_age,0.09070965018444443,11,32,Nakuru,underweight
+residence_urban,0.06158166109411112,12,32,Nakuru,underweight
+size_at_birth,0.04574683270722222,13,32,Nakuru,underweight
+fever_2wk,0.04199816965236111,14,32,Nakuru,underweight
+breastfeeding,0.040515337307638885,15,32,Nakuru,underweight
+electricity,0.03762398644027778,16,32,Nakuru,underweight
+hh_head_sex,0.028382997670833337,17,32,Nakuru,underweight
+diarrhea_2wk,0.0,18,32,Nakuru,underweight
+wealth_index,0.42619439048557695,1,33,Narok,underweight
+maternal_edu,0.3475185203076923,2,33,Narok,underweight
+birth_order,0.3422186544423077,3,33,Narok,underweight
+child_age_months,0.23707993458749999,4,33,Narok,underweight
+wash_score,0.22391259437980768,5,33,Narok,underweight
+maternal_bmi,0.18450536939134612,6,33,Narok,underweight
+under5_in_hh,0.1671687940826923,7,33,Narok,underweight
+child_sex,0.16081559401923076,8,33,Narok,underweight
+prev_birth_interval,0.15944155459903844,9,33,Narok,underweight
+birth_weight_kg,0.12394277696490384,10,33,Narok,underweight
+size_at_birth,0.09255301585201922,11,33,Narok,underweight
+hh_head_age,0.07821773538653846,12,33,Narok,underweight
+residence_urban,0.05362759008653846,13,33,Narok,underweight
+breastfeeding,0.03551915357346154,14,33,Narok,underweight
+fever_2wk,0.0330364554639423,15,33,Narok,underweight
+hh_head_sex,0.022210229023076924,16,33,Narok,underweight
+electricity,0.020824804725769232,17,33,Narok,underweight
+diarrhea_2wk,0.0,18,33,Narok,underweight
+wealth_index,0.5692416040410958,1,34,Kajiado,underweight
+birth_order,0.32635268283561647,2,34,Kajiado,underweight
+maternal_edu,0.3104770716452055,3,34,Kajiado,underweight
+wash_score,0.23822242379726027,4,34,Kajiado,underweight
+prev_birth_interval,0.19604445887671232,5,34,Kajiado,underweight
+child_age_months,0.19363613815205477,6,34,Kajiado,underweight
+under5_in_hh,0.18590209279452052,7,34,Kajiado,underweight
+child_sex,0.16934125569863012,8,34,Kajiado,underweight
+maternal_bmi,0.1469629218630137,9,34,Kajiado,underweight
+hh_head_age,0.08490503099178083,10,34,Kajiado,underweight
+birth_weight_kg,0.08107891335342465,11,34,Kajiado,underweight
+size_at_birth,0.06769908223268493,12,34,Kajiado,underweight
+residence_urban,0.051766585897260284,13,34,Kajiado,underweight
+breastfeeding,0.03988989302547945,14,34,Kajiado,underweight
+fever_2wk,0.037809904347945206,15,34,Kajiado,underweight
+electricity,0.026005768992328773,16,34,Kajiado,underweight
+hh_head_sex,0.024528576738356164,17,34,Kajiado,underweight
+diarrhea_2wk,0.0,18,34,Kajiado,underweight
+maternal_edu,0.45123832279411763,1,35,Kericho,underweight
+wealth_index,0.44577598785294126,2,35,Kericho,underweight
+birth_order,0.3427649846470588,3,35,Kericho,underweight
+wash_score,0.23981271457794115,4,35,Kericho,underweight
+child_age_months,0.21960914196176468,5,35,Kericho,underweight
+maternal_bmi,0.18568792036764703,6,35,Kericho,underweight
+under5_in_hh,0.18559939532352943,7,35,Kericho,underweight
+prev_birth_interval,0.18392737126764708,8,35,Kericho,underweight
+child_sex,0.166439933367647,9,35,Kericho,underweight
+birth_weight_kg,0.08799500637794118,10,35,Kericho,underweight
+hh_head_age,0.07314228073088234,11,35,Kericho,underweight
+residence_urban,0.0617826449117647,12,35,Kericho,underweight
+breastfeeding,0.04834739764117647,13,35,Kericho,underweight
+size_at_birth,0.04404567877,14,35,Kericho,underweight
+electricity,0.033153116536470593,15,35,Kericho,underweight
+hh_head_sex,0.02368111518235294,16,35,Kericho,underweight
+fever_2wk,0.023415752159852938,17,35,Kericho,underweight
+diarrhea_2wk,0.0,18,35,Kericho,underweight
+maternal_edu,0.40922614641891897,1,36,Bomet,underweight
+birth_order,0.36841603572972975,2,36,Bomet,underweight
+wealth_index,0.3536968296486486,3,36,Bomet,underweight
+wash_score,0.2921014297027027,4,36,Bomet,underweight
+maternal_bmi,0.21347078013513512,5,36,Bomet,underweight
+child_age_months,0.183358448255946,6,36,Bomet,underweight
+prev_birth_interval,0.1814671753297973,7,36,Bomet,underweight
+under5_in_hh,0.1814262688418919,8,36,Bomet,underweight
+child_sex,0.17245525702702705,9,36,Bomet,underweight
+birth_weight_kg,0.08909173039797298,10,36,Bomet,underweight
+hh_head_age,0.08388306007162162,11,36,Bomet,underweight
+residence_urban,0.06184620702702703,12,36,Bomet,underweight
+breastfeeding,0.04803163112162163,13,36,Bomet,underweight
+size_at_birth,0.044114338310405406,14,36,Bomet,underweight
+fever_2wk,0.03276225584864865,15,36,Bomet,underweight
+hh_head_sex,0.026632407331081073,16,36,Bomet,underweight
+electricity,0.026082735254594598,17,36,Bomet,underweight
+diarrhea_2wk,0.0,18,36,Bomet,underweight
+wealth_index,0.5344730335915493,1,37,Kakamega,underweight
+maternal_edu,0.46459450352112674,2,37,Kakamega,underweight
+birth_order,0.34249818454647896,3,37,Kakamega,underweight
+wash_score,0.2315426967464789,4,37,Kakamega,underweight
+maternal_bmi,0.22426952919154933,5,37,Kakamega,underweight
+child_age_months,0.21097096229295773,6,37,Kakamega,underweight
+prev_birth_interval,0.19626352426760568,7,37,Kakamega,underweight
+under5_in_hh,0.19432982163943663,8,37,Kakamega,underweight
+child_sex,0.17443120107887325,9,37,Kakamega,underweight
+size_at_birth,0.10006286408112675,10,37,Kakamega,underweight
+hh_head_age,0.09271958159295775,11,37,Kakamega,underweight
+birth_weight_kg,0.09171405560915492,12,37,Kakamega,underweight
+residence_urban,0.06395216554788731,13,37,Kakamega,underweight
+fever_2wk,0.03999411063380281,14,37,Kakamega,underweight
+breastfeeding,0.03977108807794367,15,37,Kakamega,underweight
+hh_head_sex,0.028926742356338027,16,37,Kakamega,underweight
+electricity,0.026319046767183104,17,37,Kakamega,underweight
+diarrhea_2wk,0.0,18,37,Kakamega,underweight
+wealth_index,0.4867009930882353,1,38,Vihiga,underweight
+maternal_edu,0.39828372617647056,2,38,Vihiga,underweight
+birth_order,0.3361708641617647,3,38,Vihiga,underweight
+wash_score,0.2974455670735294,4,38,Vihiga,underweight
+maternal_bmi,0.23303097973529407,5,38,Vihiga,underweight
+under5_in_hh,0.1834380072205882,6,38,Vihiga,underweight
+prev_birth_interval,0.17971574039705884,7,38,Vihiga,underweight
+child_age_months,0.1611470447792647,8,38,Vihiga,underweight
+child_sex,0.15961610522058822,9,38,Vihiga,underweight
+hh_head_age,0.12691538223014706,10,38,Vihiga,underweight
+birth_weight_kg,0.07929909516617648,11,38,Vihiga,underweight
+residence_urban,0.06743276804411764,12,38,Vihiga,underweight
+fever_2wk,0.04160614881323529,13,38,Vihiga,underweight
+breastfeeding,0.04068725760441177,14,38,Vihiga,underweight
+size_at_birth,0.03395110929426471,15,38,Vihiga,underweight
+hh_head_sex,0.03387885639867646,16,38,Vihiga,underweight
+electricity,0.033111637375470584,17,38,Vihiga,underweight
+diarrhea_2wk,0.0,18,38,Vihiga,underweight
+wealth_index,0.5145795986979166,1,39,Bungoma,underweight
+maternal_edu,0.41900106447916663,2,39,Bungoma,underweight
+birth_order,0.3563865250729166,3,39,Bungoma,underweight
+wash_score,0.22308961248958337,4,39,Bungoma,underweight
+maternal_bmi,0.20806808845833333,5,39,Bungoma,underweight
+prev_birth_interval,0.20105850616666665,6,39,Bungoma,underweight
+under5_in_hh,0.19574904832291665,7,39,Bungoma,underweight
+child_sex,0.17040721545833334,8,39,Bungoma,underweight
+child_age_months,0.1511802886304167,9,39,Bungoma,underweight
+birth_weight_kg,0.09013285294552083,10,39,Bungoma,underweight
+hh_head_age,0.06970299692291666,11,39,Bungoma,underweight
+size_at_birth,0.06719605941979166,12,39,Bungoma,underweight
+residence_urban,0.059065132296874996,13,39,Bungoma,underweight
+fever_2wk,0.03872255557916667,14,39,Bungoma,underweight
+breastfeeding,0.03735014963854166,15,39,Bungoma,underweight
+electricity,0.025495425456343753,16,39,Bungoma,underweight
+hh_head_sex,0.022417226422083335,17,39,Bungoma,underweight
+diarrhea_2wk,0.0,18,39,Bungoma,underweight
+wealth_index,0.4445402047246377,1,40,Busia,underweight
+maternal_edu,0.4061661194202898,2,40,Busia,underweight
+birth_order,0.3565933015652174,3,40,Busia,underweight
+maternal_bmi,0.2348832972753623,4,40,Busia,underweight
+wash_score,0.23424117853623186,5,40,Busia,underweight
+child_sex,0.1902028065289855,6,40,Busia,underweight
+child_age_months,0.18341671463623188,7,40,Busia,underweight
+prev_birth_interval,0.17275031571499996,8,40,Busia,underweight
+under5_in_hh,0.16752302947826087,9,40,Busia,underweight
+birth_weight_kg,0.10723601144130435,10,40,Busia,underweight
+hh_head_age,0.07091087784492754,11,40,Busia,underweight
+size_at_birth,0.05990845557971013,12,40,Busia,underweight
+residence_urban,0.05165856237971016,13,40,Busia,underweight
+fever_2wk,0.04540752187144927,14,40,Busia,underweight
+breastfeeding,0.04134675126956522,15,40,Busia,underweight
+electricity,0.027706044280579708,16,40,Busia,underweight
+hh_head_sex,0.021049024537898548,17,40,Busia,underweight
+diarrhea_2wk,0.0,18,40,Busia,underweight
+maternal_edu,0.4243411898488371,1,41,Siaya,underweight
+wealth_index,0.41337176430232564,2,41,Siaya,underweight
+birth_order,0.33958626072093023,3,41,Siaya,underweight
+maternal_bmi,0.23905434174418605,4,41,Siaya,underweight
+wash_score,0.22446238369767435,5,41,Siaya,underweight
+prev_birth_interval,0.19157766022093026,6,41,Siaya,underweight
+child_sex,0.182178184755814,7,41,Siaya,underweight
+under5_in_hh,0.16159903624232558,8,41,Siaya,underweight
+child_age_months,0.15239634049302325,9,41,Siaya,underweight
+birth_weight_kg,0.09939660521348839,10,41,Siaya,underweight
+size_at_birth,0.09470962753151163,11,41,Siaya,underweight
+hh_head_age,0.08455642369534884,12,41,Siaya,underweight
+residence_urban,0.05327709087209302,13,41,Siaya,underweight
+breastfeeding,0.04377009764627907,14,41,Siaya,underweight
+fever_2wk,0.030843911011860462,15,41,Siaya,underweight
+hh_head_sex,0.027666744198604643,16,41,Siaya,underweight
+electricity,0.01978892202593023,17,41,Siaya,underweight
+diarrhea_2wk,0.0,18,41,Siaya,underweight
+maternal_edu,0.4178188358474577,1,42,Kisumu,underweight
+wealth_index,0.4050996253559322,2,42,Kisumu,underweight
+birth_order,0.39867972719322037,3,42,Kisumu,underweight
+wash_score,0.2389659243898305,4,42,Kisumu,underweight
+maternal_bmi,0.22258908284745763,5,42,Kisumu,underweight
+under5_in_hh,0.19172107598305083,6,42,Kisumu,underweight
+prev_birth_interval,0.16730597681694914,7,42,Kisumu,underweight
+child_age_months,0.16604244702542373,8,42,Kisumu,underweight
+child_sex,0.16466216236440678,9,42,Kisumu,underweight
+birth_weight_kg,0.0911951330159322,10,42,Kisumu,underweight
+hh_head_age,0.08016976294067796,11,42,Kisumu,underweight
+residence_urban,0.05917097833898304,12,42,Kisumu,underweight
+size_at_birth,0.05297530472733898,13,42,Kisumu,underweight
+breastfeeding,0.042197178296610176,14,42,Kisumu,underweight
+fever_2wk,0.03913718978135593,15,42,Kisumu,underweight
+hh_head_sex,0.028813792164406778,16,42,Kisumu,underweight
+electricity,0.02734234757379322,17,42,Kisumu,underweight
+diarrhea_2wk,0.0,18,42,Kisumu,underweight
+maternal_edu,0.4467273969625,1,43,Homa Bay,underweight
+wealth_index,0.376179634175,2,43,Homa Bay,underweight
+birth_order,0.34521452131944447,3,43,Homa Bay,underweight
+wash_score,0.219015711625,4,43,Homa Bay,underweight
+maternal_bmi,0.19127405550694446,5,43,Homa Bay,underweight
+under5_in_hh,0.17360724130555555,6,43,Homa Bay,underweight
+prev_birth_interval,0.16927958465,7,43,Homa Bay,underweight
+child_sex,0.1579217323888889,8,43,Homa Bay,underweight
+child_age_months,0.15538083101944444,9,43,Homa Bay,underweight
+size_at_birth,0.09984270675277779,10,43,Homa Bay,underweight
+birth_weight_kg,0.09381734888055555,11,43,Homa Bay,underweight
+hh_head_age,0.08197255549819445,12,43,Homa Bay,underweight
+residence_urban,0.06087731388888889,13,43,Homa Bay,underweight
+fever_2wk,0.05234161024180556,14,43,Homa Bay,underweight
+breastfeeding,0.047887529977499996,15,43,Homa Bay,underweight
+hh_head_sex,0.030910325448611116,16,43,Homa Bay,underweight
+electricity,0.02207939594176389,17,43,Homa Bay,underweight
+diarrhea_2wk,0.0,18,43,Homa Bay,underweight
+maternal_edu,0.47053522834999995,1,44,Migori,underweight
+wealth_index,0.38863589612,2,44,Migori,underweight
+birth_order,0.3735847082899999,3,44,Migori,underweight
+wash_score,0.2266601498,4,44,Migori,underweight
+maternal_bmi,0.21016136393,5,44,Migori,underweight
+child_age_months,0.18344843227342994,6,44,Migori,underweight
+under5_in_hh,0.16621957142,7,44,Migori,underweight
+child_sex,0.16382644474000002,8,44,Migori,underweight
+prev_birth_interval,0.159339800806,9,44,Migori,underweight
+birth_weight_kg,0.09591693695139998,10,44,Migori,underweight
+hh_head_age,0.07724297870784,11,44,Migori,underweight
+size_at_birth,0.0618425170081,12,44,Migori,underweight
+residence_urban,0.04968240512999999,13,44,Migori,underweight
+breastfeeding,0.0468594719872,14,44,Migori,underweight
+fever_2wk,0.046309687207100006,15,44,Migori,underweight
+hh_head_sex,0.025072517159000003,16,44,Migori,underweight
+electricity,0.021401898296899997,17,44,Migori,underweight
+diarrhea_2wk,0.0,18,44,Migori,underweight
+maternal_edu,0.5257412371428571,1,45,Kisii,underweight
+wealth_index,0.42888801504081636,2,45,Kisii,underweight
+birth_order,0.3547203716122449,3,45,Kisii,underweight
+maternal_bmi,0.29777378551632655,4,45,Kisii,underweight
+wash_score,0.2334156444897959,5,45,Kisii,underweight
+child_age_months,0.23072547911428568,6,45,Kisii,underweight
+under5_in_hh,0.205151046844898,7,45,Kisii,underweight
+prev_birth_interval,0.20445298876122447,8,45,Kisii,underweight
+child_sex,0.19097789449591837,9,45,Kisii,underweight
+hh_head_age,0.11155456963061225,10,45,Kisii,underweight
+birth_weight_kg,0.08545936341428573,11,45,Kisii,underweight
+residence_urban,0.08068472575510205,12,45,Kisii,underweight
+size_at_birth,0.06063429866375509,13,45,Kisii,underweight
+fever_2wk,0.055722912945563266,14,45,Kisii,underweight
+breastfeeding,0.04947580005367346,15,45,Kisii,underweight
+hh_head_sex,0.026525672436530614,16,45,Kisii,underweight
+electricity,0.0250868031242449,17,45,Kisii,underweight
+diarrhea_2wk,0.0,18,45,Kisii,underweight
+maternal_edu,0.5026980041509433,1,46,Nyamira,underweight
+wealth_index,0.4290470335471698,2,46,Nyamira,underweight
+birth_order,0.3402421977169811,3,46,Nyamira,underweight
+maternal_bmi,0.27194072501698113,4,46,Nyamira,underweight
+wash_score,0.22505576220754717,5,46,Nyamira,underweight
+prev_birth_interval,0.214997154509434,6,46,Nyamira,underweight
+under5_in_hh,0.20407402024528296,7,46,Nyamira,underweight
+child_sex,0.17678279898113206,8,46,Nyamira,underweight
+child_age_months,0.12914034269056604,9,46,Nyamira,underweight
+hh_head_age,0.10502944920000001,10,46,Nyamira,underweight
+size_at_birth,0.09837307056169813,11,46,Nyamira,underweight
+birth_weight_kg,0.07252443834018867,12,46,Nyamira,underweight
+residence_urban,0.0701912206037736,13,46,Nyamira,underweight
+fever_2wk,0.06528937567169811,14,46,Nyamira,underweight
+breastfeeding,0.04852721508490567,15,46,Nyamira,underweight
+electricity,0.032877700412264156,16,46,Nyamira,underweight
+hh_head_sex,0.023810166091509436,17,46,Nyamira,underweight
+diarrhea_2wk,0.0,18,46,Nyamira,underweight
+wealth_index,0.7859058979452055,1,47,Nairobi,underweight
+maternal_edu,0.43033550465753423,2,47,Nairobi,underweight
+birth_order,0.35327771395890406,3,47,Nairobi,underweight
+maternal_bmi,0.30567592842465746,4,47,Nairobi,underweight
+wash_score,0.23361686589041097,5,47,Nairobi,underweight
+under5_in_hh,0.23025678067123284,6,47,Nairobi,underweight
+prev_birth_interval,0.19977721465753426,7,47,Nairobi,underweight
+child_age_months,0.16898181731232875,8,47,Nairobi,underweight
+child_sex,0.14263746460273974,9,47,Nairobi,underweight
+birth_weight_kg,0.1028639562,10,47,Nairobi,underweight
+hh_head_age,0.09862822457438356,11,47,Nairobi,underweight
+fever_2wk,0.08466817209726027,12,47,Nairobi,underweight
+residence_urban,0.07743240765753424,13,47,Nairobi,underweight
+electricity,0.04767285167808219,14,47,Nairobi,underweight
+size_at_birth,0.04512837110273973,15,47,Nairobi,underweight
+breastfeeding,0.0440939510730137,16,47,Nairobi,underweight
+hh_head_sex,0.02725067838082192,17,47,Nairobi,underweight
+diarrhea_2wk,0.0,18,47,Nairobi,underweight
