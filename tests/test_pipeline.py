@@ -5,20 +5,20 @@ Unit tests for the data pipeline logic (01_pipeline.py).
 Tests run on synthetic data — no real KDHS file required.
 """
 
-import sys  # noqa: E401
-import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))  # noqa: E402
-
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-import pytest  # noqa: E402
-
-# Import functions from pipeline
-from pipeline_helpers import (  # noqa: E402
+from pipeline_helpers import (
     filter_sample,
     engineer_features,
     select_features,
 )
+import pytest
+import pandas as pd
+import numpy as np
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
+
+# Import functions from pipeline
 
 
 # ── FIXTURES ──────────────────────────────────────────────────────────────────

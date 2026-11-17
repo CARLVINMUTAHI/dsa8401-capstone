@@ -19,25 +19,25 @@ Usage
     python 03_county_profiles.py
 """
 
+import pandas as pd
+import numpy as np
+import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
 import os
 import warnings
 
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
-import numpy as np
-import pandas as pd
 
 warnings.filterwarnings("ignore")
 
 # ── CONFIGURATION ─────────────────────────────────────────────────────────────
 
-MODEL_DIR   = "models"
-DATA_DIR    = "data"
-REPORT_DIR  = "reports"
+MODEL_DIR = "models"
+DATA_DIR = "data"
+REPORT_DIR = "reports"
 FIGURES_DIR = os.path.join(REPORT_DIR, "figures")
-OUTCOMES    = ["stunted", "wasted", "underweight"]
+OUTCOMES = ["stunted", "wasted", "underweight"]
 
 # DHS county codes → county names (2022 KDHS v024 mapping)
 COUNTY_NAMES = {
@@ -95,8 +95,8 @@ def build_prevalence_table(df: pd.DataFrame) -> pd.DataFrame:
         df.groupby(["county", "county_name"])
         .agg(
             n_children=("stunted", "count"),
-            stunting_pct=("stunted",     lambda x: round(x.mean() * 100, 1)),
-            wasting_pct=("wasted",       lambda x: round(x.mean() * 100, 1)),
+            stunting_pct=("stunted", lambda x: round(x.mean() * 100, 1)),
+            wasting_pct=("wasted", lambda x: round(x.mean() * 100, 1)),
             underweight_pct=("underweight", lambda x: round(x.mean() * 100, 1)),
             mean_wealth=("wealth_index", "mean"),
             pct_urban=("residence_urban", lambda x: round(x.mean() * 100, 1)),
@@ -107,8 +107,8 @@ def build_prevalence_table(df: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
         .sort_values("stunting_pct", ascending=False)
     )
-    agg["mean_wealth"]  = agg["mean_wealth"].round(2)
-    agg["mean_wash"]    = agg["mean_wash"].round(2)
+    agg["mean_wealth"] = agg["mean_wealth"].round(2)
+    agg["mean_wash"] = agg["mean_wash"].round(2)
     return agg
 
 
@@ -123,12 +123,12 @@ def build_shap_profiles(outcome: str, shap_df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for county_code, grp in shap_df.groupby("county"):
         mean_abs = grp[feature_cols].abs().mean()
-        ranked   = mean_abs.sort_values(ascending=False).reset_index()
+        ranked = mean_abs.sort_values(ascending=False).reset_index()
         ranked.columns = ["feature", "mean_abs_shap"]
-        ranked["rank"]        = range(1, len(ranked) + 1)
-        ranked["county"]      = county_code
+        ranked["rank"] = range(1, len(ranked) + 1)
+        ranked["county"] = county_code
         ranked["county_name"] = COUNTY_NAMES.get(county_code, str(county_code))
-        ranked["outcome"]     = outcome
+        ranked["outcome"] = outcome
         rows.append(ranked)
     return pd.concat(rows, ignore_index=True)
 
@@ -208,7 +208,8 @@ def plot_top_counties(prevalence: pd.DataFrame) -> None:
         ax.bar_label(bars, fmt="%.1f%%", padding=3, fontsize=8)
         ax.set_xlim(0, top10[col].max() * 1.25)
         ax.spines[["top", "right"]].set_visible(False)
-    plt.suptitle("2022 KDHS — Highest Malnutrition Burden Counties", fontsize=13, fontweight="bold", y=1.01)
+    plt.suptitle("2022 KDHS — Highest Malnutrition Burden Counties",
+                 fontsize=13, fontweight="bold", y=1.01)
     plt.tight_layout()
     out = os.path.join(FIGURES_DIR, "top10_counties_prevalence.png")
     plt.savefig(out, dpi=150, bbox_inches="tight")
@@ -228,12 +229,12 @@ def main():
 
     print("\nTop 10 counties by stunting:")
     print(prevalence[["county_name", "stunting_pct", "wasting_pct",
-                       "underweight_pct", "n_children"]].head(10).to_string(index=False))
+                      "underweight_pct", "n_children"]].head(10).to_string(index=False))
 
     # 2. SHAP profiles per outcome
     print("\n[2/4] Building SHAP county profiles …")
     all_shap_profiles = []
-    all_top_drivers   = []
+    all_top_drivers = []
 
     for outcome in OUTCOMES:
         try:

@@ -31,32 +31,31 @@ Usage
     python 02_train.py          # trains all three outcomes sequentially
 """
 
+from xgboost import XGBClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import StratifiedKFold, cross_val_score
+from sklearn.metrics import (
+    roc_auc_score, recall_score, f1_score,
+    precision_score, classification_report,
+)
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from imblearn.pipeline import Pipeline as ImbPipeline
+from imblearn.over_sampling import SMOTE
+import shap
+import pandas as pd
+import numpy as np
+import mlflow.sklearn
+import mlflow
+import joblib
+import warnings
+import json
+import argparse
 import os
 # ── DAGSHUB credentials — must be set before mlflow is imported ───────────────
 os.environ["MLFLOW_TRACKING_USERNAME"] = "CARLVINMUTAHI"
 os.environ["MLFLOW_TRACKING_PASSWORD"] = "ef2023d70c0fa36be9c0bef33ac3b941b81459ce"
 
-import argparse
-import json
-import warnings
-
-import joblib
-import mlflow
-import mlflow.sklearn
-import numpy as np
-import pandas as pd
-import shap
-from imblearn.over_sampling import SMOTE
-from imblearn.pipeline import Pipeline as ImbPipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import (
-    roc_auc_score, recall_score, f1_score,
-    precision_score, classification_report,
-)
-from sklearn.model_selection import StratifiedKFold, cross_val_score
-from sklearn.preprocessing import StandardScaler
-from xgboost import XGBClassifier
 
 warnings.filterwarnings("ignore")
 
@@ -66,9 +65,9 @@ mlflow.set_tracking_uri("https://dagshub.com/CARLVINMUTAHI/dsa8401-capstone.mlfl
 # ── CONFIGURATION ─────────────────────────────────────────────────────────────
 
 RANDOM_SEED = 42
-N_FOLDS     = 5
-DATA_DIR    = "data"
-MODEL_DIR   = "models"
+N_FOLDS = 5
+DATA_DIR = "data"
+MODEL_DIR = "models"
 
 FEATURE_COLS = [
     "child_age_months", "child_sex", "birth_order", "prev_birth_interval",
@@ -81,6 +80,7 @@ FEATURE_COLS = [
 OUTCOMES = ["stunted", "wasted", "underweight"]
 
 # ── MODEL DEFINITIONS ─────────────────────────────────────────────────────────
+
 
 def build_models() -> dict:
     """Return dict of name → sklearn-compatible estimator."""
@@ -103,6 +103,7 @@ def build_models() -> dict:
 
 # ── TRAINING ──────────────────────────────────────────────────────────────────
 
+
 def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -> dict:
     """
     Train all classifiers for one outcome, evaluate, and save best model.
@@ -114,20 +115,20 @@ def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -
 
     X_train = train_df[FEATURE_COLS].values
     y_train = train_df[outcome].values
-    X_test  = test_df[FEATURE_COLS].values
-    y_test  = test_df[outcome].values
+    X_test = test_df[FEATURE_COLS].values
+    y_test = test_df[outcome].values
 
     print(f"  Train positives: {y_train.sum()} / {len(y_train)} "
           f"({y_train.mean():.1%})")
     print(f"  Test  positives: {y_test.sum()}  / {len(y_test)} "
           f"({y_test.mean():.1%})")
 
-    cv      = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=RANDOM_SEED)
-    models  = build_models()
+    cv = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=RANDOM_SEED)
+    models = build_models()
     results = []
-    best_auc  = -1
+    best_auc = -1
     best_model = None
-    best_name  = ""
+    best_name = ""
 
     for name, clf in models.items():
         print(f"\n  -- {name} --")
@@ -151,9 +152,9 @@ def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -
         y_prob = pipe.predict_proba(X_test)[:, 1]
         y_pred = pipe.predict(X_test)
 
-        test_auc  = roc_auc_score(y_test, y_prob)
-        test_rec  = recall_score(y_test, y_pred)
-        test_f1   = f1_score(y_test, y_pred)
+        test_auc = roc_auc_score(y_test, y_prob)
+        test_rec = recall_score(y_test, y_pred)
+        test_f1 = f1_score(y_test, y_pred)
         test_prec = precision_score(y_test, y_pred)
 
         print(f"     Test AUC   : {test_auc:.4f}")
@@ -200,9 +201,9 @@ def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -
         })
 
         if test_auc > best_auc:
-            best_auc   = test_auc
+            best_auc = test_auc
             best_model = pipe
-            best_name  = name
+            best_name = name
 
     # ── Save best model ───────────────────────────────────────────────────────
     os.makedirs(MODEL_DIR, exist_ok=True)
@@ -215,14 +216,14 @@ def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -
     print(f"  Computing SHAP values …")
     # Extract the fitted classifier from pipeline for SHAP
     clf_fitted = best_model.named_steps["clf"]
-    scaler     = best_model.named_steps["scaler"]
+    scaler = best_model.named_steps["scaler"]
     X_test_scaled = scaler.transform(X_test)
 
     if best_name == "XGBoost" or best_name == "RandomForest":
-        explainer   = shap.TreeExplainer(clf_fitted)
+        explainer = shap.TreeExplainer(clf_fitted)
         shap_values = explainer.shap_values(X_test_scaled)
     else:
-        explainer   = shap.LinearExplainer(clf_fitted, X_test_scaled)
+        explainer = shap.LinearExplainer(clf_fitted, X_test_scaled)
         shap_values = explainer.shap_values(X_test_scaled)
 
     # Normalise to 2-D array regardless of SHAP version
@@ -259,7 +260,7 @@ def train_outcome(outcome: str, train_df: pd.DataFrame, test_df: pd.DataFrame) -
 
 def main(outcomes: list[str]) -> None:
     train_df = pd.read_csv(os.path.join(DATA_DIR, "features_train.csv"))
-    test_df  = pd.read_csv(os.path.join(DATA_DIR, "features_test.csv"))
+    test_df = pd.read_csv(os.path.join(DATA_DIR, "features_test.csv"))
 
     all_results = []
     for outcome in outcomes:

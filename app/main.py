@@ -76,26 +76,37 @@ app.add_middleware(
 
 # ── REQUEST / RESPONSE SCHEMAS ────────────────────────────────────────────────
 
+
 class ChildInput(BaseModel):
     child_age_months:    float = Field(..., ge=0,  le=59,  description="Child age in months (0–59)")
-    child_sex:           int   = Field(..., ge=1,  le=2,   description="Child sex: 1=male, 2=female")
-    birth_order:         int   = Field(..., ge=1,  le=20,  description="Birth order")
-    prev_birth_interval: float = Field(..., ge=0,          description="Preceding birth interval (months)")
-    size_at_birth:       int   = Field(..., ge=1,  le=5,   description="Size at birth: 1=very small to 5=very large")
+    child_sex:           int = Field(..., ge=1,  le=2,   description="Child sex: 1=male, 2=female")
+    birth_order:         int = Field(..., ge=1,  le=20,  description="Birth order")
+    prev_birth_interval: float = Field(..., ge=0,
+                                       description="Preceding birth interval (months)")
+    size_at_birth:       int = Field(..., ge=1,  le=5,
+                                     description="Size at birth: 1=very small to 5=very large")
     birth_weight_kg:     float = Field(..., ge=0.5, le=6.0, description="Birth weight in kg")
-    diarrhea_2wk:        int   = Field(..., ge=0,  le=1,   description="Diarrhea in last 2 weeks: 1=yes")
-    fever_2wk:           int   = Field(..., ge=0,  le=1,   description="Fever in last 2 weeks: 1=yes")
-    breastfeeding:       int   = Field(..., ge=1,  le=3,   description="1=currently, 2=previously, 3=never")
-    maternal_edu:        int   = Field(..., ge=0,  le=3,   description="0=none, 1=primary, 2=secondary, 3=higher")
+    diarrhea_2wk:        int = Field(..., ge=0,  le=1,
+                                     description="Diarrhea in last 2 weeks: 1=yes")
+    fever_2wk:           int = Field(..., ge=0,  le=1,   description="Fever in last 2 weeks: 1=yes")
+    breastfeeding:       int = Field(..., ge=1,  le=3,
+                                     description="1=currently, 2=previously, 3=never")
+    maternal_edu:        int = Field(..., ge=0,  le=3,
+                                     description="0=none, 1=primary, 2=secondary, 3=higher")
     maternal_bmi:        float = Field(..., ge=10, le=60,  description="Maternal BMI (kg/m²)")
-    wealth_index:        int   = Field(..., ge=1,  le=5,   description="DHS wealth quintile: 1=poorest to 5=richest")
-    under5_in_hh:        int   = Field(..., ge=1,  le=20,  description="Number of children under 5 in household")
-    hh_head_sex:         int   = Field(..., ge=1,  le=2,   description="1=male, 2=female")
-    hh_head_age:         float = Field(..., ge=15, le=100, description="Household head age in years")
-    electricity:         int   = Field(..., ge=0,  le=1,   description="Household has electricity: 1=yes")
-    residence_urban:     int   = Field(..., ge=0,  le=1,   description="Urban residence: 1=urban, 0=rural")
-    wash_score:          int   = Field(..., ge=0,  le=3,   description="WASH composite score (0–3)")
-    county:              int   = Field(..., ge=1,  le=47,  description="Kenya county code (1–47)")
+    wealth_index:        int = Field(..., ge=1,  le=5,
+                                     description="DHS wealth quintile: 1=poorest to 5=richest")
+    under5_in_hh:        int = Field(..., ge=1,  le=20,
+                                     description="Number of children under 5 in household")
+    hh_head_sex:         int = Field(..., ge=1,  le=2,   description="1=male, 2=female")
+    hh_head_age:         float = Field(..., ge=15, le=100,
+                                       description="Household head age in years")
+    electricity:         int = Field(..., ge=0,  le=1,
+                                     description="Household has electricity: 1=yes")
+    residence_urban:     int = Field(..., ge=0,  le=1,
+                                     description="Urban residence: 1=urban, 0=rural")
+    wash_score:          int = Field(..., ge=0,  le=3,   description="WASH composite score (0–3)")
+    county:              int = Field(..., ge=1,  le=47,  description="Kenya county code (1–47)")
 
     class Config:
         json_schema_extra = {

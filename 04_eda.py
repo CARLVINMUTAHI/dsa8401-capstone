@@ -14,23 +14,23 @@ Usage
     python 04_eda.py
 """
 
+from scipy import stats
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import matplotlib.gridspec as gridspec
+import matplotlib.pyplot as plt
 import os
 import warnings
 
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import numpy as np
-import pandas as pd
-import seaborn as sns
-from scipy import stats
 
 warnings.filterwarnings("ignore")
 sns.set_theme(style="whitegrid", palette="muted")
 
-DATA_DIR    = "data"
-REPORT_DIR  = "reports"
+DATA_DIR = "data"
+REPORT_DIR = "reports"
 FIGURES_DIR = os.path.join(REPORT_DIR, "figures")
 os.makedirs(FIGURES_DIR, exist_ok=True)
 
@@ -43,16 +43,16 @@ OUTCOME_LABELS = {
 COLORS = {"stunted": "#d32f2f", "wasted": "#f57c00", "underweight": "#1565c0"}
 
 COUNTY_NAMES = {
-    1:"Mombasa",2:"Kwale",3:"Kilifi",4:"Tana River",5:"Lamu",
-    6:"Taita/Taveta",7:"Garissa",8:"Wajir",9:"Mandera",10:"Marsabit",
-    11:"Isiolo",12:"Meru",13:"Tharaka-Nithi",14:"Embu",15:"Kitui",
-    16:"Machakos",17:"Makueni",18:"Nyandarua",19:"Nyeri",20:"Kirinyaga",
-    21:"Murang'a",22:"Kiambu",23:"Turkana",24:"West Pokot",25:"Samburu",
-    26:"Trans Nzoia",27:"Uasin Gishu",28:"Elgeyo/Marakwet",29:"Nandi",
-    30:"Baringo",31:"Laikipia",32:"Nakuru",33:"Narok",34:"Kajiado",
-    35:"Kericho",36:"Bomet",37:"Kakamega",38:"Vihiga",39:"Bungoma",
-    40:"Busia",41:"Siaya",42:"Kisumu",43:"Homa Bay",44:"Migori",
-    45:"Kisii",46:"Nyamira",47:"Nairobi",
+    1: "Mombasa", 2: "Kwale", 3: "Kilifi", 4: "Tana River", 5: "Lamu",
+    6: "Taita/Taveta", 7: "Garissa", 8: "Wajir", 9: "Mandera", 10: "Marsabit",
+    11: "Isiolo", 12: "Meru", 13: "Tharaka-Nithi", 14: "Embu", 15: "Kitui",
+    16: "Machakos", 17: "Makueni", 18: "Nyandarua", 19: "Nyeri", 20: "Kirinyaga",
+    21: "Murang'a", 22: "Kiambu", 23: "Turkana", 24: "West Pokot", 25: "Samburu",
+    26: "Trans Nzoia", 27: "Uasin Gishu", 28: "Elgeyo/Marakwet", 29: "Nandi",
+    30: "Baringo", 31: "Laikipia", 32: "Nakuru", 33: "Narok", 34: "Kajiado",
+    35: "Kericho", 36: "Bomet", 37: "Kakamega", 38: "Vihiga", 39: "Bungoma",
+    40: "Busia", 41: "Siaya", 42: "Kisumu", 43: "Homa Bay", 44: "Migori",
+    45: "Kisii", 46: "Nyamira", 47: "Nairobi",
 }
 
 
@@ -68,7 +68,7 @@ def fig_prevalence_overview(df: pd.DataFrame) -> None:
     fig, axes = plt.subplots(1, 3, figsize=(14, 5))
     for ax, outcome in zip(axes, OUTCOMES):
         counts = df[outcome].value_counts()
-        pct    = df[outcome].mean() * 100
+        pct = df[outcome].mean() * 100
         wedges, texts, autotexts = ax.pie(
             [counts.get(1, 0), counts.get(0, 0)],
             labels=["Malnourished", "Normal"],
@@ -107,7 +107,8 @@ def fig_class_imbalance(df: pd.DataFrame) -> None:
     )
     ax.bar_label(bars, labels=[f"IR = {v}" for v in irs.values()], padding=5, fontsize=11)
     ax.set_ylabel("Imbalance Ratio (majority:minority)", fontsize=11)
-    ax.set_title("Class Imbalance Ratio per Outcome\n(justifies SMOTE application)", fontsize=12, fontweight="bold")
+    ax.set_title("Class Imbalance Ratio per Outcome\n(justifies SMOTE application)",
+                 fontsize=12, fontweight="bold")
     ax.set_ylim(0, max(irs.values()) * 1.3)
     ax.spines[["top", "right"]].set_visible(False)
     plt.tight_layout()
@@ -205,17 +206,19 @@ def fig_correlation(df: pd.DataFrame) -> None:
 
 def fig_maternal_edu(df: pd.DataFrame) -> None:
     edu_labels = {0: "None", 1: "Primary", 2: "Secondary", 3: "Higher"}
-    fig, axes  = plt.subplots(1, 3, figsize=(14, 4))
+    fig, axes = plt.subplots(1, 3, figsize=(14, 4))
     for ax, outcome in zip(axes, OUTCOMES):
         grp = df.groupby("maternal_edu")[outcome].mean() * 100
         grp.index = [edu_labels.get(i, i) for i in grp.index]
         bars = ax.bar(grp.index, grp.values, color=COLORS[outcome], alpha=0.85, edgecolor="white")
         ax.bar_label(bars, fmt="%.1f%%", padding=3, fontsize=9)
         ax.set_ylabel("Prevalence (%)", fontsize=10)
-        ax.set_title(f"{outcome.capitalize()}\nvs Maternal Education", fontsize=11, fontweight="bold")
+        ax.set_title(f"{outcome.capitalize()}\nvs Maternal Education",
+                     fontsize=11, fontweight="bold")
         ax.set_ylim(0, grp.max() * 1.3)
         ax.spines[["top", "right"]].set_visible(False)
-    fig.suptitle("Malnutrition Prevalence by Maternal Education Level", fontsize=13, fontweight="bold")
+    fig.suptitle("Malnutrition Prevalence by Maternal Education Level",
+                 fontsize=13, fontweight="bold")
     plt.tight_layout()
     _save(fig, "eda_07_maternal_education.png")
 
@@ -257,7 +260,7 @@ def write_summary(df: pd.DataFrame) -> None:
     ]
     for outcome in OUTCOMES:
         maj = (df[outcome] == 0).sum()
-        mi  = (df[outcome] == 1).sum()
+        mi = (df[outcome] == 1).sum()
         lines.append(f"  {outcome:15s}: {maj/mi:.2f}:1 → SMOTE justified")
 
     lines += [

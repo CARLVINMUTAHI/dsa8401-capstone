@@ -1,4 +1,4 @@
-"""Quick SHAP shape test — run once to verify fix."""
+"""Quick SHAP shape test — run once to verify fix, then delete."""
 import joblib
 import shap
 import numpy as np

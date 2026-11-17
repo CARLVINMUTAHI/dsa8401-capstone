@@ -14,29 +14,29 @@ Usage
     python 05_evaluate.py
 """
 
+from sklearn.metrics import (
+    auc, average_precision_score, classification_report,
+    confusion_matrix, f1_score, precision_recall_curve,
+    roc_auc_score, roc_curve,
+)
+from sklearn.calibration import calibration_curve
+import shap
+import pandas as pd
+import numpy as np
+import matplotlib.gridspec as gridspec
+import matplotlib.pyplot as plt
 import os
 import warnings
 
 import joblib
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import numpy as np
-import pandas as pd
-import shap
-from sklearn.calibration import calibration_curve
-from sklearn.metrics import (
-    auc, average_precision_score, classification_report,
-    confusion_matrix, f1_score, precision_recall_curve,
-    roc_auc_score, roc_curve,
-)
 
 warnings.filterwarnings("ignore")
 
-MODEL_DIR   = "models"
-DATA_DIR    = "data"
-REPORT_DIR  = "reports"
+MODEL_DIR = "models"
+DATA_DIR = "data"
+REPORT_DIR = "reports"
 FIGURES_DIR = os.path.join(REPORT_DIR, "figures")
 os.makedirs(FIGURES_DIR, exist_ok=True)
 
@@ -74,10 +74,10 @@ def fig_roc_curves(test_df: pd.DataFrame) -> dict:
     aucs = {}
     for outcome in OUTCOMES:
         try:
-            obj    = load_model(outcome)
-            pipe   = obj["pipeline"]
-            X      = test_df[FEATURE_COLS].values
-            y      = test_df[outcome].values
+            obj = load_model(outcome)
+            pipe = obj["pipeline"]
+            X = test_df[FEATURE_COLS].values
+            y = test_df[outcome].values
             y_prob = pipe.predict_proba(X)[:, 1]
             fpr, tpr, _ = roc_curve(y, y_prob)
             roc_auc = auc(fpr, tpr)
@@ -104,10 +104,10 @@ def fig_pr_curves(test_df: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(7, 6))
     for outcome in OUTCOMES:
         try:
-            obj    = load_model(outcome)
-            pipe   = obj["pipeline"]
-            X      = test_df[FEATURE_COLS].values
-            y      = test_df[outcome].values
+            obj = load_model(outcome)
+            pipe = obj["pipeline"]
+            X = test_df[FEATURE_COLS].values
+            y = test_df[outcome].values
             y_prob = pipe.predict_proba(X)[:, 1]
             prec, rec, _ = precision_recall_curve(y, y_prob)
             ap = average_precision_score(y, y_prob)
@@ -132,20 +132,21 @@ def fig_confusion_matrices(test_df: pd.DataFrame) -> None:
     fig, axes = plt.subplots(1, 3, figsize=(14, 4))
     for ax, outcome in zip(axes, OUTCOMES):
         try:
-            obj    = load_model(outcome)
-            pipe   = obj["pipeline"]
-            X      = test_df[FEATURE_COLS].values
-            y      = test_df[outcome].values
+            obj = load_model(outcome)
+            pipe = obj["pipeline"]
+            X = test_df[FEATURE_COLS].values
+            y = test_df[outcome].values
             y_pred = pipe.predict(X)
-            cm     = confusion_matrix(y, y_pred)
+            cm = confusion_matrix(y, y_pred)
             cm_pct = cm.astype(float) / cm.sum(axis=1, keepdims=True) * 100
             im = ax.imshow(cm_pct, cmap="Blues", vmin=0, vmax=100)
             for i in range(2):
                 for j in range(2):
-                    ax.text(j, i, f"{cm[i,j]}\n({cm_pct[i,j]:.1f}%)",
+                    ax.text(j, i, f"{cm[i, j]}\n({cm_pct[i, j]:.1f}%)",
                             ha="center", va="center", fontsize=11,
                             color="white" if cm_pct[i, j] > 50 else "black")
-            ax.set_xticks([0, 1]); ax.set_yticks([0, 1])
+            ax.set_xticks([0, 1])
+            ax.set_yticks([0, 1])
             ax.set_xticklabels(["Pred: Normal", "Pred: Malnourished"], fontsize=9)
             ax.set_yticklabels(["True: Normal", "True: Malnourished"], fontsize=9)
             ax.set_title(OUTCOME_LABELS[outcome], fontsize=11, fontweight="bold")
@@ -163,10 +164,10 @@ def fig_calibration(test_df: pd.DataFrame) -> None:
     ax.plot([0, 1], [0, 1], "k--", lw=1, label="Perfect calibration")
     for outcome in OUTCOMES:
         try:
-            obj    = load_model(outcome)
-            pipe   = obj["pipeline"]
-            X      = test_df[FEATURE_COLS].values
-            y      = test_df[outcome].values
+            obj = load_model(outcome)
+            pipe = obj["pipeline"]
+            X = test_df[FEATURE_COLS].values
+            y = test_df[outcome].values
             y_prob = pipe.predict_proba(X)[:, 1]
             prob_true, prob_pred = calibration_curve(y, y_prob, n_bins=10)
             ax.plot(prob_pred, prob_true, marker="o", lw=2,
@@ -191,7 +192,7 @@ def fig_shap_global_importance() -> None:
         if not os.path.exists(path):
             ax.set_title(f"{outcome} — SHAP not found")
             continue
-        shap_df  = pd.read_csv(path)
+        shap_df = pd.read_csv(path)
         feat_cols = [c for c in shap_df.columns if c != "county"]
         importance = shap_df[feat_cols].abs().mean().sort_values(ascending=True)
 
@@ -219,8 +220,8 @@ def fig_metric_comparison(test_df: pd.DataFrame) -> None:
 
     for ax, outcome in zip(axes, OUTCOMES):
         sub = df[df["outcome"] == outcome].copy()
-        x   = np.arange(len(sub))
-        w   = 0.25
+        x = np.arange(len(sub))
+        w = 0.25
         ax.bar(x - w, sub["test_auc"],    width=w, label="AUC-ROC", color="#1565c0", alpha=0.85)
         ax.bar(x,     sub["test_recall"], width=w, label="Recall",  color="#d32f2f", alpha=0.85)
         ax.bar(x + w, sub["test_f1"],     width=w, label="F1",      color="#2e7d32", alpha=0.85)
@@ -249,11 +250,11 @@ def write_text_report(test_df: pd.DataFrame) -> None:
     ]
     for outcome in OUTCOMES:
         try:
-            obj    = load_model(outcome)
-            pipe   = obj["pipeline"]
-            name   = obj.get("model_name", "Unknown")
-            X      = test_df[FEATURE_COLS].values
-            y      = test_df[outcome].values
+            obj = load_model(outcome)
+            pipe = obj["pipeline"]
+            name = obj.get("model_name", "Unknown")
+            X = test_df[FEATURE_COLS].values
+            y = test_df[outcome].values
             y_pred = pipe.predict(X)
             y_prob = pipe.predict_proba(X)[:, 1]
 

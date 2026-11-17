@@ -31,7 +31,7 @@ warnings.filterwarnings("ignore")
 # ── CONFIGURATION ────────────────────────────────────────────────────────────
 
 RANDOM_SEED = 42
-TEST_SIZE    = 0.20   # 80 / 20 stratified split (stratify on stunting)
+TEST_SIZE = 0.20   # 80 / 20 stratified split (stratify on stunting)
 
 # WHO anthropometric flag bounds (children outside these are excluded)
 HAZ_MIN, HAZ_MAX = -600, 600   # stored as x100 in DHS
@@ -60,6 +60,7 @@ KR_VARS = [
 OUTPUT_DIR = "data"
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
+
 
 def load_kr(path: str) -> pd.DataFrame:
     """Load selected columns from KR Stata file."""
@@ -106,40 +107,40 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     print("[3/6] Engineering features …")
 
     # ── OUTCOMES (z-scores stored as integer x100) ──────────────────────────
-    df["stunted"]     = (df["hw70"] < -200).astype(int)   # HAZ < -2 SD
-    df["wasted"]      = (df["hw72"] < -200).astype(int)   # WHZ < -2 SD
+    df["stunted"] = (df["hw70"] < -200).astype(int)   # HAZ < -2 SD
+    df["wasted"] = (df["hw72"] < -200).astype(int)   # WHZ < -2 SD
     df["underweight"] = (df["hw71"] < -200).astype(int)   # WAZ < -2 SD
 
     # ── CHILD FEATURES ───────────────────────────────────────────────────────
     df["child_age_months"] = df["b19"].fillna(df["b19"].median())
-    df["child_sex"]        = (df["b4"] == 2).astype(int)   # 1=female, 0=male
-    df["birth_order"]      = df["bord"].clip(upper=6)       # cap at 6+
+    df["child_sex"] = (df["b4"] == 2).astype(int)   # 1=female, 0=male
+    df["birth_order"] = df["bord"].clip(upper=6)       # cap at 6+
     df["prev_birth_interval"] = df["b11"].fillna(df["b11"].median())
-    df["size_at_birth"]    = df["m18"].fillna(df["m18"].mode()[0])  # 1-5 scale
-    df["birth_weight_kg"]  = df["m19"].replace(9.998, np.nan)       # 9.998 = missing code
-    df["birth_weight_kg"]  = df["birth_weight_kg"].fillna(df["birth_weight_kg"].median())
-    df["diarrhea_2wk"]     = (df["h11"] == 1).astype(int)
-    df["fever_2wk"]        = (df["h22"] == 1).astype(int)
-    df["breastfeeding"]    = (df["v404"] == 1).astype(int)
+    df["size_at_birth"] = df["m18"].fillna(df["m18"].mode()[0])  # 1-5 scale
+    df["birth_weight_kg"] = df["m19"].replace(9.998, np.nan)       # 9.998 = missing code
+    df["birth_weight_kg"] = df["birth_weight_kg"].fillna(df["birth_weight_kg"].median())
+    df["diarrhea_2wk"] = (df["h11"] == 1).astype(int)
+    df["fever_2wk"] = (df["h22"] == 1).astype(int)
+    df["breastfeeding"] = (df["v404"] == 1).astype(int)
 
     # ── MATERNAL FEATURES ────────────────────────────────────────────────────
-    df["maternal_edu"]     = df["v106"].fillna(0)           # 0=no edu, 1=primary, 2=secondary, 3=higher
-    df["maternal_bmi"]     = (df["v437"] / 10) / ((df["v438"] / 1000) ** 2)
-    df["maternal_bmi"]     = df["maternal_bmi"].replace([np.inf, -np.inf], np.nan)
-    df["maternal_bmi"]     = df["maternal_bmi"].clip(10, 50)
-    df["maternal_bmi"]     = df["maternal_bmi"].fillna(df["maternal_bmi"].median())
+    df["maternal_edu"] = df["v106"].fillna(0)           # 0=no edu, 1=primary, 2=secondary, 3=higher
+    df["maternal_bmi"] = (df["v437"] / 10) / ((df["v438"] / 1000) ** 2)
+    df["maternal_bmi"] = df["maternal_bmi"].replace([np.inf, -np.inf], np.nan)
+    df["maternal_bmi"] = df["maternal_bmi"].clip(10, 50)
+    df["maternal_bmi"] = df["maternal_bmi"].fillna(df["maternal_bmi"].median())
 
     # ── HOUSEHOLD FEATURES ───────────────────────────────────────────────────
-    df["wealth_index"]     = df["v190"].fillna(df["v190"].mode()[0])   # 1-5 quintile
-    df["under5_in_hh"]     = df["v137"].clip(upper=5)
-    df["hh_head_sex"]      = (df["v151"] == 2).astype(int)             # 1=female head
-    df["hh_head_age"]      = df["v152"].fillna(df["v152"].median())
-    df["electricity"]      = (df["v119"] == 1).astype(int)
-    df["residence_urban"]  = (df["v025"] == 1).astype(int)
+    df["wealth_index"] = df["v190"].fillna(df["v190"].mode()[0])   # 1-5 quintile
+    df["under5_in_hh"] = df["v137"].clip(upper=5)
+    df["hh_head_sex"] = (df["v151"] == 2).astype(int)             # 1=female head
+    df["hh_head_age"] = df["v152"].fillna(df["v152"].median())
+    df["electricity"] = (df["v119"] == 1).astype(int)
+    df["residence_urban"] = (df["v025"] == 1).astype(int)
 
     # WASH composite score (0-3): improved water + improved toilet + electricity proxy
-    improved_water  = df["v113"].isin([10,11,12,13,14,21,31,41,51,61,71]).astype(int)
-    improved_toilet = df["v116"].isin([10,11,12,13,14,15,21,22,41]).astype(int)
+    improved_water = df["v113"].isin([10, 11, 12, 13, 14, 21, 31, 41, 51, 61, 71]).astype(int)
+    improved_toilet = df["v116"].isin([10, 11, 12, 13, 14, 15, 21, 22, 41]).astype(int)
     df["wash_score"] = improved_water + improved_toilet + df["electricity"]
 
     # ── GEOGRAPHY (county identifier) ────────────────────────────────────────
@@ -173,7 +174,7 @@ def select_features(df: pd.DataFrame) -> tuple[list, pd.DataFrame]:
     ]
 
     OUTCOME_COLS = ["stunted", "wasted", "underweight"]
-    META_COLS    = ["v001", "v002", "survey_weight", "county"]
+    META_COLS = ["v001", "v002", "survey_weight", "county"]
 
     keep = FEATURE_COLS + OUTCOME_COLS + META_COLS
     df_model = df[keep].dropna(subset=FEATURE_COLS).copy()
@@ -203,9 +204,9 @@ def split_and_save(df: pd.DataFrame, feature_cols: list) -> None:
 
 
 def main(kr_path: str) -> None:
-    df, meta   = load_kr(kr_path)
-    df         = filter_sample(df)
-    df         = engineer_features(df)
+    df, meta = load_kr(kr_path)
+    df = filter_sample(df)
+    df = engineer_features(df)
     feat_cols, df_model = select_features(df)
     split_and_save(df_model, feat_cols)
     print("[6/6] Pipeline complete. ✓")
