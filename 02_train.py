@@ -1,29 +1,27 @@
 """
 02_train.py
 ===========
-Model training script for the DSA 8401 Capstone Project.
+Model training script
 
 Reads    : data/features_train.csv, data/features_test.csv
 Outputs  : models/best_model_<outcome>.pkl   (serialised pipeline per outcome)
            models/results_summary.csv        (AUC-ROC, Recall, F1 per model)
            models/shap_values_<outcome>.csv  (SHAP values on test set)
 
-Technique justification (required by rubric):
-  - Logistic Regression  : statistical baseline; directly comparable to prior
+Technique justification:
+  - Logistic Regression  : Works as the statistical baseline and is directly comparable to prior
                            Kenya-specific regression studies.
-  - Random Forest        : ensemble baseline; handles non-linearity; robust to
+  - Random Forest        : Is the ensemble baseline as it handles non-linearity. It is also robust to
                            missing values and high-cardinality categoricals.
-  - XGBoost              : sequential boosting; empirically strongest on tabular
-                           DHS data in prior SSA studies (Ayele 2025, Akombi).
+  - XGBoost              : Sequential boosting, empirically strongest on tabular
+                           DHS data in prior SSA studies.
   - SMOTE on training set only: addresses class imbalance without leaking
                            synthetic minority samples into test evaluation.
-  - 5-fold stratified CV : preferred over simple hold-out given ~8k training
-                           rows; stratification preserves malnutrition class ratio.
-  - AUC-ROC primary      : threshold-independent; appropriate for imbalanced
-                           outcomes. Recall co-primary: cost of missing a
+  - 5-fold stratified CV : preferred over simple hold-out given 8k training
+                           rows. Stratification preserves malnutrition class ratio.
+  - AUC-ROC primary      : appropriate for imbalanced outcomes. Recall co-primary: cost of missing a
                            malnourished child exceeds cost of a false alert.
-  - SHAP TreeExplainer   : model-agnostic locally faithful explanations; enables
-                           county-level feature importance — methodological novelty.
+  - SHAP TreeExplainer   : enables county-level feature importance — methodological novelty.
 
 Usage
 -----
@@ -52,7 +50,7 @@ import warnings
 import json
 import argparse
 import os
-# ── DAGSHUB credentials — must be set before mlflow is imported ───────────────
+# ── DAGSHUB credentials ───────────────
 os.environ["MLFLOW_TRACKING_USERNAME"] = "CARLVINMUTAHI"
 os.environ["MLFLOW_TRACKING_PASSWORD"] = "ef2023d70c0fa36be9c0bef33ac3b941b81459ce"
 
