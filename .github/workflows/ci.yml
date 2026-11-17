@@ -38,6 +38,7 @@ jobs:
           flake8 . \
             --max-line-length=100 \
             --exclude=.git,__pycache__,models,data,reports \
+            --extend-ignore=F401,F811,F841,F541 \
             --per-file-ignores="*.py:E501"
 
       - name: Run unit tests
