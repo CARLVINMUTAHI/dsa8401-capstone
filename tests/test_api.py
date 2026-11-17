@@ -2,8 +2,7 @@
 tests/test_api.py
 =================
 Unit and integration tests for the FastAPI prediction service (app/main.py).
-Uses httpx TestClient — no live models required; models are monkey-patched
-with tiny sklearn pipelines trained on synthetic data.
+Uses httpx TestClient — no live models required.
 """
 
 import os
