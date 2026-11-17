@@ -8,29 +8,30 @@ with tiny sklearn pipelines trained on synthetic data.
 
 import sys
 import os
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-import numpy as np
-import pytest
-from fastapi.testclient import TestClient
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
+import numpy as np  # noqa: E402
+import pytest  # noqa: E402
+from fastapi.testclient import TestClient  # noqa: E402
+from sklearn.linear_model import LogisticRegression  # noqa: E402
+from sklearn.pipeline import Pipeline  # noqa: E402
+from sklearn.preprocessing import StandardScaler  # noqa: E402
 
-import app.main as api_module
+import app.main as api_module  # noqa: E402
 
 FEATURE_COLS = api_module.FEATURE_COLS
-N_FEATURES   = len(FEATURE_COLS)   # must be 19
+N_FEATURES = len(FEATURE_COLS)   # must be 19
 
 
 def _make_tiny_pipeline(seed: int = 0) -> dict:
     """Train a 20-sample logistic regression — fast but realistic pipeline."""
     rng = np.random.default_rng(seed)
-    X   = rng.standard_normal((40, N_FEATURES))
-    y   = rng.integers(0, 2, 40)
+    X = rng.standard_normal((40, N_FEATURES))
+    y = rng.integers(0, 2, 40)
     pipe = Pipeline([
         ("scaler", StandardScaler()),
-        ("clf",    LogisticRegression(max_iter=200, random_state=seed)),
+        ("clf", LogisticRegression(max_iter=200, random_state=seed)),
     ])
     pipe.fit(X, y)
     return {"pipeline": pipe, "model_name": "LogisticRegression_test"}
@@ -41,8 +42,8 @@ def patch_pipelines():
     """Replace loaded pkl models with toy pipelines for every test."""
     original = api_module.pipelines.copy()
     api_module.pipelines.update({
-        "stunted":     _make_tiny_pipeline(0),
-        "wasted":      _make_tiny_pipeline(1),
+        "stunted": _make_tiny_pipeline(0),
+        "wasted": _make_tiny_pipeline(1),
         "underweight": _make_tiny_pipeline(2),
     })
     yield
@@ -60,25 +61,25 @@ def client():
 @pytest.fixture
 def valid_child():
     return {
-        "child_age_months":    24,
-        "child_sex":           1,       # 1=male, 2=female
-        "birth_order":         2,
+        "child_age_months": 24,
+        "child_sex": 1,
+        "birth_order": 2,
         "prev_birth_interval": 30.0,
-        "size_at_birth":       3,
-        "birth_weight_kg":     3.1,
-        "diarrhea_2wk":        0,
-        "fever_2wk":           1,
-        "breastfeeding":       1,       # 1=currently, 2=previously, 3=never
-        "maternal_edu":        1,
-        "maternal_bmi":        22.5,
-        "wealth_index":        2,
-        "under5_in_hh":        3,
-        "hh_head_sex":         1,       # 1=male, 2=female
-        "hh_head_age":         35.0,
-        "electricity":         0,
-        "residence_urban":     0,
-        "wash_score":          1,
-        "county":              23,
+        "size_at_birth": 3,
+        "birth_weight_kg": 3.1,
+        "diarrhea_2wk": 0,
+        "fever_2wk": 1,
+        "breastfeeding": 1,
+        "maternal_edu": 1,
+        "maternal_bmi": 22.5,
+        "wealth_index": 2,
+        "under5_in_hh": 3,
+        "hh_head_sex": 1,
+        "hh_head_age": 35.0,
+        "electricity": 0,
+        "residence_urban": 0,
+        "wash_score": 1,
+        "county": 23,
     }
 
 
@@ -130,15 +131,15 @@ class TestPredictValid:
     def test_predictions_has_all_outcomes(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
         preds = data["predictions"]
-        assert "stunted"     in preds
-        assert "wasted"      in preds
+        assert "stunted" in preds
+        assert "wasted" in preds
         assert "underweight" in preds
 
     def test_each_outcome_has_probability_and_flag(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
         for outcome in ["stunted", "wasted", "underweight"]:
             assert "probability" in data["predictions"][outcome]
-            assert "flag"        in data["predictions"][outcome]
+            assert "flag" in data["predictions"][outcome]
 
     def test_probabilities_between_0_and_1(self, client, valid_child):
         data = client.post("/predict", json=valid_child).json()
@@ -164,8 +165,8 @@ class TestPredictValid:
         r1 = client.post("/predict", json=valid_child).json()
         r2 = client.post("/predict", json=valid_child).json()
         for outcome in ["stunted", "wasted", "underweight"]:
-            assert r1["predictions"][outcome]["probability"] == \
-                   r2["predictions"][outcome]["probability"]
+            assert (r1["predictions"][outcome]["probability"] ==
+                    r2["predictions"][outcome]["probability"])
 
     def test_different_county(self, client, valid_child):
         """Changing county produces a valid response."""
@@ -187,12 +188,12 @@ class TestPredictInvalid:
 
     def test_age_above_max_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["child_age_months"] = 60   # max is 59
+        payload["child_age_months"] = 60
         assert client.post("/predict", json=payload).status_code == 422
 
     def test_county_out_of_range_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["county"] = 48             # max is 47
+        payload["county"] = 48
         assert client.post("/predict", json=payload).status_code == 422
 
     def test_negative_age_422(self, client, valid_child):
@@ -202,7 +203,7 @@ class TestPredictInvalid:
 
     def test_wealth_index_zero_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["wealth_index"] = 0        # min is 1
+        payload["wealth_index"] = 0
         assert client.post("/predict", json=payload).status_code == 422
 
     def test_empty_body_422(self, client):
@@ -210,12 +211,12 @@ class TestPredictInvalid:
 
     def test_child_sex_zero_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["child_sex"] = 0           # min is 1
+        payload["child_sex"] = 0
         assert client.post("/predict", json=payload).status_code == 422
 
     def test_breastfeeding_zero_422(self, client, valid_child):
         payload = dict(valid_child)
-        payload["breastfeeding"] = 0       # min is 1
+        payload["breastfeeding"] = 0
         assert client.post("/predict", json=payload).status_code == 422
 
 
@@ -251,6 +252,6 @@ class TestPredictBatch:
 
     def test_batch_one_invalid_422(self, client, valid_child):
         bad_child = dict(valid_child)
-        bad_child["county"] = 99           # invalid
+        bad_child["county"] = 99
         resp = client.post("/predict/batch", json=[valid_child, bad_child])
         assert resp.status_code == 422

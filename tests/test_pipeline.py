@@ -5,16 +5,16 @@ Unit tests for the data pipeline logic (01_pipeline.py).
 Tests run on synthetic data — no real KDHS file required.
 """
 
-import sys
+import sys  # noqa: E401
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))  # noqa: E402
 
-import numpy as np
-import pandas as pd
-import pytest
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+import pytest  # noqa: E402
 
 # Import functions from pipeline
-from pipeline_helpers import (
+from pipeline_helpers import (  # noqa: E402
     filter_sample,
     engineer_features,
     select_features,
@@ -93,7 +93,7 @@ class TestFilterSample:
         df["hw70"] = 0
         df["hw71"] = 0
         df["hw72"] = 0
-        df["b19"]  = 24
+        df["b19"] = 24
         result = filter_sample(df)
         assert len(result) == 50
 
@@ -108,8 +108,8 @@ class TestEngineerFeatures:
 
     def test_outcome_columns_created(self, filtered_df):
         df = engineer_features(filtered_df)
-        assert "stunted"     in df.columns
-        assert "wasted"      in df.columns
+        assert "stunted" in df.columns
+        assert "wasted" in df.columns
         assert "underweight" in df.columns
 
     def test_stunted_binary(self, filtered_df):
