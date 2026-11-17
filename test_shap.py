@@ -1,4 +1,4 @@
-"""Quick SHAP shape test — run once to verify fix, then delete."""
+"""Quick SHAP shape test — run once to verify fix."""
 import joblib
 import shap
 import numpy as np
@@ -12,12 +12,12 @@ FEATURE_COLS = [
     "residence_urban", "wash_score", "county",
 ]
 
-obj    = joblib.load("models/best_model_stunted.pkl")
-df     = pd.read_csv("data/features_test.csv")
-X      = df[FEATURE_COLS].values
-clf    = obj["pipeline"].named_steps["clf"]
+obj = joblib.load("models/best_model_stunted.pkl")
+df = pd.read_csv("data/features_test.csv")
+X = df[FEATURE_COLS].values
+clf = obj["pipeline"].named_steps["clf"]
 scaler = obj["pipeline"].named_steps["scaler"]
-Xs     = scaler.transform(X)
+Xs = scaler.transform(X)
 
 sv = shap.TreeExplainer(clf).shap_values(Xs)
 if isinstance(sv, list):
