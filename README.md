@@ -1,5 +1,5 @@
 # Kenya Child Malnutrition Risk Prediction
-### DSA 8401 Applied Machine Learning — Capstone Project
+###Applied Machine Learning:Capstone Project
 **Author:** Carlvin Mutahi · 101055  
 **Programme:** MSc Data Science and Analytics, Strathmore University  
 
@@ -9,9 +9,9 @@
 
 This project develops a machine learning predictive framework for child malnutrition risk among children under five in Kenya, using the **2022 Kenya Demographic and Health Survey (KDHS)**. Three binary outcomes are predicted:
 
-- **Stunting** (HAZ < −2 SD) — chronic undernutrition
-- **Wasting** (WHZ < −2 SD) — acute undernutrition  
-- **Underweight** (WAZ < −2 SD) — combined
+- **Stunting** which is chronic undernutrition
+- **Wasting** also referred to as acute undernutrition  
+- **Underweight** that combines both stunting and wasting
 
 SHAP values are aggregated per county to generate county-level risk intelligence for all 47 Kenyan counties, directly supporting devolved health planning.
 
@@ -147,11 +147,11 @@ curl -X POST http://localhost:8000/predict \
 | Component | Choice | Justification |
 |---|---|---|
 | Baseline | Logistic Regression | Directly comparable to prior Kenya regression studies |
-| Ensemble baseline | Random Forest (200 trees) | Handles non-linearity; robust to class imbalance |
-| Primary candidate | XGBoost | Sequential boosting; strongest on tabular DHS data in prior SSA studies |
+| Ensemble baseline | Random Forest (200 trees) | Handles non-linearity and is robust to class imbalance |
+| Primary candidate | XGBoost | Sequential boosting, is strongest on tabular DHS data in prior SSA studies |
 | Class imbalance | SMOTE (training only) | Prevents synthetic samples leaking into test evaluation |
-| Validation | 5-fold stratified CV | Preferred over hold-out at ~8k training rows |
-| Primary metric | AUC-ROC | Threshold-independent; appropriate for imbalanced outcomes |
+| Validation | 5-fold stratified CV | Preferred over hold-out at 8k training rows |
+| Primary metric | AUC-ROC | Threshold-independent and appropriate for imbalanced outcomes |
 | Co-primary metric | Recall | Missing a malnourished child carries greater cost than a false alert |
 | Explainability | SHAP TreeExplainer | County-level feature importance aggregation — methodological novelty |
 
