@@ -17,7 +17,7 @@
 | Model Training Code & Artifacts | [02_train.py](02_train.py), [models/](models/) |
 | Docker Configuration | [Dockerfile](Dockerfile), [docker-compose.yml](docker-compose.yml) |
 | API Service Code | [app/main.py](app/main.py) |
-| Final Report | [reports/final_report.tex](reports/final_report.tex) |
+| Final Report | [reports/final_report.tex](reports/final_report.tex), [Presentation Slides](reports/Child%20Malnutrition%20Risk%20Prediction%20%E2%80%94%20Kenya%20KDHS%202022.pptx) |
 | CI/CD Pipeline | [.github/workflows/ci.yml](.github/workflows/ci.yml) |
 | Unit Tests | [tests/](tests/) |
 | Hospital Screener UI | [screener.html](screener.html) |
@@ -206,3 +206,4 @@ curl -X POST http://localhost:8000/predict \
 ## Results
 
 See `models/results_summary.csv` after running `02_train.py`.
+
