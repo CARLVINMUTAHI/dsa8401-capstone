@@ -186,7 +186,7 @@ curl -X POST http://localhost:8000/predict \
 | Ensemble baseline | Random Forest (200 trees) | Handles non-linearity; robust to class imbalance |
 | Primary candidate | XGBoost | Sequential boosting; strongest on tabular DHS data in prior SSA studies |
 | Class imbalance | SMOTE (training only) | Prevents synthetic samples leaking into test evaluation |
-| Validation | 5-fold stratified CV | Preferred over hold-out at ~8k training rows |
+| Validation | 5-fold stratified CV | Preferred over hold-out at 8k training rows |
 | Primary metric | AUC-ROC | Threshold-independent; appropriate for imbalanced outcomes |
 | Co-primary metric | Recall | Missing a malnourished child carries greater cost than a false alert |
 | Explainability | SHAP TreeExplainer | County-level feature importance aggregation — methodological novelty |
