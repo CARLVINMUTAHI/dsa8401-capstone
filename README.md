@@ -198,7 +198,7 @@ curl -X POST http://localhost:8000/predict \
 **2022 Kenya Demographic and Health Survey (KDHS)**  
 - Conducted August 2022 – February 2023  
 - Stratified two-stage cluster design; nationally representative across all 47 counties  
-- Children's Recode (KR file): ~8,099 children under 5 with valid anthropometric records  
+- Children's Recode (KR file): 8,099 children under 5 with valid anthropometric records  
 - Access: https://dhsprogram.com (free for non-commercial research)
 
 ---
